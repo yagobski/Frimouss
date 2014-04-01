@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Frimouss Admin Panel</title>
+    
+        <!-- Bootstrap framework -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+        <!-- jQuery UI theme-->
+            <link rel="stylesheet" href="lib/jquery-ui/css/Aristo/Aristo.css" />
+        <!-- Bootstrap toggle-->
+            <link rel="stylesheet" href="lib/bootstrap-toggle-buttons/css/bootstrap-toggle-buttons-theme.css" />
+        <!-- tooltips-->
+            <link rel="stylesheet" href="lib/qtip2/jquery.qtip.min.css" />
+        <!-- notifications -->
+            <link rel="stylesheet" href="lib/sticky/sticky.css" />
+        <!-- code prettify -->
+            <link rel="stylesheet" href="lib/google-code-prettify/prettify.css" /> 
+        <!-- bootstrap wysihtml5 EDITOR -->
+        	<link rel="stylesheet" href="lib/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" />               
+        <!-- notifications -->
+            <link rel="stylesheet" href="lib/sticky/sticky.css" />    
+        <!-- splashy icons -->
+            <link rel="stylesheet" href="img/splashy/splashy.css" />
+		<!-- flags -->
+            <link rel="stylesheet" href="img/flags/flags.css" />
+		<!-- datepicker -->
+            <link rel="stylesheet" href="lib/datepicker/datepicker.css" />
+        <!-- tag handler -->
+            <link rel="stylesheet" href="lib/tag_handler/css/jquery.taghandler.css" />
+        <!-- nice form elements -->
+            <link rel="stylesheet" href="lib/uniform/Aristo/uniform.aristo.css" />
+		<!-- 2col multiselect -->
+            <link rel="stylesheet" href="lib/multiselect/css/multi-select.css" />
+		<!-- enhanced select -->
+            <link rel="stylesheet" href="lib/chosen/chosen.css" />
+        <!-- upload -->
+            <link rel="stylesheet" href="lib/plupload/js/jquery.plupload.queue/css/plupload-frimouss.css" />
+		<!-- colorbox -->
+            <link rel="stylesheet" href="lib/colorbox/colorbox.css" />
+		<!-- colorpicker -->
+            <link rel="stylesheet" href="lib/colorpicker/css/colorpicker.css" />	
+        <!-- main styles -->
+            <link rel="stylesheet" href="css/style.css" />			
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+        <!-- Favicon -->
+            <link rel="shortcut icon" href="favicon.ico" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/ie.css" />
+            <script src="js/ie/html5.js"></script>
+			<script src="js/ie/respond.min.js"></script>
+        <![endif]-->
+		
+		<script>
+			//* hide all elements & show preloader
+			document.documentElement.className += 'js';
+		</script>
+    </head>
+    <body>
+		<div id="maincontainer" class="clearfix">
+			<!-- header -->
+		    <header>
+		        <div class="navbar navbar-fixed-top">
+		            <div class="navbar-inner">
+		                <div class="container-fluid">
+		                	<div class="logo"><a href="dashboard.html" title="Homepage"><img width="101" height="25" alt="Logo" src="img/logo.png"></a></div>
+		                    <form class="visible-desktop" id="search-theme-form" method="post" accept-charset="UTF-8" action="/">
+		                                    <input type="text" size="15" maxlength="128" name="search_theme_form" id="search-q" class="typeahead" />
+		                                      <input type="submit" value="Search" name="op" id="search-submit" />                
+		                                    </form>
+		                                                      	
+		                    <ul class="nav user_menu pull-right">
+		                       
+								<li class="divider-vertical hidden-phone hidden-tablet"></li>
+								
+		                        <li class="dropdown">
+		                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-users"></span> Karim Benzama <b class="caret"></b></a>
+		                            <ul class="dropdown-menu">
+										<li><a href="user_profile.html">My Profile</a></li>
+										<li><a href="javascrip:void(0)">Settings</a></li>
+										<li><a href="javascrip:void(0)">Social</a></li>
+										<li><a href="javascrip:void(0)">Friends</a></li>
+										<li class="divider"></li>
+										<li><a href="login.html">Log Out</a></li>
+		                            </ul>
+		                        </li>
+		                        <li class="divider-vertical hidden-phone hidden-tablet"></li>
+		                        
+		                        <li class="dropdown">
+		                            <a href="#" class="dropdown-toggle nav_condensed" data-toggle="dropdown"><i class="flag-gb"></i> <b class="caret"></b></a>
+		                            <ul class="dropdown-menu">
+		                        		<li><a href="javascript:void(0)"><i class="flag-de"></i> Deutsch</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-fr"></i> Français</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-es"></i> Español</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-ma"></i> Arabic</a></li>
+		                            </ul>
+		                        </li>
+		                    </ul>
+		                    <ul class="nav user-menu visible-desktop pull-right">
+		                       <li><a data-toggle="modal" data-backdrop="static" href="#myTasks" title="New Task" class="btn-glyph ttip_b fontello-icon-edit"><span class="badge badge-important">9</span></a></li>
+		                       <li><a data-toggle="modal" data-backdrop="static" href="#myMail" title="Message" class="btn-glyph ttip_b fontello-icon-mail-1"><span class="badge badge-important">2</span></a></li>
+		                       <li><a href="chat.html" title="Support" class="btn-glyph ttip_b fontello-icon-lifebuoy"><span class="badge badge-important">1</span></a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="modal hide fade" id="myMail">
+		            <div class="modal-header">
+		                <button class="close" data-dismiss="modal">×</button>
+		                <h3>New messages</h3>
+		            </div>
+		            <div class="modal-body">
+		                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		                <table class="table table-condensed table-striped" data-provides="rowlink">
+		                    <thead>
+		                        <tr>
+		                            <th>Sender</th>
+		                            <th>Subject</th>
+		                            <th>Date</th>
+		                            <th>Size</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>Anji Mariotta</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>23/05/2013</td>
+		                            <td>45KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Driss Willis</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>24/05/2013</td>
+		                            <td>15KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Marlene Bui</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>25/05/2013</td>
+		                            <td>128KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Dhung Found</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>25/05/2013</td>
+		                            <td>31KB</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            <div class="modal-footer">
+		                <a href="mailbox.html" class="btn">Go to mailbox</a>
+		            </div>
+		        </div>
+		        <div class="modal fade" id="myTasks">
+		            <div class="modal-header">
+		                <button class="close" data-dismiss="modal">×</button>
+		                <h3>New Tasks</h3>
+		            </div>
+		            <div class="modal-body">
+		                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		                <table class="table table-condensed table-striped" data-provides="rowlink">
+		                    <thead>
+		                        <tr>
+		                            <th>id</th>
+		                            <th>Summary</th>
+		                            <th>Updated</th>
+		                            <th>Priority</th>
+		                            <th>Status</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>#123</td>
+		                            <td><a href="javascript:void(0)">Fix navigation menu&hellip;</a></td>
+		                            <td>23/05/2012</td>
+		                            <td class="tac"><span class="label label-important">High</span></td>
+		                            <td>Open</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#218</td>
+		                            <td><a href="javascript:void(0)">Upgrade Apache and Mysql &hellip;</a></td>
+		                            <td>22/05/2012</td>
+		                            <td class="tac"><span class="label label-warning">Medium</span></td>
+		                            <td>Reopen</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#425</td>
+		                            <td><a href="javascript:void(0)">Make performance test on server&hellip;</a></td>
+		                            <td>22/05/2012</td>
+		                            <td class="tac"><span class="label label-success">Low</span></td>
+		                            <td>Updated</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#510</td>
+		                            <td><a href="javascript:void(0)">Fix design border&hellip;</a></td>
+		                            <td>17/05/2012</td>
+		                            <td class="tac"><span class="label label-warning">Low</span></td>
+		                            <td>Open</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            <div class="modal-footer">
+		                <a href="taskmanager.html" class="btn">Go to task manager</a>
+		            </div>
+		        </div>
+		    </header>
+		    <!-- main content -->
+		    <div id="contentwrapper">
+		        <div class="main_content">
+					
+					<div class="header">
+					 	<h1 class="page-title"><i class="fontello-icon-book"></i>Form extended</h1>
+					</div>
+					<ul class="breadcrumb">
+					    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+				        <li class="active">Form extended</li>
+			        </ul>
+					
+					<div class="container-fluid"> 
+					
+					
+					<div class="formSep">
+						<div class="row-fluid">
+							<div class="span12">
+								<table class="table table-striped">
+												<tr>
+													<td>basic</td>
+													<td>
+														<div class="slider sliderSimple"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Minimum</td>
+													<td>
+														<div class="slider sliderMin sliderGreen"></div>
+														<div class="field_notice">Min: <span class="must sliderMinLabel">$180</span></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Maximum</td>
+													<td>
+														<div class="slider sliderMax sliderYellow"></div>
+														<div class="field_notice">Max: <span class="must sliderMaxLabel">$280</span></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Range</td>
+													<td>
+														<div class="slider sliderRange sliderBlue"></div>
+														<div class="field_notice">Price Range: <span class="must sliderRangeLabel">$192 - $470</span></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Equalizer</td>
+													<td>
+														<div id="sliderVertical-1" class="slider sliderBlue sliderVertical"></div>
+														<div id="sliderVertical-2" class="slider sliderBlue sliderVertical"></div>
+														<div id="sliderVertical-3" class="slider sliderBlue sliderVertical"></div>
+														<div id="sliderVertical-4" class="slider sliderBlue sliderVertical"></div>
+														<div id="sliderVertical-5" class="slider sliderBlue sliderVertical"></div>
+														<div id="sliderVertical-6" class="slider sliderBlue sliderVertical"></div>
+														<div id="sliderVertical-7" class="slider sliderGreen sliderVertical"></div>
+														<div id="sliderVertical-8" class="slider sliderGreen sliderVertical"></div>
+														<div id="sliderVertical-9" class="slider sliderYellow sliderVertical"></div>
+														<div id="sliderVertical-10" class="slider sliderYellow sliderVertical"></div>
+														<div id="sliderVertical-11" class="slider sliderRed sliderVertical"></div>
+														<div id="sliderVertical-12" class="slider sliderRed sliderVertical"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Blue</td>
+													<td>
+														<div class="slider sliderMin-1 sliderBlue"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Green</td>
+													<td>
+														<div class="slider sliderMin-2 sliderGreen"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Dark Pink</td>
+													<td>
+														<div class="slider sliderMin-3 sliderPink"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Red</td>
+													<td>
+														<div class="slider sliderMin-4 sliderRed"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Yellow</td>
+													<td>
+														<div class="slider sliderMin-5 sliderYellow"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Dark Green</td>
+													<td>
+														<div class="slider sliderMin-6 sliderDarkGreen"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Light Orange</td>
+													<td>
+														<div class="slider sliderMin-7 sliderLightOrange"></div>
+													</td>
+												</tr>
+												<tr>
+													<td>Orange</td>
+													<td>
+														<div class="slider sliderMin-8 sliderOrange"></div>
+													</td>
+												</tr>
+											</table>
+											</div>
+												</div>
+					</div>
+											
+					<div class="formSep">
+						<div class="row-fluid">
+							<div class="span6">
+								<p><h3 class="heading">Multiselect</h3></p>
+								<select multiple="multiple" class="multiselect" id="optgroup">
+									<optgroup label="Africa"><option value="DZ">Algeria</option><option value="AO">Angola</option><option value="BJ">Benin</option><option value="BW">Botswana</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="CM">Cameroon</option><option value="CV">Cape Verde</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="KM">Comoros</option><option value="CD">Congo [DRC]</option><option value="CG">Congo [Republic]</option><option value="DJ">Djibouti</option><option value="EG">Egypt</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="ET">Ethiopia</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GH">Ghana</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="CI">Ivory Coast</option><option value="KE">Kenya</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="ML">Mali</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="NA">Namibia</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="RW">Rwanda</option><option value="RE">Réunion</option><option value="SH">Saint Helena</option><option value="SN">Senegal</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="SD">Sudan</option><option value="SZ">Swaziland</option><option value="ST">São Tomé and Príncipe</option><option value="TZ">Tanzania</option><option value="TG">Togo</option><option value="TN">Tunisia</option><option value="UG">Uganda</option><option value="EH">Western Sahara</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></optgroup><optgroup label="Antarctica"><option value="AQ">Antarctica</option><option value="BV">Bouvet Island</option><option value="TF">French Southern Territories</option><option value="HM">Heard Island and McDonald Island</option><option value="GS">South Georgia and the South Sandwich Islands</option></optgroup><optgroup label="Asia"><option value="AF">Afghanistan</option><option value="AM">Armenia</option><option value="AZ">Azerbaijan</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BT">Bhutan</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="KH">Cambodia</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos [Keeling] Islands</option><option value="GE">Georgia</option><option value="HK">Hong Kong</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IL">Israel</option><option value="JP">Japan</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LB">Lebanon</option><option value="MO">Macau</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="MN">Mongolia</option><option value="MM">Myanmar [Burma]</option><option value="NP">Nepal</option><option value="KP">North Korea</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PS">Palestinian Territories</option><option value="PH">Philippines</option><option value="QA">Qatar</option><option value="SA">Saudi Arabia</option><option value="SG">Singapore</option><option value="KR">South Korea</option><option value="LK">Sri Lanka</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TH">Thailand</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="AE">United Arab Emirates</option><option value="UZ">Uzbekistan</option><option value="VN">Vietnam</option><option value="YE">Yemen</option></optgroup><optgroup label="Europe"><option value="AL">Albania</option><option value="AD">Andorra</option><option value="AT">Austria</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BA">Bosnia and Herzegovina</option><option value="BG">Bulgaria</option><option value="HR">Croatia</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="EE">Estonia</option><option value="FO">Faroe Islands</option><option value="FI">Finland</option><option value="FR">France</option><option value="DE">Germany</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GG">Guernsey</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IT">Italy</option><option value="JE">Jersey</option><option value="XK">Kosovo</option><option value="LV">Latvia</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MK">Macedonia</option><option value="MT">Malta</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="ME">Montenegro</option><option value="NL">Netherlands</option><option value="NO">Norway</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="SM">San Marino</option><option value="RS">Serbia</option><option value="CS">Serbia and Montenegro</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="ES">Spain</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="UA">Ukraine</option><option value="GB">United Kingdom</option><option value="VA">Vatican City</option><option value="AX">Åland Islands</option></optgroup><optgroup label="North America"><option value="AI">Anguilla</option><option value="AG">Antigua and Barbuda</option><option value="AW">Aruba</option><option value="BS">Bahamas</option><option value="BB">Barbados</option><option value="BZ">Belize</option><option value="BM">Bermuda</option><option value="BQ">Bonaire, Saint Eustatius and Saba</option><option value="VG">British Virgin Islands</option><option value="CA">Canada</option><option value="KY">Cayman Islands</option><option value="CR">Costa Rica</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="SV">El Salvador</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GT">Guatemala</option><option value="HT">Haiti</option><option value="HN">Honduras</option><option value="JM">Jamaica</option><option value="MQ">Martinique</option><option value="MX">Mexico</option><option value="MS">Montserrat</option><option value="AN">Netherlands Antilles</option><option value="NI">Nicaragua</option><option value="PA">Panama</option><option value="PR">Puerto Rico</option><option value="BL">Saint Barthélemy</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="SX">Sint Maarten</option><option value="TT">Trinidad and Tobago</option><option value="TC">Turks and Caicos Islands</option><option value="VI">U.S. Virgin Islands</option><option value="US">United States</option></optgroup><optgroup label="South America"><option value="AR">Argentina</option><option value="BO">Bolivia</option><option value="BR">Brazil</option><option value="CL">Chile</option><option value="CO">Colombia</option><option value="EC">Ecuador</option><option value="FK">Falkland Islands</option><option value="GF">French Guiana</option><option value="GY">Guyana</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="SR">Suriname</option><option value="UY">Uruguay</option><option value="VE">Venezuela</option></optgroup><optgroup label="Oceania"><option value="AS">American Samoa</option><option value="AU">Australia</option><option value="CK">Cook Islands</option><option value="TL">East Timor</option><option value="FJ">Fiji</option><option value="PF">French Polynesia</option><option value="GU">Guam</option><option value="KI">Kiribati</option><option value="MH">Marshall Islands</option><option value="FM">Micronesia</option><option value="NR">Nauru</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="PW">Palau</option><option value="PG">Papua New Guinea</option><option value="PN">Pitcairn Islands</option><option value="WS">Samoa</option><option value="SB">Solomon Islands</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TV">Tuvalu</option><option value="UM">U.S. Minor Outlying Islands</option><option value="VU">Vanuatu</option><option value="WF">Wallis and Futuna</option></optgroup>
+								</select>
+								<a id="select_all" href="javascript:void(0)">Select All</a> / <a id="deselect_all" href="javascript:void(0)">Deselect All</a>
+							</div>
+							<div class="span6">
+								<p><h3 class="heading">Multiselect with search</h3></p>
+								<form id="searchable-form">
+									<select name="countries[]" multiple="multiple" id="searchable-select">
+										<option value=""></option> 
+										<option value="DZ">Algeria</option><option value="AO">Angola</option><option value="BJ">Benin</option><option value="BW">Botswana</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="CM">Cameroon</option><option value="CV">Cape Verde</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="KM">Comoros</option><option value="CD">Congo [DRC]</option><option value="CG">Congo [Republic]</option><option value="DJ">Djibouti</option><option value="EG">Egypt</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="ET">Ethiopia</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GH">Ghana</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="CI">Ivory Coast</option><option value="KE">Kenya</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="ML">Mali</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="NA">Namibia</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="RW">Rwanda</option><option value="RE">Réunion</option><option value="SH">Saint Helena</option><option value="SN">Senegal</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="SD">Sudan</option><option value="SZ">Swaziland</option><option value="ST">São Tomé and Príncipe</option><option value="TZ">Tanzania</option><option value="TG">Togo</option><option value="TN">Tunisia</option><option value="UG">Uganda</option><option value="EH">Western Sahara</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option><option value="AQ">Antarctica</option><option value="BV">Bouvet Island</option><option value="TF">French Southern Territories</option><option value="HM">Heard Island and McDonald Island</option><option value="GS">South Georgia and the South Sandwich Islands</option><option value="AF">Afghanistan</option><option value="AM">Armenia</option><option value="AZ">Azerbaijan</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BT">Bhutan</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="KH">Cambodia</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos [Keeling] Islands</option><option value="GE">Georgia</option><option value="HK">Hong Kong</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IL">Israel</option><option value="JP">Japan</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LB">Lebanon</option><option value="MO">Macau</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="MN">Mongolia</option><option value="MM">Myanmar [Burma]</option><option value="NP">Nepal</option><option value="KP">North Korea</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PS">Palestinian Territories</option><option value="PH">Philippines</option><option value="QA">Qatar</option><option value="SA">Saudi Arabia</option><option value="SG">Singapore</option><option value="KR">South Korea</option><option value="LK">Sri Lanka</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TH">Thailand</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="AE">United Arab Emirates</option><option value="UZ">Uzbekistan</option><option value="VN">Vietnam</option><option value="YE">Yemen</option><option value="AL">Albania</option><option value="AD">Andorra</option><option value="AT">Austria</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BA">Bosnia and Herzegovina</option><option value="BG">Bulgaria</option><option value="HR">Croatia</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="EE">Estonia</option><option value="FO">Faroe Islands</option><option value="FI">Finland</option><option value="FR">France</option><option value="DE">Germany</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GG">Guernsey</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IT">Italy</option><option value="JE">Jersey</option><option value="XK">Kosovo</option><option value="LV">Latvia</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MK">Macedonia</option><option value="MT">Malta</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="ME">Montenegro</option><option value="NL">Netherlands</option><option value="NO">Norway</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="SM">San Marino</option><option value="RS">Serbia</option><option value="CS">Serbia and Montenegro</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="ES">Spain</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="UA">Ukraine</option><option value="GB">United Kingdom</option><option value="VA">Vatican City</option><option value="AX">Åland Islands</option><option value="AI">Anguilla</option><option value="AG">Antigua and Barbuda</option><option value="AW">Aruba</option><option value="BS">Bahamas</option><option value="BB">Barbados</option><option value="BZ">Belize</option><option value="BM">Bermuda</option><option value="BQ">Bonaire, Saint Eustatius and Saba</option><option value="VG">British Virgin Islands</option><option value="CA">Canada</option><option value="KY">Cayman Islands</option><option value="CR">Costa Rica</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="SV">El Salvador</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GT">Guatemala</option><option value="HT">Haiti</option><option value="HN">Honduras</option><option value="JM">Jamaica</option><option value="MQ">Martinique</option><option value="MX">Mexico</option><option value="MS">Montserrat</option><option value="AN">Netherlands Antilles</option><option value="NI">Nicaragua</option><option value="PA">Panama</option><option value="PR">Puerto Rico</option><option value="BL">Saint Barthélemy</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="SX">Sint Maarten</option><option value="TT">Trinidad and Tobago</option><option value="TC">Turks and Caicos Islands</option><option value="VI">U.S. Virgin Islands</option><option value="US">United States</option><option value="AR">Argentina</option><option value="BO">Bolivia</option><option value="BR">Brazil</option><option value="CL">Chile</option><option value="CO">Colombia</option><option value="EC">Ecuador</option><option value="FK">Falkland Islands</option><option value="GF">French Guiana</option><option value="GY">Guyana</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="SR">Suriname</option><option value="UY">Uruguay</option><option value="VE">Venezuela</option><option value="AS">American Samoa</option><option value="AU">Australia</option><option value="CK">Cook Islands</option><option value="TL">East Timor</option><option value="FJ">Fiji</option><option value="PF">French Polynesia</option><option value="GU">Guam</option><option value="KI">Kiribati</option><option value="MH">Marshall Islands</option><option value="FM">Micronesia</option><option value="NR">Nauru</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="PW">Palau</option><option value="PG">Papua New Guinea</option><option value="PN">Pitcairn Islands</option><option value="WS">Samoa</option><option value="SB">Solomon Islands</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TV">Tuvalu</option><option value="UM">U.S. Minor Outlying Islands</option><option value="VU">Vanuatu</option><option value="WF">Wallis and Futuna</option>  
+									</select>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<div class="row-fluid">
+							<div class="span6">
+								<p><h3 class="heading">Enhanced Select</h3></p>
+								<select name="chosen_a" id="chosen_a" data-placeholder="Choose a Country..." class="chzn_a">
+									<option value=""></option> 
+									<option value="DZ">Algeria</option><option value="AO">Angola</option><option value="BJ">Benin</option><option value="BW">Botswana</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="CM">Cameroon</option><option value="CV">Cape Verde</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="KM">Comoros</option><option value="CD">Congo [DRC]</option><option value="CG">Congo [Republic]</option><option value="DJ">Djibouti</option><option value="EG">Egypt</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="ET">Ethiopia</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GH">Ghana</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="CI">Ivory Coast</option><option value="KE">Kenya</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="ML">Mali</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="NA">Namibia</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="RW">Rwanda</option><option value="RE">Réunion</option><option value="SH">Saint Helena</option><option value="SN">Senegal</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="SD">Sudan</option><option value="SZ">Swaziland</option><option value="ST">São Tomé and Príncipe</option><option value="TZ">Tanzania</option><option value="TG">Togo</option><option value="TN">Tunisia</option><option value="UG">Uganda</option><option value="EH">Western Sahara</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option><option value="AQ">Antarctica</option><option value="BV">Bouvet Island</option><option value="TF">French Southern Territories</option><option value="HM">Heard Island and McDonald Island</option><option value="GS">South Georgia and the South Sandwich Islands</option><option value="AF">Afghanistan</option><option value="AM">Armenia</option><option value="AZ">Azerbaijan</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BT">Bhutan</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="KH">Cambodia</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos [Keeling] Islands</option><option value="GE">Georgia</option><option value="HK">Hong Kong</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IL">Israel</option><option value="JP">Japan</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LB">Lebanon</option><option value="MO">Macau</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="MN">Mongolia</option><option value="MM">Myanmar [Burma]</option><option value="NP">Nepal</option><option value="KP">North Korea</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PS">Palestinian Territories</option><option value="PH">Philippines</option><option value="QA">Qatar</option><option value="SA">Saudi Arabia</option><option value="SG">Singapore</option><option value="KR">South Korea</option><option value="LK">Sri Lanka</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TH">Thailand</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="AE">United Arab Emirates</option><option value="UZ">Uzbekistan</option><option value="VN">Vietnam</option><option value="YE">Yemen</option><option value="AL">Albania</option><option value="AD">Andorra</option><option value="AT">Austria</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BA">Bosnia and Herzegovina</option><option value="BG">Bulgaria</option><option value="HR">Croatia</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="EE">Estonia</option><option value="FO">Faroe Islands</option><option value="FI">Finland</option><option value="FR">France</option><option value="DE">Germany</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GG">Guernsey</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IT">Italy</option><option value="JE">Jersey</option><option value="XK">Kosovo</option><option value="LV">Latvia</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MK">Macedonia</option><option value="MT">Malta</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="ME">Montenegro</option><option value="NL">Netherlands</option><option value="NO">Norway</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="SM">San Marino</option><option value="RS">Serbia</option><option value="CS">Serbia and Montenegro</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="ES">Spain</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="UA">Ukraine</option><option value="GB">United Kingdom</option><option value="VA">Vatican City</option><option value="AX">Åland Islands</option><option value="AI">Anguilla</option><option value="AG">Antigua and Barbuda</option><option value="AW">Aruba</option><option value="BS">Bahamas</option><option value="BB">Barbados</option><option value="BZ">Belize</option><option value="BM">Bermuda</option><option value="BQ">Bonaire, Saint Eustatius and Saba</option><option value="VG">British Virgin Islands</option><option value="CA">Canada</option><option value="KY">Cayman Islands</option><option value="CR">Costa Rica</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="SV">El Salvador</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GT">Guatemala</option><option value="HT">Haiti</option><option value="HN">Honduras</option><option value="JM">Jamaica</option><option value="MQ">Martinique</option><option value="MX">Mexico</option><option value="MS">Montserrat</option><option value="AN">Netherlands Antilles</option><option value="NI">Nicaragua</option><option value="PA">Panama</option><option value="PR">Puerto Rico</option><option value="BL">Saint Barthélemy</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="SX">Sint Maarten</option><option value="TT">Trinidad and Tobago</option><option value="TC">Turks and Caicos Islands</option><option value="VI">U.S. Virgin Islands</option><option value="US">United States</option><option value="AR">Argentina</option><option value="BO">Bolivia</option><option value="BR">Brazil</option><option value="CL">Chile</option><option value="CO">Colombia</option><option value="EC">Ecuador</option><option value="FK">Falkland Islands</option><option value="GF">French Guiana</option><option value="GY">Guyana</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="SR">Suriname</option><option value="UY">Uruguay</option><option value="VE">Venezuela</option><option value="AS">American Samoa</option><option value="AU">Australia</option><option value="CK">Cook Islands</option><option value="TL">East Timor</option><option value="FJ">Fiji</option><option value="PF">French Polynesia</option><option value="GU">Guam</option><option value="KI">Kiribati</option><option value="MH">Marshall Islands</option><option value="FM">Micronesia</option><option value="NR">Nauru</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="PW">Palau</option><option value="PG">Papua New Guinea</option><option value="PN">Pitcairn Islands</option><option value="WS">Samoa</option><option value="SB">Solomon Islands</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TV">Tuvalu</option><option value="UM">U.S. Minor Outlying Islands</option><option value="VU">Vanuatu</option><option value="WF">Wallis and Futuna</option>  
+								</select>
+							</div>
+							<div class="span6">
+								<p><h3 class="heading">Enhanced Multi-Select</h3>
+								<select name="chosen_b" id="chosen_b" multiple data-placeholder="Choose a Country..." class="chzn_b span8">
+									<optgroup label="Africa"><option value="DZ">Algeria</option><option value="AO">Angola</option><option value="BJ">Benin</option><option value="BW">Botswana</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="CM">Cameroon</option><option value="CV">Cape Verde</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="KM">Comoros</option><option value="CD">Congo [DRC]</option><option value="CG">Congo [Republic]</option><option value="DJ">Djibouti</option><option value="EG">Egypt</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="ET">Ethiopia</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GH">Ghana</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="CI">Ivory Coast</option><option value="KE">Kenya</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="ML">Mali</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="NA">Namibia</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="RW">Rwanda</option><option value="RE">Réunion</option><option value="SH">Saint Helena</option><option value="SN">Senegal</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="SD">Sudan</option><option value="SZ">Swaziland</option><option value="ST">São Tomé and Príncipe</option><option value="TZ">Tanzania</option><option value="TG">Togo</option><option value="TN">Tunisia</option><option value="UG">Uganda</option><option value="EH">Western Sahara</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></optgroup><optgroup label="Antarctica"><option value="AQ">Antarctica</option><option value="BV">Bouvet Island</option><option value="TF">French Southern Territories</option><option value="HM">Heard Island and McDonald Island</option><option value="GS">South Georgia and the South Sandwich Islands</option></optgroup><optgroup label="Asia"><option value="AF">Afghanistan</option><option value="AM">Armenia</option><option value="AZ">Azerbaijan</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BT">Bhutan</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="KH">Cambodia</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos [Keeling] Islands</option><option value="GE">Georgia</option><option value="HK">Hong Kong</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IL">Israel</option><option value="JP">Japan</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LB">Lebanon</option><option value="MO">Macau</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="MN">Mongolia</option><option value="MM">Myanmar [Burma]</option><option value="NP">Nepal</option><option value="KP">North Korea</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PS">Palestinian Territories</option><option value="PH">Philippines</option><option value="QA">Qatar</option><option value="SA">Saudi Arabia</option><option value="SG">Singapore</option><option value="KR">South Korea</option><option value="LK">Sri Lanka</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TH">Thailand</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="AE">United Arab Emirates</option><option value="UZ">Uzbekistan</option><option value="VN">Vietnam</option><option value="YE">Yemen</option></optgroup><optgroup label="Europe"><option value="AL">Albania</option><option value="AD">Andorra</option><option value="AT">Austria</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BA">Bosnia and Herzegovina</option><option value="BG">Bulgaria</option><option value="HR">Croatia</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="EE">Estonia</option><option value="FO">Faroe Islands</option><option value="FI">Finland</option><option value="FR">France</option><option value="DE">Germany</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GG">Guernsey</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IT">Italy</option><option value="JE">Jersey</option><option value="XK">Kosovo</option><option value="LV">Latvia</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MK">Macedonia</option><option value="MT">Malta</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="ME">Montenegro</option><option value="NL">Netherlands</option><option value="NO">Norway</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="SM">San Marino</option><option value="RS">Serbia</option><option value="CS">Serbia and Montenegro</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="ES">Spain</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="UA">Ukraine</option><option value="GB">United Kingdom</option><option value="VA">Vatican City</option><option value="AX">Åland Islands</option></optgroup><optgroup label="North America"><option value="AI">Anguilla</option><option value="AG">Antigua and Barbuda</option><option value="AW">Aruba</option><option value="BS">Bahamas</option><option value="BB">Barbados</option><option value="BZ">Belize</option><option value="BM">Bermuda</option><option value="BQ">Bonaire, Saint Eustatius and Saba</option><option value="VG">British Virgin Islands</option><option value="CA">Canada</option><option value="KY">Cayman Islands</option><option value="CR">Costa Rica</option><option value="CU">Cuba</option><option value="CW">Curacao</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="SV">El Salvador</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GT">Guatemala</option><option value="HT">Haiti</option><option value="HN">Honduras</option><option value="JM">Jamaica</option><option value="MQ">Martinique</option><option value="MX">Mexico</option><option value="MS">Montserrat</option><option value="AN">Netherlands Antilles</option><option value="NI">Nicaragua</option><option value="PA">Panama</option><option value="PR">Puerto Rico</option><option value="BL">Saint Barthélemy</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="SX">Sint Maarten</option><option value="TT">Trinidad and Tobago</option><option value="TC">Turks and Caicos Islands</option><option value="VI">U.S. Virgin Islands</option><option value="US">United States</option></optgroup><optgroup label="South America"><option value="AR">Argentina</option><option value="BO">Bolivia</option><option value="BR">Brazil</option><option value="CL">Chile</option><option value="CO">Colombia</option><option value="EC">Ecuador</option><option value="FK">Falkland Islands</option><option value="GF">French Guiana</option><option value="GY">Guyana</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="SR">Suriname</option><option value="UY">Uruguay</option><option value="VE">Venezuela</option></optgroup><optgroup label="Oceania"><option value="AS">American Samoa</option><option value="AU">Australia</option><option value="CK">Cook Islands</option><option value="TL">East Timor</option><option value="FJ">Fiji</option><option value="PF">French Polynesia</option><option value="GU">Guam</option><option value="KI">Kiribati</option><option value="MH">Marshall Islands</option><option value="FM">Micronesia</option><option value="NR">Nauru</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="PW">Palau</option><option value="PG">Papua New Guinea</option><option value="PN">Pitcairn Islands</option><option value="WS">Samoa</option><option value="SB">Solomon Islands</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TV">Tuvalu</option><option value="UM">U.S. Minor Outlying Islands</option><option value="VU">Vanuatu</option><option value="WF">Wallis and Futuna</option></optgroup>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<p><h3 class="heading">Uniform</h3>
+						<div class="row-fluid">
+							<div class="span4">
+								<select class="uni_style">
+									<option>Lorem ipsum dolor sit amet amet, lorem ipsum</option>
+									<option>Lorem ipsum dolor sit amet</option>
+									<option>Lorem ipsum dolor sit amet</option>
+									<option>Lorem ipsum dolor sit amet</option>
+									<option>Lorem ipsum dolor sit amet</option>
+								</select>
+								<input type="file" name="uni_file" id="uni_file"  class="uni_style" />
+							</div>
+							<div class="span4">
+								<label class="uni-checkbox">
+									<input type="checkbox" value="option1" name="uni_c1" class="uni_style" />
+									Lorem ipsum dolor sit amet
+								</label>
+								<label class="uni-checkbox">
+									<input type="checkbox" value="option2" name="uni_c2" class="uni_style" />
+									Lorem ipsum dolor sit amet
+								</label>
+								<label class="uni-checkbox">
+									<input type="checkbox" value="option3" name="uni_c3" class="uni_style" />
+									Lorem ipsum dolor sit amet
+								</label>
+								<label class="uni-checkbox">
+									<input type="checkbox" value="option3" name="uni_c3" disabled="disabled" class="uni_style" />
+									Disabled
+								</label>
+							</div>
+							<div class="span4">
+								<label class="uni-radio">
+									<input type="radio" checked="" value="option1" id="uni_r1a" name="uni_r" class="uni_style" />
+									Lorem ipsum dolor sit amet
+								</label>
+								<label class="uni-radio">
+									<input type="radio" value="option2" id="uni_r1b" name="uni_r" class="uni_style" />
+									Lorem ipsum dolor sit amet
+								</label>
+								<label class="uni-radio">
+									<input type="radio" value="option2" id="uni_r1c" name="uni_r" disabled="disabled" class="uni_style" />
+									Disabled
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<p><h3 class="heading">File upload</h3>
+						<div class="row-fluid">
+							<div class="span4">
+								<div data-provides="fileupload" class="fileupload fileupload-new"><input type="hidden" />
+									<div class="input-append">
+										<div class="uneditable-input span2"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a>
+									</div>
+								</div>
+							</div>
+							<div class="span4">
+								<div data-provides="fileupload" class="fileupload fileupload-new"><input type="hidden" value="" name="">
+									<span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" name=""></span>
+									<span class="fileupload-preview"></span>
+									<a style="float: none" data-dismiss="fileupload" class="close fileupload-exists" href="#">&times;</a>
+								</div>
+							</div>
+						</div>
+						<div class="row-fluid">
+							<div class="span4">
+								<div data-provides="fileupload" class="fileupload fileupload-new"><input type="hidden">
+									<div style="width: 200px; height: 150px;" class="fileupload-new thumbnail"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /></div>
+									<div style="max-width: 200px; max-height: 150px; line-height: 0px;" class="fileupload-preview fileupload-exists thumbnail"></div>
+									<div>
+										<span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span>
+										<a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a>
+									</div>
+								</div>
+							</div>
+							<div class="span4">
+								<div data-provides="fileupload" class="fileupload fileupload-new"><input type="hidden" />
+									<div style="width: 200px; height: 150px; line-height: 150px;" class="fileupload-preview thumbnail"></div>
+									<div>
+										<span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span>
+										<a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a>
+									</div>
+								</div>
+							</div>
+							<div class="span4">
+								<div data-provides="fileupload" class="fileupload fileupload-new"><input type="hidden" />
+									<div style="width: 50px; height: 50px;" class="fileupload-new thumbnail"><img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA" alt="" /></div>
+									<div style="width: 50px; height: 50px; line-height: 50px;" class="fileupload-preview fileupload-exists thumbnail"></div>
+									<span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span>
+									<a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a>
+								</div>
+								<br/>
+								<div style="text-align: right" data-provides="fileupload" class="fileupload fileupload-new visible-desktop"><input type="hidden" />
+									<span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span>
+									<a data-dismiss="fileupload" class="btn fileupload-exists" href="#">Remove</a>
+									<div style="width: 50px; height: 50px;" class="fileupload-new thumbnail"><img src="http://www.placehold.it/50x50/EFEFEF/AAAAAA" alt="" /></div>
+									<div style="width: 50px; height: 50px; line-height: 50px;" class="fileupload-preview fileupload-exists thumbnail"></div>
+								</div>
+							</div>
+						</div>    
+					</div>
+					<div class="formSep">
+						<p><h3 class="heading">Masked inputs</h3>
+						<div class="row-fluid">
+							<div class="span3">
+								<label for="mask_date">Date</label>
+								<input type="text" class="span8" id="mask_date" />
+								<span class="help-block">99/99/9999</span>
+							</div>
+							<div class="span3">
+								<label for="mask_phone">Phone</label>
+								<input type="text" class="span8" id="mask_phone" />
+								<span class="help-block">(999) 999-9999</span>
+							</div>
+							<div class="span3">
+								<label for="mask_ssn">SSN Number</label>
+								<input type="text" class="span8" id="mask_ssn" />
+								<span class="help-block">999-99-9999</span>
+							</div>
+							<div class="span3">
+								<label for="mask_product">Product number</label>
+								<input type="text" class="span8" id="mask_product" />
+								<span class="help-block">AA-999-A999</span>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<p class="sepH_c"><h3 class="heading">Datepickers</h3>
+						<div class="row-fluid">
+							<div class="span3">
+								<input type="text" class="span8" id="dp1" />
+								<span class="help-block">Default datepicker</span>
+							</div>
+							<div class="span3">
+								<div class="input-append date" id="dp2" data-date-format="dd/mm/yyyy">
+									<input class="span6" type="text" readonly="readonly" /><span class="add-on"><i class="splashy-calendar_day"></i></span>
+								</div>
+								<span class="help-block">As component</span>
+							</div>
+							<div class="span3">
+								<div class="input-append date" id="dp_start">
+									<input class="span6" type="text" readonly="readonly" /><span class="add-on"><i class="splashy-calendar_day_up"></i></span>
+								</div>
+								<span class="help-block">Daterange - date start</span>
+							</div>
+							<div class="span3">
+								<div class="input-append date" id="dp_end">
+									<input class="span6" type="text" readonly="readonly" /><span class="add-on"><i class="splashy-calendar_day_down"></i></span>
+								</div>
+								<span class="help-block">Daterange - date end</span>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<p class="sepH_c"><h3 class="heading">Date Range Picker</h3>
+						<div class="row-fluid">
+							<div class="span4">
+								<div id="analytics" class="pull-right">
+								 	   <i class="fontello-icon-calendar-1"></i>
+								 	 <span></span> <b class="caret" style="margin-top: 8px"></b>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="formSep">
+						<p class="sepH_c"><h3 class="heading">Colorpicker</h3>
+						<div class="row-fluid">
+							<div class="span3">
+								<input type="text" class="span6" id="cp1" value="#2eb97a" />
+								<span class="help-block">Hex format</span>
+							</div>
+							<div class="span3">
+								<input type="text" class="span8" value="rgb(0,194,255,0.78)" id="cp2" data-color-format="rgba" />
+								<span class="help-block">Rgba format</span>
+							</div>
+							<div class="span3">
+								<div class="input-append color" data-color="rgb(218,57,41)" data-color-format="rgb" id="cp3">
+									<input type="text" class="span6" value="" readonly /><span class="add-on"><i style="background-color: rgb(218,57,41)"></i></span>
+								</div>
+								<span class="help-block">As component</span>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<p class="sepH_c"><h3 class="heading">Timepickers</h3>
+						<div class="row-fluid">
+							<div class="span3">
+								<input type="text" class="span8" id="tp_1" />
+								<span class="help-block">Show as modal (24h)</span>
+							</div>
+							<div class="span3">
+								<input type="text" class="span8" id="tp_2" />
+								<span class="help-block">Show as dropdown (12h)</span>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<p class="sepH_c"><h3 class="heading">Password strength checker</h3>
+						<div class="row-fluid">
+							<div class="span4">
+								<input type="password" placeholder="Password, min. 6 chars" class="span8" id="pass_check" />
+								<div id="pass_progress" class="progress progress-danger" style="width:60%">
+									<div class="bar" style="width: 0"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+															
+					<div class="formSep">
+						<p class="sepH_c"><h3 class="heading">Textarea word and character limiter</h3>
+						<div class="row-fluid">
+							<div class="span6">
+								<textarea name="txtarea_limit_chars" id="txtarea_limit_chars" cols="1" rows="4" class="span12"></textarea>
+							</div>
+							<div class="span6">
+								<textarea name="txtarea_limit_words" id="txtarea_limit_words" cols="1" rows="4" class="span12"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<p class="sepH_c"><h3 class="heading">Auto-Expanding Textarea</h3>
+						<div class="row-fluid">
+							<div class="span12">
+								<textarea name="auto_expand" id="auto_expand" cols="1" rows="4" class="span12"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<p><h3 class="heading">Tag Handler</h3>
+						<div class="row-fluid">
+							<div class="span6">
+								<ul id="array_tag_handler"></ul>
+								<span class="help-block">The Tag Handler initialized with preset tags, and autocomplete is turned on</span>
+							</div>
+							<div class="span6">
+								<ul id="max_tags_tag_handler"></ul>
+								<span class="help-block">Maximum 5 tags allowed.</span>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<p><h3 class="heading">Spinners</h3>
+						<div class="row-fluid">
+							<div class="span2">
+								<label for="sp_basic">Basic</label>
+								<input type="text" id="sp_basic" name="sp_basic" class="span12" value="100"/>
+							</div>
+							<div class="span2">
+								<label for="sp_dec">Decimal</label>
+								<input type="text" id="sp_dec" name="sp_dec" class="span12" value="10.25"/>
+							</div>
+							<div class="span2">
+								<label for="sp_currency">Currency</label>
+								<input type="text" id="sp_currency" name="sp_currency" class="span12" value="2" />
+								<span class="help-block">min:2, max:20</span>
+							</div>
+							<div class="span3">
+								<label>Data list</label>
+								<ul id="sp_list">
+									<li>item 1</li>
+									<li>item 2</li>
+									<li>item 3</li>
+									<li>item 4</li>
+									<li>item 5</li>
+									<li>item 6</li>
+									<li>item 7</li>
+									<li>item 8</li>
+									<li>item 9</li>
+									<li>item 10</li>
+								</ul>
+							</div>
+							<div class="span3">
+								<label>Users</label>
+								<div id="sp_users"></div>
+							</div>
+						</div>
+					</div>
+					<div class="formSep">
+						<p><h3 class="heading">Bootstrap WYSIWG Editor</h3>
+						<textarea name="wysiwg_bootstrap" id="wysiwg_bootstrap" class="span8" cols="20" rows="5"></textarea>
+					</div>
+					<div class="formSep">
+						<p><h3 class="heading">WYSIWG Editor with integrated File Manager</h3>
+						<textarea name="wysiwg_full" id="wysiwg_full" cols="30" rows="10"></textarea>
+					</div>
+					<p><h3 class="heading">Multiupload</h3>
+					<div id="multi_upload" class="frimouss-upload">
+						<p>You browser doesn't have Flash, Silverlight or HTML5 support.</p>
+					</div>
+                    
+                    <footer>
+                        <hr>
+                    	 <p class="pull-right">By Humain2 from <a target="_blank" href="http://www.pwaq.com">Pwaq.com</a></p>
+                      	 <p>&copy; 2013 <a target="_blank" href="http://www.pwaq.com">Pwaq Inc.</a></p>
+                    </footer> 
+                </div>
+                
+            </div>
+            
+			<!-- sidebar -->
+            <a href="javascript:void(0)" class="sidebar_switch on_switch ttip_r" title="Hide Sidebar">Sidebar switch</a>
+            <div class="sidebar">
+				
+				<div class="antiScroll">
+					<div class="antiscroll-inner">
+						<div class="antiscroll-content">
+					
+							<div class="antiScroll">
+								<div class="antiscroll-inner">
+									<div class="antiscroll-content">
+								
+										<div class="sidebar_inner">
+											<div id="side_accordion" class="accordion">
+												<div class="accordion-group">
+													<div class="accordion-heading">
+														<a href="dashboard.html" class="accordion-toggle">
+															<i class="fontello-icon-net"></i> Dashboard
+														</a>
+													</div>
+												</div>
+												
+												<div class="accordion-group">
+													<div class="accordion-heading">
+														<a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+															<i class="icon-list-alt"></i> Forms
+														</a>
+													</div>
+													<div class="accordion-body collapse" id="collapseOne">
+														<div class="accordion-inner">
+															<ul class="nav nav-list">
+																<li><a href="form_elements.html">Form elements</a></li>
+																<li><a href="form_extended.html">Extended form elements</a></li>
+																<li><a href="form_validation.html">Form Validation</a></li>
+																<li><a href="wizard.html">Wizard</a></li>
+																
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="accordion-group">
+													<div class="accordion-heading">
+														<a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+															<i class="icon-th"></i> Components 
+														</a>
+													</div>
+													<div class="accordion-body collapse" id="collapseTwo">
+														<div class="accordion-inner">
+															<ul class="nav nav-list">
+																<li><a href="alerts_btns.html">Alerts & Buttons</a></li>
+																<li><a href="icons.html">Icons</a></li>
+																<li><a href="notifications.html">Notifications</a></li>
+																<li><a href="tables.html">Tables</a></li>
+																<li><a href="tabs_accordion.html">Tabs & Accordion</a></li>
+																<li><a href="typography.html">Typography</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="accordion-group">
+													<div class="accordion-heading">
+														<a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+															<i class="icon-wrench"></i> Plugins 
+														</a>
+													</div>
+													<div class="accordion-body collapse" id="collapseThree">
+														<div class="accordion-inner">
+															<ul class="nav nav-list">
+																<li><a href="charts.html">Charts</a></li>
+																<li><a href="calendar.html">Calendar</a></li>
+																<li><a href="file_manager.html">File Manager</a></li>
+																<li><a href="contacts_list.html">Contacts list</a></li>
+															</ul>
+															
+														</div>
+													</div>
+												</div>
+												<div class="accordion-group">
+													<div class="accordion-heading">
+														<a href="#collapseFour" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+															<i class="icon-file"></i> Pages
+														</a>
+													</div>
+													<div class="accordion-body collapse" id="collapseFour">
+														<div class="accordion-inner">
+															<ul class="nav nav-list">
+																<li><a href="login.html">Login</a></li>
+																<li><a href="user.html">User profile</a></li>
+																<li><a href="chat.html">Chat</a></li>
+																<li><a href="mailbox.html">Mailbox</a></li>
+																<li><a href="search.html">Search page</a></li>
+																<li><a href="invoice.html">Invoice</a></li>
+																<li><a href="error_404.html">Error 404</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												
+												
+											</div>
+											
+											<div class="push"></div>
+										</div>
+										   
+										<div class="sidebar_info">
+											<div class="box">
+												        	<small>Using 16.8 GB of your 51.7 GB </small>
+												        	<div class="progress progress-success progress-striped active">
+												                <div style="width: 20%" class="bar"></div>
+												            </div>
+												            <small><strong>38% full</strong></small>
+											</div>
+										</div> 
+									
+									</div>
+								</div>
+							</div>
+							   
+							<div class="sidebar_info">
+								<ul class="unstyled">
+									<li>
+										<span class="act act-warning">65</span>
+										<strong>New comments</strong>
+									</li>
+									<li>
+										<span class="act act-success">10</span>
+										<strong>New articles</strong>
+									</li>
+									<li>
+										<span class="act act-danger">85</span>
+										<strong>New registrations</strong>
+									</li>
+								</ul>
+							</div> 
+						
+						</div>
+					</div>
+				</div>
+			
+			</div>
+            
+            <script src="js/jquery.min.js"></script>
+			<!-- smart resize event -->
+			<script src="js/jquery.debouncedresize.min.js"></script>
+			<!-- hidden elements width/height -->
+			<script src="js/jquery.actual.min.js"></script>
+			<!-- js cookie plugin -->
+			<script src="js/jquery.cookie.min.js"></script>
+			<!-- main bootstrap js -->
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<!-- bootstrap plugins -->
+			<script src="js/bootstrap.plugins.min.js"></script>
+			<!-- tooltips -->
+			<script src="lib/qtip2/jquery.qtip.min.js"></script>
+			<!-- sticky messages -->
+            <script src="lib/sticky/sticky.min.js"></script>
+			<!-- fix for ios orientation change -->
+			<script src="js/ios-orientationchange-fix.js"></script>
+			<!-- scrollbar -->
+			<script src="lib/antiscroll/antiscroll.js"></script>
+			<script src="lib/antiscroll/jquery-mousewheel.js"></script>
+			<!-- lightbox -->
+            <script src="lib/colorbox/jquery.colorbox.min.js"></script>
+            <!-- common functions -->
+			<script src="js/frimouss_common.js"></script>
+	
+            <script src="lib/jquery-ui/jquery-ui-1.8.23.custom.min.js"></script>
+            <!-- touch events for jquery ui-->
+            <script src="js/forms/jquery.ui.touch-punch.min.js"></script>
+            <!-- masked inputs -->
+            <script src="js/forms/jquery.inputmask.min.js"></script>
+            <!-- autosize textareas -->
+            <script src="js/forms/jquery.autosize.min.js"></script>
+            <!-- textarea limiter/counter -->
+            <script src="js/forms/jquery.counter.min.js"></script>
+            <!-- datepicker -->
+            <script src="lib/datepicker/bootstrap-datepicker.min.js"></script>
+            <!-- timepicker -->
+            <script src="lib/datepicker/bootstrap-timepicker.min.js"></script>
+            <!-- tag handler -->
+            <script src="lib/tag_handler/jquery.taghandler.min.js"></script>
+            <!-- input spinners -->
+            <script src="js/forms/jquery.spinners.min.js"></script>
+            <!-- styled form elements -->
+            <script src="lib/uniform/jquery.uniform.min.js"></script>
+            <!-- animated progressbars -->
+            <script src="js/forms/jquery.progressbar.anim.js"></script>
+           	<!-- Bootstrap wysihtml5 -->
+            <script src="lib/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+            <script src="lib/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script> 
+            <!-- multiselect -->
+            <script src="lib/multiselect/js/jquery.multi-select.min.js"></script>
+            <!-- enhanced select (chosen) -->
+            <script src="lib/chosen/chosen.jquery.min.js"></script>
+            <!-- TinyMce WYSIWG editor -->
+            <script src="lib/tiny_mce/jquery.tinymce.js"></script>
+			<!-- plupload and all it's runtimes and the jQuery queue widget (attachments) -->
+			<script type="text/javascript" src="lib/plupload/js/plupload.full.js"></script>
+			<script type="text/javascript" src="lib/plupload/js/jquery.plupload.queue/jquery.plupload.queue.full.js"></script>
+			<!-- date range picker -->
+			<script type="text/javascript" src="lib/bootstrap-daterangepicker-master/date.js"></script>
+			<script type="text/javascript" src="lib/bootstrap-daterangepicker-master/daterangepicker.js"></script>
+			<script type="text/javascript" src="lib/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script>
+			
+			
+            <!-- colorpicker -->
+			<script src="lib/colorpicker/bootstrap-colorpicker.js"></script>
+			<!-- password strength checker -->
+			<script src="lib/complexify/jquery.complexify.min.js"></script>
+			<!-- form functions -->
+            <script src="js/frimouss_forms.js"></script>
+    
+			
+		
+		</div>
+		<div id="loading_layer" style="display:none"><img src="img/ajax_loader.gif" alt="" /></div>
+	</body>
+</html>

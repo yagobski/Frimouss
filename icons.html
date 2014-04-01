@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Frimouss Admin Panel</title>
+    
+        <!-- Bootstrap framework -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+        <!-- tooltips-->
+            <link rel="stylesheet" href="lib/qtip2/jquery.qtip.min.css" />
+        <!-- notifications -->
+            <link rel="stylesheet" href="lib/sticky/sticky.css" />
+        <!-- notifications -->
+            <link rel="stylesheet" href="lib/sticky/sticky.css" />    
+        <!-- splashy icons -->
+            <link rel="stylesheet" href="img/splashy/splashy.css" />
+		<!-- flags -->
+            <link rel="stylesheet" href="img/flags/flags.css" />
+		<!-- flags -->
+            <link rel="stylesheet" href="img/flags/flags.css" />
+        <!-- colorbox -->
+            <link rel="stylesheet" href="lib/colorbox/colorbox.css" />	
+		<!-- main styles -->
+            <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+        <!-- Favicon -->
+            <link rel="shortcut icon" href="favicon.ico" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/ie.css" />
+            <script src="js/ie/html5.js"></script>
+			<script src="js/ie/respond.min.js"></script>
+        <![endif]-->
+		
+		<script>
+			//* hide all elements & show preloader
+			document.documentElement.className += 'js';
+		</script>
+    </head>
+    <body>		
+		<div id="maincontainer" class="clearfix">
+			<!-- header -->
+		    <header>
+		        <div class="navbar navbar-fixed-top">
+		            <div class="navbar-inner">
+		                <div class="container-fluid">
+		                	<div class="logo"><a href="dashboard.html" title="Homepage"><img width="101" height="25" alt="Logo" src="img/logo.png"></a></div>
+		                    <form class="visible-desktop" id="search-theme-form" method="post" accept-charset="UTF-8" action="/">
+		                                    <input type="text" size="15" maxlength="128" name="search_theme_form" id="search-q" class="typeahead" />
+		                                      <input type="submit" value="Search" name="op" id="search-submit" />                
+		                                    </form>
+		                                                      	
+		                    <ul class="nav user_menu pull-right">
+		                       
+								<li class="divider-vertical hidden-phone hidden-tablet"></li>
+								
+		                        <li class="dropdown">
+		                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-users"></span> Karim Benzama <b class="caret"></b></a>
+		                            <ul class="dropdown-menu">
+										<li><a href="user_profile.html">My Profile</a></li>
+										<li><a href="javascrip:void(0)">Settings</a></li>
+										<li><a href="javascrip:void(0)">Social</a></li>
+										<li><a href="javascrip:void(0)">Friends</a></li>
+										<li class="divider"></li>
+										<li><a href="login.html">Log Out</a></li>
+		                            </ul>
+		                        </li>
+		                        <li class="divider-vertical hidden-phone hidden-tablet"></li>
+		                        
+		                        <li class="dropdown">
+		                            <a href="#" class="dropdown-toggle nav_condensed" data-toggle="dropdown"><i class="flag-gb"></i> <b class="caret"></b></a>
+		                            <ul class="dropdown-menu">
+		                        		<li><a href="javascript:void(0)"><i class="flag-de"></i> Deutsch</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-fr"></i> Français</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-es"></i> Español</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-ma"></i> Arabic</a></li>
+		                            </ul>
+		                        </li>
+		                    </ul>
+		                    <ul class="nav user-menu visible-desktop pull-right">
+		                       <li><a data-toggle="modal" data-backdrop="static" href="#myTasks" title="New Task" class="btn-glyph ttip_b fontello-icon-edit"><span class="badge badge-important">9</span></a></li>
+		                       <li><a data-toggle="modal" data-backdrop="static" href="#myMail" title="Message" class="btn-glyph ttip_b fontello-icon-mail-1"><span class="badge badge-important">2</span></a></li>
+		                       <li><a href="chat.html" title="Support" class="btn-glyph ttip_b fontello-icon-lifebuoy"><span class="badge badge-important">1</span></a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="modal hide fade" id="myMail">
+		            <div class="modal-header">
+		                <button class="close" data-dismiss="modal">×</button>
+		                <h3>New messages</h3>
+		            </div>
+		            <div class="modal-body">
+		                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		                <table class="table table-condensed table-striped" data-provides="rowlink">
+		                    <thead>
+		                        <tr>
+		                            <th>Sender</th>
+		                            <th>Subject</th>
+		                            <th>Date</th>
+		                            <th>Size</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>Anji Mariotta</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>23/05/2013</td>
+		                            <td>45KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Driss Willis</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>24/05/2013</td>
+		                            <td>15KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Marlene Bui</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>25/05/2013</td>
+		                            <td>128KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Dhung Found</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>25/05/2013</td>
+		                            <td>31KB</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            <div class="modal-footer">
+		                <a href="mailbox.html" class="btn">Go to mailbox</a>
+		            </div>
+		        </div>
+		        <div class="modal fade" id="myTasks">
+		            <div class="modal-header">
+		                <button class="close" data-dismiss="modal">×</button>
+		                <h3>New Tasks</h3>
+		            </div>
+		            <div class="modal-body">
+		                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		                <table class="table table-condensed table-striped" data-provides="rowlink">
+		                    <thead>
+		                        <tr>
+		                            <th>id</th>
+		                            <th>Summary</th>
+		                            <th>Updated</th>
+		                            <th>Priority</th>
+		                            <th>Status</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>#123</td>
+		                            <td><a href="javascript:void(0)">Fix navigation menu&hellip;</a></td>
+		                            <td>23/05/2012</td>
+		                            <td class="tac"><span class="label label-important">High</span></td>
+		                            <td>Open</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#218</td>
+		                            <td><a href="javascript:void(0)">Upgrade Apache and Mysql &hellip;</a></td>
+		                            <td>22/05/2012</td>
+		                            <td class="tac"><span class="label label-warning">Medium</span></td>
+		                            <td>Reopen</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#425</td>
+		                            <td><a href="javascript:void(0)">Make performance test on server&hellip;</a></td>
+		                            <td>22/05/2012</td>
+		                            <td class="tac"><span class="label label-success">Low</span></td>
+		                            <td>Updated</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#510</td>
+		                            <td><a href="javascript:void(0)">Fix design border&hellip;</a></td>
+		                            <td>17/05/2012</td>
+		                            <td class="tac"><span class="label label-warning">Low</span></td>
+		                            <td>Open</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            <div class="modal-footer">
+		                <a href="taskmanager.html" class="btn">Go to task manager</a>
+		            </div>
+		        </div>
+		    </header>		    
+		    <!-- main content -->
+		    <div id="contentwrapper">
+		        <div class="main_content">
+					
+					<div class="header">
+					 	<h1 class="page-title"><i class="fontello-icon-fire"></i> Icons</h1>
+					</div>
+					<ul class="breadcrumb">
+					    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+				        <li class="active">Icons</li>
+			        </ul>
+					
+					<div class="container-fluid"> 
+						<h2 class="heading">Fontello <small>easy iconic fonts</small></h2>
+					        <p>Combination ICONICS fonts Entypo, Font Awesome, Iconic, Typicons, Modern Pictograms, Web symbols, Brandico. The icons they can be any color you like, have the same size as your text and are subject to CSS text effects <code>.text-shadow .color</code> ...</p>
+					            <hr class="strong margin-0x">
+					            <h3 class="heading">Symbols <small>select &amp; use</small></h3>
+					                  <p class="well"> For iconics icons you can use an <code>&lt;i&gt;</code> or <code>&lt;span&gt;</code> tag, just like regular for icons. To use, place the following code just about anywhere: <code>&lt;i class="fontello-icon-publish"&gt;&lt;/i&gt;</code></p>
+					                        <div class="row-fluid">
+					                                                    <div class="span3">
+					                                                        <ul class="the-icons">
+					                                                            <li><i class="fontello-icon-hash"></i> fontello-icon-hash</li>
+					                                                            <li><i class="fontello-icon-plus-3"></i> fontello-icon-plus-3</li>
+					                                                            <li><i class="fontello-icon-plus-4"></i> fontello-icon-plus-4</li>
+					                                                            <li><i class="fontello-icon-plus-1"></i> fontello-icon-plus-1</li>
+					                                                            <li><i class="fontello-icon-plus-2"></i> fontello-icon-plus-2</li>
+					                                                            <li><i class="fontello-icon-plus"></i> fontello-icon-plus</li>
+					                                                            <li><i class="fontello-icon-minus-3"></i> fontello-icon-minus-3</li>
+					                                                            <li><i class="fontello-icon-minus"></i> fontello-icon-minus</li>
+					                                                            <li><i class="fontello-icon-minus-2"></i> fontello-icon-minus-2</li>
+					                                                            <li><i class="fontello-icon-minus-1"></i> fontello-icon-minus-1</li>
+					                                                            <li><i class="fontello-icon-colon"></i> fontello-icon-colon</li>
+					                                                            <li><i class="fontello-icon-semicolon"></i> fontello-icon-semicolon</li>
+					                                                            <li><i class="fontello-icon-eq"></i> fontello-icon-eq</li>
+					                                                            <li><i class="fontello-icon-at-1"></i> fontello-icon-at-1</li>
+					                                                            <li><i class="fontello-icon-at"></i> fontello-icon-at</li>
+					                                                            <li><i class="fontello-icon-flask"></i> fontello-icon-flask</li>
+					                                                            <li><i class="fontello-icon-pilcrow"></i> fontello-icon-pilcrow</li>
+					                                                            <li><i class="fontello-icon-info-2"></i> fontello-icon-info-2</li>
+					                                                            <li><i class="fontello-icon-info"></i> fontello-icon-info</li>
+					                                                            <li><i class="fontello-icon-info-1"></i> fontello-icon-info-1</li>
+					                                                            <li><i class="fontello-icon-left-1"></i> fontello-icon-left-1</li>
+					                                                            <li><i class="fontello-icon-left-2"></i> fontello-icon-left-2</li>
+					                                                            <li><i class="fontello-icon-left-3"></i> fontello-icon-left-3</li>
+					                                                            <li><i class="fontello-icon-left"></i> fontello-icon-left</li>
+					                                                            <li><i class="fontello-icon-up"></i> fontello-icon-up</li>
+					                                                            <li><i class="fontello-icon-up-2"></i> fontello-icon-up-2</li>
+					                                                            <li><i class="fontello-icon-up-4"></i> fontello-icon-up-4</li>
+					                                                            <li><i class="fontello-icon-up-3"></i> fontello-icon-up-3</li>
+					                                                            <li><i class="fontello-icon-up-1"></i> fontello-icon-up-1</li>
+					                                                            <li><i class="fontello-icon-right-2"></i> fontello-icon-right-2</li>
+					                                                            <li><i class="fontello-icon-right-1"></i> fontello-icon-right-1</li>
+					                                                            <li><i class="fontello-icon-right"></i> fontello-icon-right</li>
+					                                                            <li><i class="fontello-icon-right-3"></i> fontello-icon-right-3</li>
+					                                                            <li><i class="fontello-icon-down"></i> fontello-icon-down</li>
+					                                                            <li><i class="fontello-icon-down-4"></i> fontello-icon-down-4</li>
+					                                                            <li><i class="fontello-icon-down-3"></i> fontello-icon-down-3</li>
+					                                                            <li><i class="fontello-icon-down-2"></i> fontello-icon-down-2</li>
+					                                                            <li><i class="fontello-icon-down-1"></i> fontello-icon-down-1</li>
+					                                                            <li><i class="fontello-icon-level-down"></i> fontello-icon-level-down</li>
+					                                                            <li><i class="fontello-icon-undo"></i> fontello-icon-undo</li>
+					                                                            <li><i class="fontello-icon-exchange"></i> fontello-icon-exchange</li>
+					                                                            <li><i class="fontello-icon-infinity"></i> fontello-icon-infinity</li>
+					                                                            <li><i class="fontello-icon-home-1"></i> fontello-icon-home-1</li>
+					                                                            <li><i class="fontello-icon-home-4"></i> fontello-icon-home-4</li>
+					                                                            <li><i class="fontello-icon-home-2"></i> fontello-icon-home-2</li>
+					                                                            <li><i class="fontello-icon-home-3"></i> fontello-icon-home-3</li>
+					                                                            <li><i class="fontello-icon-home"></i> fontello-icon-home</li>
+					                                                            <li><i class="fontello-icon-keyboard"></i> fontello-icon-keyboard</li>
+					                                                            <li><i class="fontello-icon-split"></i> fontello-icon-split</li>
+					                                                            <li><i class="fontello-icon-pause"></i> fontello-icon-pause</li>
+					                                                            <li><i class="fontello-icon-pause-1"></i> fontello-icon-pause-1</li>
+					                                                            <li><i class="fontello-icon-pause-2"></i> fontello-icon-pause-2</li>
+					                                                            <li><i class="fontello-icon-eject-2"></i> fontello-icon-eject-2</li>
+					                                                            <li><i class="fontello-icon-eject-1"></i> fontello-icon-eject-1</li>
+					                                                            <li><i class="fontello-icon-fast-fw-1"></i> fontello-icon-fast-fw-1</li>
+					                                                            <li><i class="fontello-icon-fast-fw"></i> fontello-icon-fast-fw</li>
+					                                                            <li><i class="fontello-icon-fast-bw-1"></i> fontello-icon-fast-bw-1</li>
+					                                                            <li><i class="fontello-icon-fast-bw"></i> fontello-icon-fast-bw</li>
+					                                                            <li><i class="fontello-icon-to-end-1"></i> fontello-icon-to-end-1</li>
+					                                                            <li><i class="fontello-icon-to-end-2"></i> fontello-icon-to-end-2</li>
+					                                                            <li><i class="fontello-icon-to-end"></i> fontello-icon-to-end</li>
+					                                                            <li><i class="fontello-icon-to-start-1"></i> fontello-icon-to-start-1</li>
+					                                                            <li><i class="fontello-icon-to-start"></i> fontello-icon-to-start</li>
+					                                                            <li><i class="fontello-icon-to-start-2"></i> fontello-icon-to-start-2</li>
+					                                                            <li><i class="fontello-icon-hourglass"></i> fontello-icon-hourglass</li>
+					                                                            <li><i class="fontello-icon-stop-2"></i> fontello-icon-stop-2</li>
+					                                                            <li><i class="fontello-icon-stop"></i> fontello-icon-stop</li>
+					                                                            <li><i class="fontello-icon-stop-1"></i> fontello-icon-stop-1</li>
+					                                                            <li><i class="fontello-icon-up-dir"></i> fontello-icon-up-dir</li>
+					                                                            <li><i class="fontello-icon-glyph78"></i> fontello-icon-glyph78</li>
+					                                                            <li><i class="fontello-icon-play-1"></i> fontello-icon-play-1</li>
+					                                                            <li><i class="fontello-icon-play"></i> fontello-icon-play</li>
+					                                                            <li><i class="fontello-icon-play-2"></i> fontello-icon-play-2</li>
+					                                                            <li><i class="fontello-icon-right-dir"></i> fontello-icon-right-dir</li>
+					                                                            <li><i class="fontello-icon-right-dir-2"></i> fontello-icon-right-dir-2</li>
+					                                                            <li><i class="fontello-icon-right-dir-1"></i> fontello-icon-right-dir-1</li>
+					                                                            <li><i class="fontello-icon-down-dir"></i> fontello-icon-down-dir</li>
+					                                                            <li><i class="fontello-icon-down-dir-2"></i> fontello-icon-down-dir-2</li>
+					                                                            <li><i class="fontello-icon-down-dir-1"></i> fontello-icon-down-dir-1</li>
+					                                                            <li><i class="fontello-icon-left-dir-1"></i> fontello-icon-left-dir-1</li>
+					                                                            <li><i class="fontello-icon-left-dir"></i> fontello-icon-left-dir</li>
+					                                                            <li><i class="fontello-icon-sun-inv"></i> fontello-icon-sun-inv</li>
+					                                                            <li><i class="fontello-icon-cloud-2"></i> fontello-icon-cloud-2</li>
+					                                                            <li><i class="fontello-icon-cloud"></i> fontello-icon-cloud</li>
+					                                                            <li><i class="fontello-icon-cloud-1"></i> fontello-icon-cloud-1</li>
+					                                                            <li><i class="fontello-icon-umbrella"></i> fontello-icon-umbrella</li>
+					                                                            <li><i class="fontello-icon-star-5"></i> fontello-icon-star-5</li>
+					                                                            <li><i class="fontello-icon-star-4"></i> fontello-icon-star-4</li>
+					                                                            <li><i class="fontello-icon-star-2"></i> fontello-icon-star-2</li>
+					                                                            <li><i class="fontello-icon-star-3"></i> fontello-icon-star-3</li>
+					                                                            <li><i class="fontello-icon-star"></i> fontello-icon-star</li>
+					                                                            <li><i class="fontello-icon-star-1"></i> fontello-icon-star-1</li>
+					                                                            <li><i class="fontello-icon-star-empty"></i> fontello-icon-star-empty</li>
+					                                                            <li><i class="fontello-icon-star-empty-1"></i> fontello-icon-star-empty-1</li>
+					                                                            <li><i class="fontello-icon-check"></i> fontello-icon-check</li>
+					                                                            <li><i class="fontello-icon-th-list-1"></i> fontello-icon-th-list-1</li>
+					                                                            <li><i class="fontello-icon-th-list"></i> fontello-icon-th-list</li>
+					                                                            <li><i class="fontello-icon-th-list-4"></i> fontello-icon-th-list-4</li>
+					                                                            <li><i class="fontello-icon-th-list-2"></i> fontello-icon-th-list-2</li>
+					                                                            <li><i class="fontello-icon-th-list-3"></i> fontello-icon-th-list-3</li>
+					                                                            <li><i class="fontello-icon-sun"></i> fontello-icon-sun</li>
+					                                                            <li><i class="fontello-icon-sun-1"></i> fontello-icon-sun-1</li>
+					                                                            <li><i class="fontello-icon-moon"></i> fontello-icon-moon</li>
+					                                                            <li><i class="fontello-icon-moon-1"></i> fontello-icon-moon-1</li>
+					                                                            <li><i class="fontello-icon-heart-empty"></i> fontello-icon-heart-empty</li>
+					                                                            <li><i class="fontello-icon-heart-empty-3"></i> fontello-icon-heart-empty-3</li>
+					                                                            <li><i class="fontello-icon-heart-empty-1"></i> fontello-icon-heart-empty-1</li>
+					                                                            <li><i class="fontello-icon-heart-empty-2"></i> fontello-icon-heart-empty-2</li>
+					                                                            <li><i class="fontello-icon-heart-5"></i> fontello-icon-heart-5</li>
+					                                                            <li><i class="fontello-icon-heart-3"></i> fontello-icon-heart-3</li>
+					                                                            <li><i class="fontello-icon-heart-1"></i> fontello-icon-heart-1</li>
+					                                                            <li><i class="fontello-icon-heart"></i> fontello-icon-heart</li>
+					                                                            <li><i class="fontello-icon-heart-4"></i> fontello-icon-heart-4</li>
+					                                                            <li><i class="fontello-icon-heart-2"></i> fontello-icon-heart-2</li>
+					                                                            <li><i class="fontello-icon-music"></i> fontello-icon-music</li>
+					                                                            <li><i class="fontello-icon-music-1"></i> fontello-icon-music-1</li>
+					                                                            <li><i class="fontello-icon-music-2"></i> fontello-icon-music-2</li>
+					                                                            <li><i class="fontello-icon-th"></i> fontello-icon-th</li>
+					                                                            <li><i class="fontello-icon-th-1"></i> fontello-icon-th-1</li>
+					                                                            <li><i class="fontello-icon-th-2"></i> fontello-icon-th-2</li>
+					                                                            <li><i class="fontello-icon-th-4"></i> fontello-icon-th-4</li>
+					                                                            <li><i class="fontello-icon-th-3"></i> fontello-icon-th-3</li>
+					                                                            <li><i class="fontello-icon-flag-2"></i> fontello-icon-flag-2</li>
+					                                                            <li><i class="fontello-icon-flag-1"></i> fontello-icon-flag-1</li>
+					                                                            <li><i class="fontello-icon-flag"></i> fontello-icon-flag</li>
+					                                                            <li><i class="fontello-icon-cog-4"></i> fontello-icon-cog-4</li>
+					                                                            <li><i class="fontello-icon-cog-2"></i> fontello-icon-cog-2</li>
+					                                                            <li><i class="fontello-icon-cog"></i> fontello-icon-cog</li>
+					                                                            <li><i class="fontello-icon-cog-1"></i> fontello-icon-cog-1</li>
+					                                                            <li><i class="fontello-icon-cog-3"></i> fontello-icon-cog-3</li>
+					                                                            <li><i class="fontello-icon-attention"></i> fontello-icon-attention</li>
+					                                                            <li><i class="fontello-icon-attention-3"></i> fontello-icon-attention-3</li>
+					                                                            <li><i class="fontello-icon-attention-2"></i> fontello-icon-attention-2</li>
+					                                                            <li><i class="fontello-icon-attention-1"></i> fontello-icon-attention-1</li>
+					                                                            <li><i class="fontello-icon-attention-4"></i> fontello-icon-attention-4</li>
+					                                                            <li><i class="fontello-icon-flash"></i> fontello-icon-flash</li>
+					                                                            <li><i class="fontello-icon-flash-2"></i> fontello-icon-flash-2</li>
+					                                                            <li><i class="fontello-icon-flash-1"></i> fontello-icon-flash-1</li>
+					                                                            <li><i class="fontello-icon-record"></i> fontello-icon-record</li>
+					                                                            <li><i class="fontello-icon-key-1"></i> fontello-icon-key-1</li>
+					                                                            <li><i class="fontello-icon-rain"></i> fontello-icon-rain</li>
+					                                                            <li><i class="fontello-icon-cog-alt"></i> fontello-icon-cog-alt</li>
+					                                                            <li><i class="fontello-icon-scissors"></i> fontello-icon-scissors</li>
+					                                                            <li><i class="fontello-icon-flight-1"></i> fontello-icon-flight-1</li>
+					                                                            <li><i class="fontello-icon-flight"></i> fontello-icon-flight</li>
+					                                                            <li><i class="fontello-icon-mail-1"></i> fontello-icon-mail-1</li>
+					                                                            <li><i class="fontello-icon-mail-4"></i> fontello-icon-mail-4</li>
+					                                                            <li><i class="fontello-icon-mail"></i> fontello-icon-mail</li>
+					                                                            <li><i class="fontello-icon-mail-2"></i> fontello-icon-mail-2</li>
+					                                                            <li><i class="fontello-icon-mail-3"></i> fontello-icon-mail-3</li>
+					                                                            <li><i class="fontello-icon-mail-5"></i> fontello-icon-mail-5</li>
+					                                                            <li><i class="fontello-icon-edit"></i> fontello-icon-edit</li>
+					                                                            <li><i class="fontello-icon-edit-1"></i> fontello-icon-edit-1</li>
+					                                                            <li><i class="fontello-icon-edit-2"></i> fontello-icon-edit-2</li>
+					                                                            <li><i class="fontello-icon-pencil-4"></i> fontello-icon-pencil-4</li>
+					                                                            <li><i class="fontello-icon-pencil"></i> fontello-icon-pencil</li>
+					                                                            <li><i class="fontello-icon-pencil-3"></i> fontello-icon-pencil-3</li>
+					                                                            <li><i class="fontello-icon-pencil-2"></i> fontello-icon-pencil-2</li>
+					                                                            <li><i class="fontello-icon-pencil-1"></i> fontello-icon-pencil-1</li>
+					                                                            <li><i class="fontello-icon-pencil-neg"></i> fontello-icon-pencil-neg</li>
+					                                                            <li><i class="fontello-icon-pencil-alt-1"></i> fontello-icon-pencil-alt-1</li>
+					                                                            <li><i class="fontello-icon-pencil-alt"></i> fontello-icon-pencil-alt</li>
+					                                                            <li><i class="fontello-icon-feather"></i> fontello-icon-feather</li>
+					                                                            <li><i class="fontello-icon-ok-4"></i> fontello-icon-ok-4</li>
+					                                                            <li><i class="fontello-icon-ok-2"></i> fontello-icon-ok-2</li>
+					                                                            <li><i class="fontello-icon-ok-5"></i> fontello-icon-ok-5</li>
+					                                                            <li><i class="fontello-icon-ok-3"></i> fontello-icon-ok-3</li>
+					                                                            <li><i class="fontello-icon-ok-1"></i> fontello-icon-ok-1</li>
+					                                                            <li><i class="fontello-icon-ok"></i> fontello-icon-ok</li>
+					                                                            <li><i class="fontello-icon-ok-circle-1"></i> fontello-icon-ok-circle-1</li>
+					                                                            <li><i class="fontello-icon-ok-circle-2"></i> fontello-icon-ok-circle-2</li>
+					                                                            <li><i class="fontello-icon-ok-circle"></i> fontello-icon-ok-circle</li>
+					                                                            <li><i class="fontello-icon-cancel"></i> fontello-icon-cancel</li>
+					                                                            <li><i class="fontello-icon-cancel-2"></i> fontello-icon-cancel-2</li>
+					                                                            <li><i class="fontello-icon-cancel-4"></i> fontello-icon-cancel-4</li>
+					                                                            <li><i class="fontello-icon-cancel-3"></i> fontello-icon-cancel-3</li>
+					                                                            <li><i class="fontello-icon-cancel-1"></i> fontello-icon-cancel-1</li>
+					                                                            <li><i class="fontello-icon-cancel-5"></i> fontello-icon-cancel-5</li>
+					                                                            <li><i class="fontello-icon-cancel-circle-2"></i> fontello-icon-cancel-circle-2</li>
+					                                                            <li><i class="fontello-icon-cancel-circle"></i> fontello-icon-cancel-circle</li>
+					                                                            <li><i class="fontello-icon-cancel-circle-3"></i> fontello-icon-cancel-circle-3</li>
+					                                                            <li><i class="fontello-icon-cancel-circle-4"></i> fontello-icon-cancel-circle-4</li>
+					                                                            <li><i class="fontello-icon-cancel-circle-1"></i> fontello-icon-cancel-circle-1</li>
+					                                                            <li><i class="fontello-icon-asterisk"></i> fontello-icon-asterisk</li>
+					                                                            <li><i class="fontello-icon-help"></i> fontello-icon-help</li>
+					                                                            <li><i class="fontello-icon-help-1"></i> fontello-icon-help-1</li>
+					                                                        </ul>
+					                                                    </div>
+					                                                    <div class="span3">
+					                                                        <ul class="the-icons">
+					                                                            <li><i class="fontello-icon-help-2"></i> fontello-icon-help-2</li>
+					                                                            <li><i class="fontello-icon-attention-circle"></i> fontello-icon-attention-circle</li>
+					                                                            <li><i class="fontello-icon-quote-left-alt"></i> fontello-icon-quote-left-alt</li>
+					                                                            <li><i class="fontello-icon-quote-right-alt"></i> fontello-icon-quote-right-alt</li>
+					                                                            <li><i class="fontello-icon-quote-left"></i> fontello-icon-quote-left</li>
+					                                                            <li><i class="fontello-icon-quote-right-1"></i> fontello-icon-quote-right-1</li>
+					                                                            <li><i class="fontello-icon-quote-right"></i> fontello-icon-quote-right</li>
+					                                                            <li><i class="fontello-icon-plus-circle-1"></i> fontello-icon-plus-circle-1</li>
+					                                                            <li><i class="fontello-icon-plus-circle"></i> fontello-icon-plus-circle</li>
+					                                                            <li><i class="fontello-icon-plus-circle-2"></i> fontello-icon-plus-circle-2</li>
+					                                                            <li><i class="fontello-icon-plus-circle-3"></i> fontello-icon-plus-circle-3</li>
+					                                                            <li><i class="fontello-icon-minus-circle-1"></i> fontello-icon-minus-circle-1</li>
+					                                                            <li><i class="fontello-icon-minus-circle-2"></i> fontello-icon-minus-circle-2</li>
+					                                                            <li><i class="fontello-icon-minus-circle-3"></i> fontello-icon-minus-circle-3</li>
+					                                                            <li><i class="fontello-icon-minus-circle"></i> fontello-icon-minus-circle</li>
+					                                                            <li><i class="fontello-icon-right-thin"></i> fontello-icon-right-thin</li>
+					                                                            <li><i class="fontello-icon-direction"></i> fontello-icon-direction</li>
+					                                                            <li><i class="fontello-icon-direction-1"></i> fontello-icon-direction-1</li>
+					                                                            <li><i class="fontello-icon-forward-1"></i> fontello-icon-forward-1</li>
+					                                                            <li><i class="fontello-icon-forward-3"></i> fontello-icon-forward-3</li>
+					                                                            <li><i class="fontello-icon-forward"></i> fontello-icon-forward</li>
+					                                                            <li><i class="fontello-icon-forward-2"></i> fontello-icon-forward-2</li>
+					                                                            <li><i class="fontello-icon-ccw"></i> fontello-icon-ccw</li>
+					                                                            <li><i class="fontello-icon-cw-3"></i> fontello-icon-cw-3</li>
+					                                                            <li><i class="fontello-icon-cw-2"></i> fontello-icon-cw-2</li>
+					                                                            <li><i class="fontello-icon-cw"></i> fontello-icon-cw</li>
+					                                                            <li><i class="fontello-icon-cw-4"></i> fontello-icon-cw-4</li>
+					                                                            <li><i class="fontello-icon-cw-1"></i> fontello-icon-cw-1</li>
+					                                                            <li><i class="fontello-icon-arrow-curved"></i> fontello-icon-arrow-curved</li>
+					                                                            <li><i class="fontello-icon-left-thin"></i> fontello-icon-left-thin</li>
+					                                                            <li><i class="fontello-icon-up-thin"></i> fontello-icon-up-thin</li>
+					                                                            <li><i class="fontello-icon-down-thin"></i> fontello-icon-down-thin</li>
+					                                                            <li><i class="fontello-icon-resize-vertical-1"></i> fontello-icon-resize-vertical-1</li>
+					                                                            <li><i class="fontello-icon-resize-vertical"></i> fontello-icon-resize-vertical</li>
+					                                                            <li><i class="fontello-icon-resize-horizontal-1"></i> fontello-icon-resize-horizontal-1</li>
+					                                                            <li><i class="fontello-icon-resize-horizontal"></i> fontello-icon-resize-horizontal</li>
+					                                                            <li><i class="fontello-icon-eject"></i> fontello-icon-eject</li>
+					                                                            <li><i class="fontello-icon-list-add"></i> fontello-icon-list-add</li>
+					                                                            <li><i class="fontello-icon-play-circle2-1"></i> fontello-icon-play-circle2-1</li>
+					                                                            <li><i class="fontello-icon-left-circle-1"></i> fontello-icon-left-circle-1</li>
+					                                                            <li><i class="fontello-icon-left-circle"></i> fontello-icon-left-circle</li>
+					                                                            <li><i class="fontello-icon-right-circle-1"></i> fontello-icon-right-circle-1</li>
+					                                                            <li><i class="fontello-icon-right-circle"></i> fontello-icon-right-circle</li>
+					                                                            <li><i class="fontello-icon-up-circle-1"></i> fontello-icon-up-circle-1</li>
+					                                                            <li><i class="fontello-icon-up-circle"></i> fontello-icon-up-circle</li>
+					                                                            <li><i class="fontello-icon-down-circle"></i> fontello-icon-down-circle</li>
+					                                                            <li><i class="fontello-icon-down-circle-1"></i> fontello-icon-down-circle-1</li>
+					                                                            <li><i class="fontello-icon-left-bold"></i> fontello-icon-left-bold</li>
+					                                                            <li><i class="fontello-icon-right-bold"></i> fontello-icon-right-bold</li>
+					                                                            <li><i class="fontello-icon-up-bold"></i> fontello-icon-up-bold</li>
+					                                                            <li><i class="fontello-icon-down-bold"></i> fontello-icon-down-bold</li>
+					                                                            <li><i class="fontello-icon-user-add"></i> fontello-icon-user-add</li>
+					                                                            <li><i class="fontello-icon-star-half"></i> fontello-icon-star-half</li>
+					                                                            <li><i class="fontello-icon-ok-circle2"></i> fontello-icon-ok-circle2</li>
+					                                                            <li><i class="fontello-icon-cancel-circle2"></i> fontello-icon-cancel-circle2</li>
+					                                                            <li><i class="fontello-icon-help-circle-2"></i> fontello-icon-help-circle-2</li>
+					                                                            <li><i class="fontello-icon-help-circle"></i> fontello-icon-help-circle</li>
+					                                                            <li><i class="fontello-icon-help-circle-1"></i> fontello-icon-help-circle-1</li>
+					                                                            <li><i class="fontello-icon-info-circle-1"></i> fontello-icon-info-circle-1</li>
+					                                                            <li><i class="fontello-icon-info-circle"></i> fontello-icon-info-circle</li>
+					                                                            <li><i class="fontello-icon-info-circle-2"></i> fontello-icon-info-circle-2</li>
+					                                                            <li><i class="fontello-icon-back"></i> fontello-icon-back</li>
+					                                                            <li><i class="fontello-icon-back-alt"></i> fontello-icon-back-alt</li>
+					                                                            <li><i class="fontello-icon-th-large-1"></i> fontello-icon-th-large-1</li>
+					                                                            <li><i class="fontello-icon-th-large"></i> fontello-icon-th-large</li>
+					                                                            <li><i class="fontello-icon-lock-empty"></i> fontello-icon-lock-empty</li>
+					                                                            <li><i class="fontello-icon-lock-open-empty"></i> fontello-icon-lock-open-empty</li>
+					                                                            <li><i class="fontello-icon-eye-4"></i> fontello-icon-eye-4</li>
+					                                                            <li><i class="fontello-icon-eye-1"></i> fontello-icon-eye-1</li>
+					                                                            <li><i class="fontello-icon-eye-3"></i> fontello-icon-eye-3</li>
+					                                                            <li><i class="fontello-icon-eye-2"></i> fontello-icon-eye-2</li>
+					                                                            <li><i class="fontello-icon-eye"></i> fontello-icon-eye</li>
+					                                                            <li><i class="fontello-icon-eye-off"></i> fontello-icon-eye-off</li>
+					                                                            <li><i class="fontello-icon-tag-4"></i> fontello-icon-tag-4</li>
+					                                                            <li><i class="fontello-icon-tag-3"></i> fontello-icon-tag-3</li>
+					                                                            <li><i class="fontello-icon-tag-1"></i> fontello-icon-tag-1</li>
+					                                                            <li><i class="fontello-icon-tag-2"></i> fontello-icon-tag-2</li>
+					                                                            <li><i class="fontello-icon-tag"></i> fontello-icon-tag</li>
+					                                                            <li><i class="fontello-icon-tag-5"></i> fontello-icon-tag-5</li>
+					                                                            <li><i class="fontello-icon-tags"></i> fontello-icon-tags</li>
+					                                                            <li><i class="fontello-icon-tag-empty"></i> fontello-icon-tag-empty</li>
+					                                                            <li><i class="fontello-icon-camera-alt"></i> fontello-icon-camera-alt</li>
+					                                                            <li><i class="fontello-icon-download-cloud"></i> fontello-icon-download-cloud</li>
+					                                                            <li><i class="fontello-icon-upload-cloud"></i> fontello-icon-upload-cloud</li>
+					                                                            <li><i class="fontello-icon-upload-cloud-1"></i> fontello-icon-upload-cloud-1</li>
+					                                                            <li><i class="fontello-icon-reply-2"></i> fontello-icon-reply-2</li>
+					                                                            <li><i class="fontello-icon-reply"></i> fontello-icon-reply</li>
+					                                                            <li><i class="fontello-icon-reply-1"></i> fontello-icon-reply-1</li>
+					                                                            <li><i class="fontello-icon-reply-all"></i> fontello-icon-reply-all</li>
+					                                                            <li><i class="fontello-icon-reply-all-1"></i> fontello-icon-reply-all-1</li>
+					                                                            <li><i class="fontello-icon-code"></i> fontello-icon-code</li>
+					                                                            <li><i class="fontello-icon-code-1"></i> fontello-icon-code-1</li>
+					                                                            <li><i class="fontello-icon-export-3"></i> fontello-icon-export-3</li>
+					                                                            <li><i class="fontello-icon-export"></i> fontello-icon-export</li>
+					                                                            <li><i class="fontello-icon-export-2"></i> fontello-icon-export-2</li>
+					                                                            <li><i class="fontello-icon-export-1"></i> fontello-icon-export-1</li>
+					                                                            <li><i class="fontello-icon-print-2"></i> fontello-icon-print-2</li>
+					                                                            <li><i class="fontello-icon-print"></i> fontello-icon-print</li>
+					                                                            <li><i class="fontello-icon-print-1"></i> fontello-icon-print-1</li>
+					                                                            <li><i class="fontello-icon-retweet"></i> fontello-icon-retweet</li>
+					                                                            <li><i class="fontello-icon-retweet-1"></i> fontello-icon-retweet-1</li>
+					                                                            <li><i class="fontello-icon-retweet-2"></i> fontello-icon-retweet-2</li>
+					                                                            <li><i class="fontello-icon-comment"></i> fontello-icon-comment</li>
+					                                                            <li><i class="fontello-icon-comment-4"></i> fontello-icon-comment-4</li>
+					                                                            <li><i class="fontello-icon-comment-1"></i> fontello-icon-comment-1</li>
+					                                                            <li><i class="fontello-icon-comment-3"></i> fontello-icon-comment-3</li>
+					                                                            <li><i class="fontello-icon-comment-2"></i> fontello-icon-comment-2</li>
+					                                                            <li><i class="fontello-icon-comment-inv"></i> fontello-icon-comment-inv</li>
+					                                                            <li><i class="fontello-icon-comment-alt"></i> fontello-icon-comment-alt</li>
+					                                                            <li><i class="fontello-icon-comment-alt-1"></i> fontello-icon-comment-alt-1</li>
+					                                                            <li><i class="fontello-icon-comment-inv-alt"></i> fontello-icon-comment-inv-alt</li>
+					                                                            <li><i class="fontello-icon-comment-alt2"></i> fontello-icon-comment-alt2</li>
+					                                                            <li><i class="fontello-icon-comment-inv-alt2"></i> fontello-icon-comment-inv-alt2</li>
+					                                                            <li><i class="fontello-icon-chat-4"></i> fontello-icon-chat-4</li>
+					                                                            <li><i class="fontello-icon-chat-2"></i> fontello-icon-chat-2</li>
+					                                                            <li><i class="fontello-icon-chat"></i> fontello-icon-chat</li>
+					                                                            <li><i class="fontello-icon-chat-5"></i> fontello-icon-chat-5</li>
+					                                                            <li><i class="fontello-icon-chat-1"></i> fontello-icon-chat-1</li>
+					                                                            <li><i class="fontello-icon-chat-3"></i> fontello-icon-chat-3</li>
+					                                                            <li><i class="fontello-icon-chat-inv"></i> fontello-icon-chat-inv</li>
+					                                                            <li><i class="fontello-icon-vcard"></i> fontello-icon-vcard</li>
+					                                                            <li><i class="fontello-icon-address-1"></i> fontello-icon-address-1</li>
+					                                                            <li><i class="fontello-icon-address"></i> fontello-icon-address</li>
+					                                                            <li><i class="fontello-icon-location-3"></i> fontello-icon-location-3</li>
+					                                                            <li><i class="fontello-icon-location-2"></i> fontello-icon-location-2</li>
+					                                                            <li><i class="fontello-icon-location"></i> fontello-icon-location</li>
+					                                                            <li><i class="fontello-icon-location-1"></i> fontello-icon-location-1</li>
+					                                                            <li><i class="fontello-icon-location-4"></i> fontello-icon-location-4</li>
+					                                                            <li><i class="fontello-icon-location-5"></i> fontello-icon-location-5</li>
+					                                                            <li><i class="fontello-icon-location-inv"></i> fontello-icon-location-inv</li>
+					                                                            <li><i class="fontello-icon-location-alt"></i> fontello-icon-location-alt</li>
+					                                                            <li><i class="fontello-icon-map"></i> fontello-icon-map</li>
+					                                                            <li><i class="fontello-icon-compass"></i> fontello-icon-compass</li>
+					                                                            <li><i class="fontello-icon-compass-1"></i> fontello-icon-compass-1</li>
+					                                                            <li><i class="fontello-icon-trash"></i> fontello-icon-trash</li>
+					                                                            <li><i class="fontello-icon-trash-3"></i> fontello-icon-trash-3</li>
+					                                                            <li><i class="fontello-icon-trash-4"></i> fontello-icon-trash-4</li>
+					                                                            <li><i class="fontello-icon-trash-1"></i> fontello-icon-trash-1</li>
+					                                                            <li><i class="fontello-icon-trash-2"></i> fontello-icon-trash-2</li>
+					                                                            <li><i class="fontello-icon-trash-empty"></i> fontello-icon-trash-empty</li>
+					                                                            <li><i class="fontello-icon-doc"></i> fontello-icon-doc</li>
+					                                                            <li><i class="fontello-icon-doc-4"></i> fontello-icon-doc-4</li>
+					                                                            <li><i class="fontello-icon-doc-2"></i> fontello-icon-doc-2</li>
+					                                                            <li><i class="fontello-icon-doc-inv"></i> fontello-icon-doc-inv</li>
+					                                                            <li><i class="fontello-icon-doc-alt"></i> fontello-icon-doc-alt</li>
+					                                                            <li><i class="fontello-icon-doc-inv-alt"></i> fontello-icon-doc-inv-alt</li>
+					                                                            <li><i class="fontello-icon-article-1"></i> fontello-icon-article-1</li>
+					                                                            <li><i class="fontello-icon-article"></i> fontello-icon-article</li>
+					                                                            <li><i class="fontello-icon-article-alt-1"></i> fontello-icon-article-alt-1</li>
+					                                                            <li><i class="fontello-icon-article-alt"></i> fontello-icon-article-alt</li>
+					                                                            <li><i class="fontello-icon-docs"></i> fontello-icon-docs</li>
+					                                                            <li><i class="fontello-icon-docs-landscape"></i> fontello-icon-docs-landscape</li>
+					                                                            <li><i class="fontello-icon-docs-landscape-1"></i> fontello-icon-docs-landscape-1</li>
+					                                                            <li><i class="fontello-icon-archive"></i> fontello-icon-archive</li>
+					                                                            <li><i class="fontello-icon-archive-1"></i> fontello-icon-archive-1</li>
+					                                                            <li><i class="fontello-icon-rss-2"></i> fontello-icon-rss-2</li>
+					                                                            <li><i class="fontello-icon-rss"></i> fontello-icon-rss</li>
+					                                                            <li><i class="fontello-icon-rss-1"></i> fontello-icon-rss-1</li>
+					                                                            <li><i class="fontello-icon-rss-3"></i> fontello-icon-rss-3</li>
+					                                                            <li><i class="fontello-icon-rss-4"></i> fontello-icon-rss-4</li>
+					                                                            <li><i class="fontello-icon-rss-alt-1"></i> fontello-icon-rss-alt-1</li>
+					                                                            <li><i class="fontello-icon-rss-alt"></i> fontello-icon-rss-alt</li>
+					                                                            <li><i class="fontello-icon-share"></i> fontello-icon-share</li>
+					                                                            <li><i class="fontello-icon-share-1"></i> fontello-icon-share-1</li>
+					                                                            <li><i class="fontello-icon-basket"></i> fontello-icon-basket</li>
+					                                                            <li><i class="fontello-icon-basket-2"></i> fontello-icon-basket-2</li>
+					                                                            <li><i class="fontello-icon-basket-1"></i> fontello-icon-basket-1</li>
+					                                                            <li><i class="fontello-icon-calendar-inv"></i> fontello-icon-calendar-inv</li>
+					                                                            <li><i class="fontello-icon-calendar-alt-1"></i> fontello-icon-calendar-alt-1</li>
+					                                                            <li><i class="fontello-icon-login"></i> fontello-icon-login</li>
+					                                                            <li><i class="fontello-icon-logout"></i> fontello-icon-logout</li>
+					                                                            <li><i class="fontello-icon-logout-1"></i> fontello-icon-logout-1</li>
+					                                                            <li><i class="fontello-icon-volume"></i> fontello-icon-volume</li>
+					                                                            <li><i class="fontello-icon-resize-full-4"></i> fontello-icon-resize-full-4</li>
+					                                                            <li><i class="fontello-icon-resize-full-1"></i> fontello-icon-resize-full-1</li>
+					                                                            <li><i class="fontello-icon-resize-full-5"></i> fontello-icon-resize-full-5</li>
+					                                                            <li><i class="fontello-icon-resize-full"></i> fontello-icon-resize-full</li>
+					                                                            <li><i class="fontello-icon-resize-full-3"></i> fontello-icon-resize-full-3</li>
+					                                                            <li><i class="fontello-icon-resize-full-2"></i> fontello-icon-resize-full-2</li>
+					                                                            <li><i class="fontello-icon-resize-full-alt"></i> fontello-icon-resize-full-alt</li>
+					                                                            <li><i class="fontello-icon-resize-small-1"></i> fontello-icon-resize-small-1</li>
+					                                                            <li><i class="fontello-icon-resize-small-2"></i> fontello-icon-resize-small-2</li>
+					                                                            <li><i class="fontello-icon-resize-small-3"></i> fontello-icon-resize-small-3</li>
+					                                                            <li><i class="fontello-icon-resize-small"></i> fontello-icon-resize-small</li>
+					                                                            <li><i class="fontello-icon-resize-small-alt"></i> fontello-icon-resize-small-alt</li>
+					                                                            <li><i class="fontello-icon-move-1"></i> fontello-icon-move-1</li>
+					                                                        </ul>
+					                                                    </div>
+					                                                    <div class="span3">
+					                                                        <ul class="the-icons">
+					                                                            <li><i class="fontello-icon-popup-3"></i> fontello-icon-popup-3</li>
+					                                                            <li><i class="fontello-icon-popup"></i> fontello-icon-popup</li>
+					                                                            <li><i class="fontello-icon-popup-1"></i> fontello-icon-popup-1</li>
+					                                                            <li><i class="fontello-icon-popup-4"></i> fontello-icon-popup-4</li>
+					                                                            <li><i class="fontello-icon-popup-2"></i> fontello-icon-popup-2</li>
+					                                                            <li><i class="fontello-icon-publish"></i> fontello-icon-publish</li>
+					                                                            <li><i class="fontello-icon-window"></i> fontello-icon-window</li>
+					                                                            <li><i class="fontello-icon-arrow-combo"></i> fontello-icon-arrow-combo</li>
+					                                                            <li><i class="fontello-icon-zoom-in-2"></i> fontello-icon-zoom-in-2</li>
+					                                                            <li><i class="fontello-icon-zoom-in-1"></i> fontello-icon-zoom-in-1</li>
+					                                                            <li><i class="fontello-icon-zoom-in"></i> fontello-icon-zoom-in</li>
+					                                                            <li><i class="fontello-icon-zoom-out-2"></i> fontello-icon-zoom-out-2</li>
+					                                                            <li><i class="fontello-icon-zoom-out"></i> fontello-icon-zoom-out</li>
+					                                                            <li><i class="fontello-icon-zoom-out-1"></i> fontello-icon-zoom-out-1</li>
+					                                                            <li><i class="fontello-icon-down-circle2"></i> fontello-icon-down-circle2</li>
+					                                                            <li><i class="fontello-icon-down-circle2-1"></i> fontello-icon-down-circle2-1</li>
+					                                                            <li><i class="fontello-icon-left-circle2"></i> fontello-icon-left-circle2</li>
+					                                                            <li><i class="fontello-icon-right-circle2"></i> fontello-icon-right-circle2</li>
+					                                                            <li><i class="fontello-icon-up-circle2-1"></i> fontello-icon-up-circle2-1</li>
+					                                                            <li><i class="fontello-icon-up-circle2"></i> fontello-icon-up-circle2</li>
+					                                                            <li><i class="fontello-icon-down-open"></i> fontello-icon-down-open</li>
+					                                                            <li><i class="fontello-icon-down-open-1"></i> fontello-icon-down-open-1</li>
+					                                                            <li><i class="fontello-icon-left-open-3"></i> fontello-icon-left-open-3</li>
+					                                                            <li><i class="fontello-icon-left-open-2"></i> fontello-icon-left-open-2</li>
+					                                                            <li><i class="fontello-icon-left-open-1"></i> fontello-icon-left-open-1</li>
+					                                                            <li><i class="fontello-icon-left-open"></i> fontello-icon-left-open</li>
+					                                                            <li><i class="fontello-icon-right-open-1"></i> fontello-icon-right-open-1</li>
+					                                                            <li><i class="fontello-icon-right-open-2"></i> fontello-icon-right-open-2</li>
+					                                                            <li><i class="fontello-icon-right-open"></i> fontello-icon-right-open</li>
+					                                                            <li><i class="fontello-icon-right-open-3"></i> fontello-icon-right-open-3</li>
+					                                                            <li><i class="fontello-icon-up-open-1"></i> fontello-icon-up-open-1</li>
+					                                                            <li><i class="fontello-icon-up-open"></i> fontello-icon-up-open</li>
+					                                                            <li><i class="fontello-icon-arrows-cw"></i> fontello-icon-arrows-cw</li>
+					                                                            <li><i class="fontello-icon-arrows-cw-2"></i> fontello-icon-arrows-cw-2</li>
+					                                                            <li><i class="fontello-icon-arrows-cw-1"></i> fontello-icon-arrows-cw-1</li>
+					                                                            <li><i class="fontello-icon-play-circle2"></i> fontello-icon-play-circle2</li>
+					                                                            <li><i class="fontello-icon-to-end-alt"></i> fontello-icon-to-end-alt</li>
+					                                                            <li><i class="fontello-icon-to-start-alt"></i> fontello-icon-to-start-alt</li>
+					                                                            <li><i class="fontello-icon-award-empty"></i> fontello-icon-award-empty</li>
+					                                                            <li><i class="fontello-icon-list-1"></i> fontello-icon-list-1</li>
+					                                                            <li><i class="fontello-icon-list-nested"></i> fontello-icon-list-nested</li>
+					                                                            <li><i class="fontello-icon-progress-0"></i> fontello-icon-progress-0</li>
+					                                                            <li><i class="fontello-icon-progress-1"></i> fontello-icon-progress-1</li>
+					                                                            <li><i class="fontello-icon-progress-2"></i> fontello-icon-progress-2</li>
+					                                                            <li><i class="fontello-icon-progress-3"></i> fontello-icon-progress-3</li>
+					                                                            <li><i class="fontello-icon-signal"></i> fontello-icon-signal</li>
+					                                                            <li><i class="fontello-icon-signal-3"></i> fontello-icon-signal-3</li>
+					                                                            <li><i class="fontello-icon-back-in-time"></i> fontello-icon-back-in-time</li>
+					                                                            <li><i class="fontello-icon-bat-empty-1"></i> fontello-icon-bat-empty-1</li>
+					                                                            <li><i class="fontello-icon-bat-empty"></i> fontello-icon-bat-empty</li>
+					                                                            <li><i class="fontello-icon-bat-half"></i> fontello-icon-bat-half</li>
+					                                                            <li><i class="fontello-icon-bat-half-1"></i> fontello-icon-bat-half-1</li>
+					                                                            <li><i class="fontello-icon-bat-full-1"></i> fontello-icon-bat-full-1</li>
+					                                                            <li><i class="fontello-icon-bat-full"></i> fontello-icon-bat-full</li>
+					                                                            <li><i class="fontello-icon-bat-charge"></i> fontello-icon-bat-charge</li>
+					                                                            <li><i class="fontello-icon-bat-charge-1"></i> fontello-icon-bat-charge-1</li>
+					                                                            <li><i class="fontello-icon-net"></i> fontello-icon-net</li>
+					                                                            <li><i class="fontello-icon-inbox-1"></i> fontello-icon-inbox-1</li>
+					                                                            <li><i class="fontello-icon-inbox"></i> fontello-icon-inbox</li>
+					                                                            <li><i class="fontello-icon-install"></i> fontello-icon-install</li>
+					                                                            <li><i class="fontello-icon-font"></i> fontello-icon-font</li>
+					                                                            <li><i class="fontello-icon-font-1"></i> fontello-icon-font-1</li>
+					                                                            <li><i class="fontello-icon-bold"></i> fontello-icon-bold</li>
+					                                                            <li><i class="fontello-icon-italic"></i> fontello-icon-italic</li>
+					                                                            <li><i class="fontello-icon-text-height"></i> fontello-icon-text-height</li>
+					                                                            <li><i class="fontello-icon-text-width"></i> fontello-icon-text-width</li>
+					                                                            <li><i class="fontello-icon-align-left"></i> fontello-icon-align-left</li>
+					                                                            <li><i class="fontello-icon-align-center"></i> fontello-icon-align-center</li>
+					                                                            <li><i class="fontello-icon-align-right"></i> fontello-icon-align-right</li>
+					                                                            <li><i class="fontello-icon-align-justify"></i> fontello-icon-align-justify</li>
+					                                                            <li><i class="fontello-icon-list-2"></i> fontello-icon-list-2</li>
+					                                                            <li><i class="fontello-icon-list"></i> fontello-icon-list</li>
+					                                                            <li><i class="fontello-icon-list-3"></i> fontello-icon-list-3</li>
+					                                                            <li><i class="fontello-icon-indent-left"></i> fontello-icon-indent-left</li>
+					                                                            <li><i class="fontello-icon-indent-left-1"></i> fontello-icon-indent-left-1</li>
+					                                                            <li><i class="fontello-icon-indent-right"></i> fontello-icon-indent-right</li>
+					                                                            <li><i class="fontello-icon-indent-right-1"></i> fontello-icon-indent-right-1</li>
+					                                                            <li><i class="fontello-icon-lifebuoy"></i> fontello-icon-lifebuoy</li>
+					                                                            <li><i class="fontello-icon-mouse"></i> fontello-icon-mouse</li>
+					                                                            <li><i class="fontello-icon-bag"></i> fontello-icon-bag</li>
+					                                                            <li><i class="fontello-icon-dot"></i> fontello-icon-dot</li>
+					                                                            <li><i class="fontello-icon-dot-2"></i> fontello-icon-dot-2</li>
+					                                                            <li><i class="fontello-icon-dot-3"></i> fontello-icon-dot-3</li>
+					                                                            <li><i class="fontello-icon-off"></i> fontello-icon-off</li>
+					                                                            <li><i class="fontello-icon-road"></i> fontello-icon-road</li>
+					                                                            <li><i class="fontello-icon-list-alt"></i> fontello-icon-list-alt</li>
+					                                                            <li><i class="fontello-icon-qrcode"></i> fontello-icon-qrcode</li>
+					                                                            <li><i class="fontello-icon-barcode"></i> fontello-icon-barcode</li>
+					                                                            <li><i class="fontello-icon-ajust"></i> fontello-icon-ajust</li>
+					                                                            <li><i class="fontello-icon-ajust-1"></i> fontello-icon-ajust-1</li>
+					                                                            <li><i class="fontello-icon-tint"></i> fontello-icon-tint</li>
+					                                                            <li><i class="fontello-icon-equalizer"></i> fontello-icon-equalizer</li>
+					                                                            <li><i class="fontello-icon-cursor"></i> fontello-icon-cursor</li>
+					                                                            <li><i class="fontello-icon-aperture"></i> fontello-icon-aperture</li>
+					                                                            <li><i class="fontello-icon-aperture-alt"></i> fontello-icon-aperture-alt</li>
+					                                                            <li><i class="fontello-icon-steering-wheel"></i> fontello-icon-steering-wheel</li>
+					                                                            <li><i class="fontello-icon-brush"></i> fontello-icon-brush</li>
+					                                                            <li><i class="fontello-icon-brush-alt"></i> fontello-icon-brush-alt</li>
+					                                                            <li><i class="fontello-icon-eyedropper"></i> fontello-icon-eyedropper</li>
+					                                                            <li><i class="fontello-icon-layers"></i> fontello-icon-layers</li>
+					                                                            <li><i class="fontello-icon-layers-alt"></i> fontello-icon-layers-alt</li>
+					                                                            <li><i class="fontello-icon-moon-inv"></i> fontello-icon-moon-inv</li>
+					                                                            <li><i class="fontello-icon-magnet"></i> fontello-icon-magnet</li>
+					                                                            <li><i class="fontello-icon-chart-pie-2"></i> fontello-icon-chart-pie-2</li>
+					                                                            <li><i class="fontello-icon-chart-pie-1"></i> fontello-icon-chart-pie-1</li>
+					                                                            <li><i class="fontello-icon-chart-pie"></i> fontello-icon-chart-pie</li>
+					                                                            <li><i class="fontello-icon-chart-pie-alt"></i> fontello-icon-chart-pie-alt</li>
+					                                                            <li><i class="fontello-icon-dial"></i> fontello-icon-dial</li>
+					                                                            <li><i class="fontello-icon-cc"></i> fontello-icon-cc</li>
+					                                                            <li><i class="fontello-icon-resize-full-circle"></i> fontello-icon-resize-full-circle</li>
+					                                                            <li><i class="fontello-icon-down-micro"></i> fontello-icon-down-micro</li>
+					                                                            <li><i class="fontello-icon-up-micro"></i> fontello-icon-up-micro</li>
+					                                                            <li><i class="fontello-icon-cw-circle"></i> fontello-icon-cw-circle</li>
+					                                                            <li><i class="fontello-icon-updown-circle"></i> fontello-icon-updown-circle</li>
+					                                                            <li><i class="fontello-icon-progress"></i> fontello-icon-progress</li>
+					                                                            <li><i class="fontello-icon-terminal"></i> fontello-icon-terminal</li>
+					                                                            <li><i class="fontello-icon-list-numbered"></i> fontello-icon-list-numbered</li>
+					                                                            <li><i class="fontello-icon-basket-alt"></i> fontello-icon-basket-alt</li>
+					                                                            <li><i class="fontello-icon-bat-third"></i> fontello-icon-bat-third</li>
+					                                                            <li><i class="fontello-icon-mobile-alt"></i> fontello-icon-mobile-alt</li>
+					                                                            <li><i class="fontello-icon-tablet"></i> fontello-icon-tablet</li>
+					                                                            <li><i class="fontello-icon-ipod"></i> fontello-icon-ipod</li>
+					                                                            <li><i class="fontello-icon-stop-3"></i> fontello-icon-stop-3</li>
+					                                                            <li><i class="fontello-icon-grid"></i> fontello-icon-grid</li>
+					                                                            <li><i class="fontello-icon-easel"></i> fontello-icon-easel</li>
+					                                                            <li><i class="fontello-icon-puzzle"></i> fontello-icon-puzzle</li>
+					                                                            <li><i class="fontello-icon-cancel-alt"></i> fontello-icon-cancel-alt</li>
+					                                                            <li><i class="fontello-icon-move-2"></i> fontello-icon-move-2</li>
+					                                                            <li><i class="fontello-icon-move"></i> fontello-icon-move</li>
+					                                                            <li><i class="fontello-icon-facebook-1"></i> fontello-icon-facebook-1</li>
+					                                                            <li><i class="fontello-icon-github"></i> fontello-icon-github</li>
+					                                                            <li><i class="fontello-icon-facebook-2"></i> fontello-icon-facebook-2</li>
+					                                                            <li><i class="fontello-icon-facebook-rect-2"></i> fontello-icon-facebook-rect-2</li>
+					                                                            <li><i class="fontello-icon-facebook-rect"></i> fontello-icon-facebook-rect</li>
+					                                                            <li><i class="fontello-icon-facebook-rect-1"></i> fontello-icon-facebook-rect-1</li>
+					                                                            <li><i class="fontello-icon-twitter-2"></i> fontello-icon-twitter-2</li>
+					                                                            <li><i class="fontello-icon-twitter-1"></i> fontello-icon-twitter-1</li>
+					                                                            <li><i class="fontello-icon-twitter-bird"></i> fontello-icon-twitter-bird</li>
+					                                                            <li><i class="fontello-icon-twitter-bird-1"></i> fontello-icon-twitter-bird-1</li>
+					                                                            <li><i class="fontello-icon-twitter-bird-2"></i> fontello-icon-twitter-bird-2</li>
+					                                                            <li><i class="fontello-icon-twitter"></i> fontello-icon-twitter</li>
+					                                                            <li><i class="fontello-icon-icq"></i> fontello-icon-icq</li>
+					                                                            <li><i class="fontello-icon-yandex"></i> fontello-icon-yandex</li>
+					                                                            <li><i class="fontello-icon-yandex-rect"></i> fontello-icon-yandex-rect</li>
+					                                                            <li><i class="fontello-icon-github-text"></i> fontello-icon-github-text</li>
+					                                                            <li><i class="fontello-icon-github-1"></i> fontello-icon-github-1</li>
+					                                                            <li><i class="fontello-icon-facebook"></i> fontello-icon-facebook</li>
+					                                                            <li><i class="fontello-icon-googleplus-rect"></i> fontello-icon-googleplus-rect</li>
+					                                                            <li><i class="fontello-icon-googleplus-rect-1"></i> fontello-icon-googleplus-rect-1</li>
+					                                                            <li><i class="fontello-icon-vkontakte-rect-1"></i> fontello-icon-vkontakte-rect-1</li>
+					                                                            <li><i class="fontello-icon-vkontakte-rect"></i> fontello-icon-vkontakte-rect</li>
+					                                                            <li><i class="fontello-icon-skype"></i> fontello-icon-skype</li>
+					                                                            <li><i class="fontello-icon-skype-1"></i> fontello-icon-skype-1</li>
+					                                                            <li><i class="fontello-icon-odnoklassniki"></i> fontello-icon-odnoklassniki</li>
+					                                                            <li><i class="fontello-icon-linkedin"></i> fontello-icon-linkedin</li>
+					                                                            <li><i class="fontello-icon-odnoklassniki-rect"></i> fontello-icon-odnoklassniki-rect</li>
+					                                                            <li><i class="fontello-icon-odnoklassniki-rect-1"></i> fontello-icon-odnoklassniki-rect-1</li>
+					                                                            <li><i class="fontello-icon-vimeo-rect"></i> fontello-icon-vimeo-rect</li>
+					                                                            <li><i class="fontello-icon-vimeo-rect-1"></i> fontello-icon-vimeo-rect-1</li>
+					                                                            <li><i class="fontello-icon-vimeo"></i> fontello-icon-vimeo</li>
+					                                                            <li><i class="fontello-icon-tumblr-rect"></i> fontello-icon-tumblr-rect</li>
+					                                                            <li><i class="fontello-icon-google-circles"></i> fontello-icon-google-circles</li>
+					                                                            <li><i class="fontello-icon-tumblr-rect-1"></i> fontello-icon-tumblr-rect-1</li>
+					                                                            <li><i class="fontello-icon-tumblr"></i> fontello-icon-tumblr</li>
+					                                                            <li><i class="fontello-icon-friendfeed"></i> fontello-icon-friendfeed</li>
+					                                                            <li><i class="fontello-icon-linkedin-rect"></i> fontello-icon-linkedin-rect</li>
+					                                                            <li><i class="fontello-icon-friendfeed-rect"></i> fontello-icon-friendfeed-rect</li>
+					                                                            <li><i class="fontello-icon-youtube"></i> fontello-icon-youtube</li>
+					                                                            <li><i class="fontello-icon-twitter-rect"></i> fontello-icon-twitter-rect</li>
+					                                                            <li><i class="fontello-icon-blogger"></i> fontello-icon-blogger</li>
+					                                                            <li><i class="fontello-icon-blogger-rect"></i> fontello-icon-blogger-rect</li>
+					                                                            <li><i class="fontello-icon-deviantart"></i> fontello-icon-deviantart</li>
+					                                                            <li><i class="fontello-icon-jabber"></i> fontello-icon-jabber</li>
+					                                                            <li><i class="fontello-icon-lastfm"></i> fontello-icon-lastfm</li>
+					                                                            <li><i class="fontello-icon-lastfm-rect"></i> fontello-icon-lastfm-rect</li>
+					                                                            <li><i class="fontello-icon-linkedin-1"></i> fontello-icon-linkedin-1</li>
+					                                                            <li><i class="fontello-icon-linkedin-rect-1"></i> fontello-icon-linkedin-rect-1</li>
+					                                                            <li><i class="fontello-icon-picasa"></i> fontello-icon-picasa</li>
+					                                                            <li><i class="fontello-icon-wordpress"></i> fontello-icon-wordpress</li>
+					                                                            <li><i class="fontello-icon-logo-entypo"></i> fontello-icon-logo-entypo</li>
+					                                                            <li><i class="fontello-icon-flag-sw"></i> fontello-icon-flag-sw</li>
+					                                                            <li><i class="fontello-icon-logo-db"></i> fontello-icon-logo-db</li>
+					                                                            <li><i class="fontello-icon-globe"></i> fontello-icon-globe</li>
+					                                                            <li><i class="fontello-icon-globe-1"></i> fontello-icon-globe-1</li>
+					                                                            <li><i class="fontello-icon-picture-1"></i> fontello-icon-picture-1</li>
+					                                                            <li><i class="fontello-icon-picture-2"></i> fontello-icon-picture-2</li>
+					                                                        </ul>
+					                                                    </div>
+					                                                    <div class="span3">
+					                                                        <ul class="the-icons">
+					                                                            <li><i class="fontello-icon-picture"></i> fontello-icon-picture</li>
+					                                                            <li><i class="fontello-icon-picture-3"></i> fontello-icon-picture-3</li>
+					                                                            <li><i class="fontello-icon-globe-2"></i> fontello-icon-globe-2</li>
+					                                                            <li><i class="fontello-icon-globe-alt"></i> fontello-icon-globe-alt</li>
+					                                                            <li><i class="fontello-icon-leaf"></i> fontello-icon-leaf</li>
+					                                                            <li><i class="fontello-icon-leaf-1"></i> fontello-icon-leaf-1</li>
+					                                                            <li><i class="fontello-icon-lemon"></i> fontello-icon-lemon</li>
+					                                                            <li><i class="fontello-icon-glass"></i> fontello-icon-glass</li>
+					                                                            <li><i class="fontello-icon-gift"></i> fontello-icon-gift</li>
+					                                                            <li><i class="fontello-icon-mic-2"></i> fontello-icon-mic-2</li>
+					                                                            <li><i class="fontello-icon-mic-1"></i> fontello-icon-mic-1</li>
+					                                                            <li><i class="fontello-icon-mic"></i> fontello-icon-mic</li>
+					                                                            <li><i class="fontello-icon-videocam"></i> fontello-icon-videocam</li>
+					                                                            <li><i class="fontello-icon-videocam-1"></i> fontello-icon-videocam-1</li>
+					                                                            <li><i class="fontello-icon-video-alt"></i> fontello-icon-video-alt</li>
+					                                                            <li><i class="fontello-icon-headphones-1"></i> fontello-icon-headphones-1</li>
+					                                                            <li><i class="fontello-icon-headphones"></i> fontello-icon-headphones</li>
+					                                                            <li><i class="fontello-icon-palette"></i> fontello-icon-palette</li>
+					                                                            <li><i class="fontello-icon-video-4"></i> fontello-icon-video-4</li>
+					                                                            <li><i class="fontello-icon-video-2"></i> fontello-icon-video-2</li>
+					                                                            <li><i class="fontello-icon-video-1"></i> fontello-icon-video-1</li>
+					                                                            <li><i class="fontello-icon-video"></i> fontello-icon-video</li>
+					                                                            <li><i class="fontello-icon-video-3"></i> fontello-icon-video-3</li>
+					                                                            <li><i class="fontello-icon-target-4"></i> fontello-icon-target-4</li>
+					                                                            <li><i class="fontello-icon-target-3"></i> fontello-icon-target-3</li>
+					                                                            <li><i class="fontello-icon-target-2"></i> fontello-icon-target-2</li>
+					                                                            <li><i class="fontello-icon-target"></i> fontello-icon-target</li>
+					                                                            <li><i class="fontello-icon-target-1"></i> fontello-icon-target-1</li>
+					                                                            <li><i class="fontello-icon-music-alt"></i> fontello-icon-music-alt</li>
+					                                                            <li><i class="fontello-icon-top-list"></i> fontello-icon-top-list</li>
+					                                                            <li><i class="fontello-icon-award"></i> fontello-icon-award</li>
+					                                                            <li><i class="fontello-icon-award-2"></i> fontello-icon-award-2</li>
+					                                                            <li><i class="fontello-icon-award-1"></i> fontello-icon-award-1</li>
+					                                                            <li><i class="fontello-icon-videocam-alt"></i> fontello-icon-videocam-alt</li>
+					                                                            <li><i class="fontello-icon-thumbs-up-2"></i> fontello-icon-thumbs-up-2</li>
+					                                                            <li><i class="fontello-icon-thumbs-up"></i> fontello-icon-thumbs-up</li>
+					                                                            <li><i class="fontello-icon-thumbs-up-3"></i> fontello-icon-thumbs-up-3</li>
+					                                                            <li><i class="fontello-icon-thumbs-up-1"></i> fontello-icon-thumbs-up-1</li>
+					                                                            <li><i class="fontello-icon-thumbs-down-1"></i> fontello-icon-thumbs-down-1</li>
+					                                                            <li><i class="fontello-icon-thumbs-down-2"></i> fontello-icon-thumbs-down-2</li>
+					                                                            <li><i class="fontello-icon-thumbs-down"></i> fontello-icon-thumbs-down</li>
+					                                                            <li><i class="fontello-icon-user-1"></i> fontello-icon-user-1</li>
+					                                                            <li><i class="fontello-icon-user-3"></i> fontello-icon-user-3</li>
+					                                                            <li><i class="fontello-icon-user-5"></i> fontello-icon-user-5</li>
+					                                                            <li><i class="fontello-icon-user"></i> fontello-icon-user</li>
+					                                                            <li><i class="fontello-icon-user-2"></i> fontello-icon-user-2</li>
+					                                                            <li><i class="fontello-icon-user-4"></i> fontello-icon-user-4</li>
+					                                                            <li><i class="fontello-icon-users"></i> fontello-icon-users</li>
+					                                                            <li><i class="fontello-icon-users-1"></i> fontello-icon-users-1</li>
+					                                                            <li><i class="fontello-icon-user-woman"></i> fontello-icon-user-woman</li>
+					                                                            <li><i class="fontello-icon-user-pair"></i> fontello-icon-user-pair</li>
+					                                                            <li><i class="fontello-icon-lamp-1"></i> fontello-icon-lamp-1</li>
+					                                                            <li><i class="fontello-icon-lamp"></i> fontello-icon-lamp</li>
+					                                                            <li><i class="fontello-icon-money"></i> fontello-icon-money</li>
+					                                                            <li><i class="fontello-icon-dollar"></i> fontello-icon-dollar</li>
+					                                                            <li><i class="fontello-icon-monitor"></i> fontello-icon-monitor</li>
+					                                                            <li><i class="fontello-icon-cd-1"></i> fontello-icon-cd-1</li>
+					                                                            <li><i class="fontello-icon-cd"></i> fontello-icon-cd</li>
+					                                                            <li><i class="fontello-icon-cd-2"></i> fontello-icon-cd-2</li>
+					                                                            <li><i class="fontello-icon-folder-2"></i> fontello-icon-folder-2</li>
+					                                                            <li><i class="fontello-icon-folder"></i> fontello-icon-folder</li>
+					                                                            <li><i class="fontello-icon-folder-3"></i> fontello-icon-folder-3</li>
+					                                                            <li><i class="fontello-icon-folder-1"></i> fontello-icon-folder-1</li>
+					                                                            <li><i class="fontello-icon-folder-open"></i> fontello-icon-folder-open</li>
+					                                                            <li><i class="fontello-icon-folder-empty"></i> fontello-icon-folder-empty</li>
+					                                                            <li><i class="fontello-icon-doc-3"></i> fontello-icon-doc-3</li>
+					                                                            <li><i class="fontello-icon-doc-text"></i> fontello-icon-doc-text</li>
+					                                                            <li><i class="fontello-icon-doc-1"></i> fontello-icon-doc-1</li>
+					                                                            <li><i class="fontello-icon-calendar-1"></i> fontello-icon-calendar-1</li>
+					                                                            <li><i class="fontello-icon-calendar-3"></i> fontello-icon-calendar-3</li>
+					                                                            <li><i class="fontello-icon-calendar"></i> fontello-icon-calendar</li>
+					                                                            <li><i class="fontello-icon-calendar-2"></i> fontello-icon-calendar-2</li>
+					                                                            <li><i class="fontello-icon-calendar-alt"></i> fontello-icon-calendar-alt</li>
+					                                                            <li><i class="fontello-icon-chart"></i> fontello-icon-chart</li>
+					                                                            <li><i class="fontello-icon-chart-1"></i> fontello-icon-chart-1</li>
+					                                                            <li><i class="fontello-icon-chart-bar-2"></i> fontello-icon-chart-bar-2</li>
+					                                                            <li><i class="fontello-icon-chart-bar-3"></i> fontello-icon-chart-bar-3</li>
+					                                                            <li><i class="fontello-icon-chart-bar"></i> fontello-icon-chart-bar</li>
+					                                                            <li><i class="fontello-icon-chart-bar-1"></i> fontello-icon-chart-bar-1</li>
+					                                                            <li><i class="fontello-icon-pin"></i> fontello-icon-pin</li>
+					                                                            <li><i class="fontello-icon-pin-1"></i> fontello-icon-pin-1</li>
+					                                                            <li><i class="fontello-icon-pin-2"></i> fontello-icon-pin-2</li>
+					                                                            <li><i class="fontello-icon-attach"></i> fontello-icon-attach</li>
+					                                                            <li><i class="fontello-icon-attach-1"></i> fontello-icon-attach-1</li>
+					                                                            <li><i class="fontello-icon-attach-2"></i> fontello-icon-attach-2</li>
+					                                                            <li><i class="fontello-icon-book-alt"></i> fontello-icon-book-alt</li>
+					                                                            <li><i class="fontello-icon-book-2"></i> fontello-icon-book-2</li>
+					                                                            <li><i class="fontello-icon-book-1"></i> fontello-icon-book-1</li>
+					                                                            <li><i class="fontello-icon-book"></i> fontello-icon-book</li>
+					                                                            <li><i class="fontello-icon-book-open"></i> fontello-icon-book-open</li>
+					                                                            <li><i class="fontello-icon-book-open-1"></i> fontello-icon-book-open-1</li>
+					                                                            <li><i class="fontello-icon-phone-1"></i> fontello-icon-phone-1</li>
+					                                                            <li><i class="fontello-icon-phone"></i> fontello-icon-phone</li>
+					                                                            <li><i class="fontello-icon-bullhorn"></i> fontello-icon-bullhorn</li>
+					                                                            <li><i class="fontello-icon-upload"></i> fontello-icon-upload</li>
+					                                                            <li><i class="fontello-icon-upload-1"></i> fontello-icon-upload-1</li>
+					                                                            <li><i class="fontello-icon-upload-2"></i> fontello-icon-upload-2</li>
+					                                                            <li><i class="fontello-icon-download-3"></i> fontello-icon-download-3</li>
+					                                                            <li><i class="fontello-icon-download-1"></i> fontello-icon-download-1</li>
+					                                                            <li><i class="fontello-icon-download"></i> fontello-icon-download</li>
+					                                                            <li><i class="fontello-icon-download-2"></i> fontello-icon-download-2</li>
+					                                                            <li><i class="fontello-icon-download-4"></i> fontello-icon-download-4</li>
+					                                                            <li><i class="fontello-icon-box"></i> fontello-icon-box</li>
+					                                                            <li><i class="fontello-icon-mobile-2"></i> fontello-icon-mobile-2</li>
+					                                                            <li><i class="fontello-icon-mobile"></i> fontello-icon-mobile</li>
+					                                                            <li><i class="fontello-icon-mobile-3"></i> fontello-icon-mobile-3</li>
+					                                                            <li><i class="fontello-icon-mobile-1"></i> fontello-icon-mobile-1</li>
+					                                                            <li><i class="fontello-icon-signal-2"></i> fontello-icon-signal-2</li>
+					                                                            <li><i class="fontello-icon-signal-1"></i> fontello-icon-signal-1</li>
+					                                                            <li><i class="fontello-icon-signal-4"></i> fontello-icon-signal-4</li>
+					                                                            <li><i class="fontello-icon-camera-2"></i> fontello-icon-camera-2</li>
+					                                                            <li><i class="fontello-icon-camera-3"></i> fontello-icon-camera-3</li>
+					                                                            <li><i class="fontello-icon-camera"></i> fontello-icon-camera</li>
+					                                                            <li><i class="fontello-icon-camera-1"></i> fontello-icon-camera-1</li>
+					                                                            <li><i class="fontello-icon-camera-4"></i> fontello-icon-camera-4</li>
+					                                                            <li><i class="fontello-icon-shuffle-2"></i> fontello-icon-shuffle-2</li>
+					                                                            <li><i class="fontello-icon-shuffle"></i> fontello-icon-shuffle</li>
+					                                                            <li><i class="fontello-icon-shuffle-1"></i> fontello-icon-shuffle-1</li>
+					                                                            <li><i class="fontello-icon-loop-1"></i> fontello-icon-loop-1</li>
+					                                                            <li><i class="fontello-icon-loop-alt"></i> fontello-icon-loop-alt</li>
+					                                                            <li><i class="fontello-icon-loop"></i> fontello-icon-loop</li>
+					                                                            <li><i class="fontello-icon-light-down"></i> fontello-icon-light-down</li>
+					                                                            <li><i class="fontello-icon-light-up"></i> fontello-icon-light-up</li>
+					                                                            <li><i class="fontello-icon-volume-off-4"></i> fontello-icon-volume-off-4</li>
+					                                                            <li><i class="fontello-icon-volume-off"></i> fontello-icon-volume-off</li>
+					                                                            <li><i class="fontello-icon-volume-off-2"></i> fontello-icon-volume-off-2</li>
+					                                                            <li><i class="fontello-icon-volume-off-3"></i> fontello-icon-volume-off-3</li>
+					                                                            <li><i class="fontello-icon-volume-off-1"></i> fontello-icon-volume-off-1</li>
+					                                                            <li><i class="fontello-icon-volume-down"></i> fontello-icon-volume-down</li>
+					                                                            <li><i class="fontello-icon-volume-down-1"></i> fontello-icon-volume-down-1</li>
+					                                                            <li><i class="fontello-icon-volume-up-2"></i> fontello-icon-volume-up-2</li>
+					                                                            <li><i class="fontello-icon-volume-up-3"></i> fontello-icon-volume-up-3</li>
+					                                                            <li><i class="fontello-icon-volume-up-1"></i> fontello-icon-volume-up-1</li>
+					                                                            <li><i class="fontello-icon-volume-up"></i> fontello-icon-volume-up</li>
+					                                                            <li><i class="fontello-icon-volume-up-4"></i> fontello-icon-volume-up-4</li>
+					                                                            <li><i class="fontello-icon-battery"></i> fontello-icon-battery</li>
+					                                                            <li><i class="fontello-icon-search-5"></i> fontello-icon-search-5</li>
+					                                                            <li><i class="fontello-icon-search-3"></i> fontello-icon-search-3</li>
+					                                                            <li><i class="fontello-icon-search"></i> fontello-icon-search</li>
+					                                                            <li><i class="fontello-icon-search-4"></i> fontello-icon-search-4</li>
+					                                                            <li><i class="fontello-icon-search-1"></i> fontello-icon-search-1</li>
+					                                                            <li><i class="fontello-icon-search-2"></i> fontello-icon-search-2</li>
+					                                                            <li><i class="fontello-icon-search-alt"></i> fontello-icon-search-alt</li>
+					                                                            <li><i class="fontello-icon-key-2"></i> fontello-icon-key-2</li>
+					                                                            <li><i class="fontello-icon-key"></i> fontello-icon-key</li>
+					                                                            <li><i class="fontello-icon-key-inv"></i> fontello-icon-key-inv</li>
+					                                                            <li><i class="fontello-icon-lock-3"></i> fontello-icon-lock-3</li>
+					                                                            <li><i class="fontello-icon-lock-1"></i> fontello-icon-lock-1</li>
+					                                                            <li><i class="fontello-icon-lock-4"></i> fontello-icon-lock-4</li>
+					                                                            <li><i class="fontello-icon-lock-2"></i> fontello-icon-lock-2</li>
+					                                                            <li><i class="fontello-icon-lock-5"></i> fontello-icon-lock-5</li>
+					                                                            <li><i class="fontello-icon-lock"></i> fontello-icon-lock</li>
+					                                                            <li><i class="fontello-icon-lock-open-2"></i> fontello-icon-lock-open-2</li>
+					                                                            <li><i class="fontello-icon-lock-open"></i> fontello-icon-lock-open</li>
+					                                                            <li><i class="fontello-icon-lock-open-4"></i> fontello-icon-lock-open-4</li>
+					                                                            <li><i class="fontello-icon-lock-open-3"></i> fontello-icon-lock-open-3</li>
+					                                                            <li><i class="fontello-icon-lock-open-1"></i> fontello-icon-lock-open-1</li>
+					                                                            <li><i class="fontello-icon-bell"></i> fontello-icon-bell</li>
+					                                                            <li><i class="fontello-icon-bell-1"></i> fontello-icon-bell-1</li>
+					                                                            <li><i class="fontello-icon-bookmark"></i> fontello-icon-bookmark</li>
+					                                                            <li><i class="fontello-icon-bookmark-2"></i> fontello-icon-bookmark-2</li>
+					                                                            <li><i class="fontello-icon-bookmark-1"></i> fontello-icon-bookmark-1</li>
+					                                                            <li><i class="fontello-icon-link-4"></i> fontello-icon-link-4</li>
+					                                                            <li><i class="fontello-icon-link-3"></i> fontello-icon-link-3</li>
+					                                                            <li><i class="fontello-icon-link"></i> fontello-icon-link</li>
+					                                                            <li><i class="fontello-icon-link-1"></i> fontello-icon-link-1</li>
+					                                                            <li><i class="fontello-icon-link-2"></i> fontello-icon-link-2</li>
+					                                                            <li><i class="fontello-icon-fire"></i> fontello-icon-fire</li>
+					                                                            <li><i class="fontello-icon-wrench-1"></i> fontello-icon-wrench-1</li>
+					                                                            <li><i class="fontello-icon-wrench"></i> fontello-icon-wrench</li>
+					                                                            <li><i class="fontello-icon-wrench-2"></i> fontello-icon-wrench-2</li>
+					                                                            <li><i class="fontello-icon-clock-alt"></i> fontello-icon-clock-alt</li>
+					                                                            <li><i class="fontello-icon-clock-5"></i> fontello-icon-clock-5</li>
+					                                                            <li><i class="fontello-icon-clock"></i> fontello-icon-clock</li>
+					                                                            <li><i class="fontello-icon-clock-3"></i> fontello-icon-clock-3</li>
+					                                                            <li><i class="fontello-icon-clock-4"></i> fontello-icon-clock-4</li>
+					                                                            <li><i class="fontello-icon-clock-2"></i> fontello-icon-clock-2</li>
+					                                                            <li><i class="fontello-icon-clock-1"></i> fontello-icon-clock-1</li>
+					                                                            <li><i class="fontello-icon-block-4"></i> fontello-icon-block-4</li>
+					                                                            <li><i class="fontello-icon-block-1"></i> fontello-icon-block-1</li>
+					                                                            <li><i class="fontello-icon-block-2"></i> fontello-icon-block-2</li>
+					                                                            <li><i class="fontello-icon-block-3"></i> fontello-icon-block-3</li>
+					                                                            <li><i class="fontello-icon-block"></i> fontello-icon-block</li>
+					                                                        </ul>
+					                                                    </div>
+					                                                </div>					            
+                    
+                    <div class="row-fluid">
+                        <div class="span12">
+							<h3 class="heading"><a href="http://splashyfish.com/icons/">Splashy icons</a> <small>(367 icons)</small></h3>
+							<div class="icon_copy_a sepH_c">Click on icon to generate code <span></span></div>
+							<ul class="icon_list_a clearfix">
+								<li title="splashy-add"><i class="splashy-add"></i></li>
+								<li title="splashy-add_outline"><i class="splashy-add_outline"></i></li>
+								<li title="splashy-add_small"><i class="splashy-add_small"></i></li>
+								<li title="splashy-applications_windows"><i class="splashy-applications_windows"></i></li>
+								<li title="splashy-application_windows"><i class="splashy-application_windows"></i></li>
+								<li title="splashy-application_windows_add"><i class="splashy-application_windows_add"></i></li>
+								<li title="splashy-application_windows_down"><i class="splashy-application_windows_down"></i></li>
+								<li title="splashy-application_windows_edit"><i class="splashy-application_windows_edit"></i></li>
+								<li title="splashy-application_windows_locked"><i class="splashy-application_windows_locked"></i></li>
+								<li title="splashy-application_windows_new"><i class="splashy-application_windows_new"></i></li>
+								<li title="splashy-application_windows_okay"><i class="splashy-application_windows_okay"></i></li>
+								<li title="splashy-application_windows_remove"><i class="splashy-application_windows_remove"></i></li>
+								<li title="splashy-application_windows_share"><i class="splashy-application_windows_share"></i></li>
+								<li title="splashy-application_windows_up"><i class="splashy-application_windows_up"></i></li>
+								<li title="splashy-application_windows_warning"><i class="splashy-application_windows_warning"></i></li>
+								<li title="splashy-arrow_large_down"><i class="splashy-arrow_large_down"></i></li>
+								<li title="splashy-arrow_large_down_outline"><i class="splashy-arrow_large_down_outline"></i></li>
+								<li title="splashy-arrow_large_left"><i class="splashy-arrow_large_left"></i></li>
+								<li title="splashy-arrow_large_left_outline"><i class="splashy-arrow_large_left_outline"></i></li>
+								<li title="splashy-arrow_large_right"><i class="splashy-arrow_large_right"></i></li>
+								<li title="splashy-arrow_large_right_outline"><i class="splashy-arrow_large_right_outline"></i></li>
+								<li title="splashy-arrow_large_up"><i class="splashy-arrow_large_up"></i></li>
+								<li title="splashy-arrow_large_up_outline"><i class="splashy-arrow_large_up_outline"></i></li>
+								<li title="splashy-arrow_medium_down"><i class="splashy-arrow_medium_down"></i></li>
+								<li title="splashy-arrow_medium_left"><i class="splashy-arrow_medium_left"></i></li>
+								<li title="splashy-arrow_medium_lower_left"><i class="splashy-arrow_medium_lower_left"></i></li>
+								<li title="splashy-arrow_medium_lower_right"><i class="splashy-arrow_medium_lower_right"></i></li>
+								<li title="splashy-arrow_medium_right"><i class="splashy-arrow_medium_right"></i></li>
+								<li title="splashy-arrow_medium_up"><i class="splashy-arrow_medium_up"></i></li>
+								<li title="splashy-arrow_medium_upper_left"><i class="splashy-arrow_medium_upper_left"></i></li>
+								<li title="splashy-arrow_medium_upper_right"><i class="splashy-arrow_medium_upper_right"></i></li>
+								<li title="splashy-arrow_small_down"><i class="splashy-arrow_small_down"></i></li>
+								<li title="splashy-arrow_small_left"><i class="splashy-arrow_small_left"></i></li>
+								<li title="splashy-arrow_small_right"><i class="splashy-arrow_small_right"></i></li>
+								<li title="splashy-arrow_small_up"><i class="splashy-arrow_small_up"></i></li>
+								<li title="splashy-arrow_state_blue_collapsed"><i class="splashy-arrow_state_blue_collapsed"></i></li>
+								<li title="splashy-arrow_state_blue_expanded"><i class="splashy-arrow_state_blue_expanded"></i></li>
+								<li title="splashy-arrow_state_blue_left"><i class="splashy-arrow_state_blue_left"></i></li>
+								<li title="splashy-arrow_state_blue_right"><i class="splashy-arrow_state_blue_right"></i></li>
+								<li title="splashy-arrow_state_grey_collapsed"><i class="splashy-arrow_state_grey_collapsed"></i></li>
+								<li title="splashy-arrow_state_grey_expanded"><i class="splashy-arrow_state_grey_expanded"></i></li>
+								<li title="splashy-arrow_state_grey_left"><i class="splashy-arrow_state_grey_left"></i></li>
+								<li title="splashy-arrow_state_grey_right"><i class="splashy-arrow_state_grey_right"></i></li>
+								<li title="splashy-box"><i class="splashy-box"></i></li>
+								<li title="splashy-box_add"><i class="splashy-box_add"></i></li>
+								<li title="splashy-box_edit"><i class="splashy-box_edit"></i></li>
+								<li title="splashy-box_locked"><i class="splashy-box_locked"></i></li>
+								<li title="splashy-box_new"><i class="splashy-box_new"></i></li>
+								<li title="splashy-box_okay"><i class="splashy-box_okay"></i></li>
+								<li title="splashy-box_remove"><i class="splashy-box_remove"></i></li>
+								<li title="splashy-box_share"><i class="splashy-box_share"></i></li>
+								<li title="splashy-box_warning"><i class="splashy-box_warning"></i></li>
+								<li title="splashy-breadcrumb_separator_arrow_1_dot"><i class="splashy-breadcrumb_separator_arrow_1_dot"></i></li>
+								<li title="splashy-breadcrumb_separator_arrow_2_dots"><i class="splashy-breadcrumb_separator_arrow_2_dots"></i></li>
+								<li title="splashy-breadcrumb_separator_arrow_full"><i class="splashy-breadcrumb_separator_arrow_full"></i></li>
+								<li title="splashy-breadcrumb_separator_dark"><i class="splashy-breadcrumb_separator_dark"></i></li>
+								<li title="splashy-breadcrumb_separator_light"><i class="splashy-breadcrumb_separator_light"></i></li>
+								<li title="splashy-bullet_blue"><i class="splashy-bullet_blue"></i></li>
+								<li title="splashy-bullet_blue_arrow"><i class="splashy-bullet_blue_arrow"></i></li>
+								<li title="splashy-bullet_blue_collapse"><i class="splashy-bullet_blue_collapse"></i></li>
+								<li title="splashy-bullet_blue_collapse_small"><i class="splashy-bullet_blue_collapse_small"></i></li>
+								<li title="splashy-bullet_blue_expand"><i class="splashy-bullet_blue_expand"></i></li>
+								<li title="splashy-bullet_blue_expand_small"><i class="splashy-bullet_blue_expand_small"></i></li>
+								<li title="splashy-bullet_blue_small"><i class="splashy-bullet_blue_small"></i></li>
+								<li title="splashy-calendar_day"><i class="splashy-calendar_day"></i></li>
+								<li title="splashy-calendar_day_add"><i class="splashy-calendar_day_add"></i></li>
+								<li title="splashy-calendar_day_down"><i class="splashy-calendar_day_down"></i></li>
+								<li title="splashy-calendar_day_edit"><i class="splashy-calendar_day_edit"></i></li>
+								<li title="splashy-calendar_day_event"><i class="splashy-calendar_day_event"></i></li>
+								<li title="splashy-calendar_day_new"><i class="splashy-calendar_day_new"></i></li>
+								<li title="splashy-calendar_day_remove"><i class="splashy-calendar_day_remove"></i></li>
+								<li title="splashy-calendar_day_up"><i class="splashy-calendar_day_up"></i></li>
+								<li title="splashy-calendar_month"><i class="splashy-calendar_month"></i></li>
+								<li title="splashy-calendar_month_add"><i class="splashy-calendar_month_add"></i></li>
+								<li title="splashy-calendar_month_down"><i class="splashy-calendar_month_down"></i></li>
+								<li title="splashy-calendar_month_edit"><i class="splashy-calendar_month_edit"></i></li>
+								<li title="splashy-calendar_month_new"><i class="splashy-calendar_month_new"></i></li>
+								<li title="splashy-calendar_month_remove"><i class="splashy-calendar_month_remove"></i></li>
+								<li title="splashy-calendar_month_up"><i class="splashy-calendar_month_up"></i></li>
+								<li title="splashy-calendar_week"><i class="splashy-calendar_week"></i></li>
+								<li title="splashy-calendar_week_add"><i class="splashy-calendar_week_add"></i></li>
+								<li title="splashy-calendar_week_edit"><i class="splashy-calendar_week_edit"></i></li>
+								<li title="splashy-calendar_week_remove"><i class="splashy-calendar_week_remove"></i></li>
+								<li title="splashy-cellphone"><i class="splashy-cellphone"></i></li>
+								<li title="splashy-check"><i class="splashy-check"></i></li>
+								<li title="splashy-close"><i class="splashy-close"></i></li>
+								<li title="splashy-comment"><i class="splashy-comment"></i></li>
+								<li title="splashy-comments"><i class="splashy-comments"></i></li>
+								<li title="splashy-comments_reply"><i class="splashy-comments_reply"></i></li>
+								<li title="splashy-comments_small"><i class="splashy-comments_small"></i></li>
+								<li title="splashy-comment_alert"><i class="splashy-comment_alert"></i></li>
+								<li title="splashy-comment_new_1"><i class="splashy-comment_new_1"></i></li>
+								<li title="splashy-comment_new_2"><i class="splashy-comment_new_2"></i></li>
+								<li title="splashy-comment_question"><i class="splashy-comment_question"></i></li>
+								<li title="splashy-comment_reply"><i class="splashy-comment_reply"></i></li>
+								<li title="splashy-contact_blue"><i class="splashy-contact_blue"></i></li>
+								<li title="splashy-contact_blue_add"><i class="splashy-contact_blue_add"></i></li>
+								<li title="splashy-contact_blue_edit"><i class="splashy-contact_blue_edit"></i></li>
+								<li title="splashy-contact_blue_new"><i class="splashy-contact_blue_new"></i></li>
+								<li title="splashy-contact_blue_remove"><i class="splashy-contact_blue_remove"></i></li>
+								<li title="splashy-contact_grey"><i class="splashy-contact_grey"></i></li>
+								<li title="splashy-contact_grey_add"><i class="splashy-contact_grey_add"></i></li>
+								<li title="splashy-contact_grey_edit"><i class="splashy-contact_grey_edit"></i></li>
+								<li title="splashy-contact_grey_new"><i class="splashy-contact_grey_new"></i></li>
+								<li title="splashy-contact_grey_remove"><i class="splashy-contact_grey_remove"></i></li>
+								<li title="splashy-diamonds_1"><i class="splashy-diamonds_1"></i></li>
+								<li title="splashy-diamonds_2"><i class="splashy-diamonds_2"></i></li>
+								<li title="splashy-diamonds_3"><i class="splashy-diamonds_3"></i></li>
+								<li title="splashy-diamonds_4"><i class="splashy-diamonds_4"></i></li>
+								<li title="splashy-documents"><i class="splashy-documents"></i></li>
+								<li title="splashy-documents_add"><i class="splashy-documents_add"></i></li>
+								<li title="splashy-documents_edit"><i class="splashy-documents_edit"></i></li>
+								<li title="splashy-documents_locked"><i class="splashy-documents_locked"></i></li>
+								<li title="splashy-documents_new"><i class="splashy-documents_new"></i></li>
+								<li title="splashy-documents_okay"><i class="splashy-documents_okay"></i></li>
+								<li title="splashy-documents_remove"><i class="splashy-documents_remove"></i></li>
+								<li title="splashy-documents_share"><i class="splashy-documents_share"></i></li>
+								<li title="splashy-documents_warning"><i class="splashy-documents_warning"></i></li>
+								<li title="splashy-document_a4"><i class="splashy-document_a4"></i></li>
+								<li title="splashy-document_a4_add"><i class="splashy-document_a4_add"></i></li>
+								<li title="splashy-document_a4_blank"><i class="splashy-document_a4_blank"></i></li>
+								<li title="splashy-document_a4_download"><i class="splashy-document_a4_download"></i></li>
+								<li title="splashy-document_a4_edit"><i class="splashy-document_a4_edit"></i></li>
+								<li title="splashy-document_a4_locked"><i class="splashy-document_a4_locked"></i></li>
+								<li title="splashy-document_a4_marked"><i class="splashy-document_a4_marked"></i></li>
+								<li title="splashy-document_a4_new"><i class="splashy-document_a4_new"></i></li>
+								<li title="splashy-document_a4_okay"><i class="splashy-document_a4_okay"></i></li>
+								<li title="splashy-document_a4_remove"><i class="splashy-document_a4_remove"></i></li>
+								<li title="splashy-document_a4_share"><i class="splashy-document_a4_share"></i></li>
+								<li title="splashy-document_a4_upload"><i class="splashy-document_a4_upload"></i></li>
+								<li title="splashy-document_a4_warning"><i class="splashy-document_a4_warning"></i></li>
+								<li title="splashy-document_copy"><i class="splashy-document_copy"></i></li>
+								<li title="splashy-document_letter"><i class="splashy-document_letter"></i></li>
+								<li title="splashy-document_letter_add"><i class="splashy-document_letter_add"></i></li>
+								<li title="splashy-document_letter_blank"><i class="splashy-document_letter_blank"></i></li>
+								<li title="splashy-document_letter_download"><i class="splashy-document_letter_download"></i></li>
+								<li title="splashy-document_letter_edit"><i class="splashy-document_letter_edit"></i></li>
+								<li title="splashy-document_letter_locked"><i class="splashy-document_letter_locked"></i></li>
+								<li title="splashy-document_letter_marked"><i class="splashy-document_letter_marked"></i></li>
+								<li title="splashy-document_letter_new"><i class="splashy-document_letter_new"></i></li>
+								<li title="splashy-document_letter_okay"><i class="splashy-document_letter_okay"></i></li>
+								<li title="splashy-document_letter_remove"><i class="splashy-document_letter_remove"></i></li>
+								<li title="splashy-document_letter_share"><i class="splashy-document_letter_share"></i></li>
+								<li title="splashy-document_letter_upload"><i class="splashy-document_letter_upload"></i></li>
+								<li title="splashy-document_letter_warning"><i class="splashy-document_letter_warning"></i></li>
+								<li title="splashy-document_small"><i class="splashy-document_small"></i></li>
+								<li title="splashy-document_small_download"><i class="splashy-document_small_download"></i></li>
+								<li title="splashy-document_small_upload"><i class="splashy-document_small_upload"></i></li>
+								<li title="splashy-download"><i class="splashy-download"></i></li>
+								<li title="splashy-error"><i class="splashy-error"></i></li>
+								<li title="splashy-error_do_not"><i class="splashy-error_do_not"></i></li>
+								<li title="splashy-error_do_not_small"><i class="splashy-error_do_not_small"></i></li>
+								<li title="splashy-error_small"><i class="splashy-error_small"></i></li>
+								<li title="splashy-error_x"><i class="splashy-error_x"></i></li>
+								<li title="splashy-fish"><i class="splashy-fish"></i></li>
+								<li title="splashy-folder_classic"><i class="splashy-folder_classic"></i></li>
+								<li title="splashy-folder_classic_add"><i class="splashy-folder_classic_add"></i></li>
+								<li title="splashy-folder_classic_add_simple"><i class="splashy-folder_classic_add_simple"></i></li>
+								<li title="splashy-folder_classic_down"><i class="splashy-folder_classic_down"></i></li>
+								<li title="splashy-folder_classic_edit"><i class="splashy-folder_classic_edit"></i></li>
+								<li title="splashy-folder_classic_locked"><i class="splashy-folder_classic_locked"></i></li>
+								<li title="splashy-folder_classic_opened"><i class="splashy-folder_classic_opened"></i></li>
+								<li title="splashy-folder_classic_opened_stuffed"><i class="splashy-folder_classic_opened_stuffed"></i></li>
+								<li title="splashy-folder_classic_remove"><i class="splashy-folder_classic_remove"></i></li>
+								<li title="splashy-folder_classic_remove_simple"><i class="splashy-folder_classic_remove_simple"></i></li>
+								<li title="splashy-folder_classic_stuffed"><i class="splashy-folder_classic_stuffed"></i></li>
+								<li title="splashy-folder_classic_stuffed_add"><i class="splashy-folder_classic_stuffed_add"></i></li>
+								<li title="splashy-folder_classic_stuffed_add_simple"><i class="splashy-folder_classic_stuffed_add_simple"></i></li>
+								<li title="splashy-folder_classic_stuffed_edit"><i class="splashy-folder_classic_stuffed_edit"></i></li>
+								<li title="splashy-folder_classic_stuffed_locked"><i class="splashy-folder_classic_stuffed_locked"></i></li>
+								<li title="splashy-folder_classic_stuffed_remove"><i class="splashy-folder_classic_stuffed_remove"></i></li>
+								<li title="splashy-folder_classic_stuffed_remove_simple"><i class="splashy-folder_classic_stuffed_remove_simple"></i></li>
+								<li title="splashy-folder_classic_type_document"><i class="splashy-folder_classic_type_document"></i></li>
+								<li title="splashy-folder_classic_type_image"><i class="splashy-folder_classic_type_image"></i></li>
+								<li title="splashy-folder_classic_type_music"><i class="splashy-folder_classic_type_music"></i></li>
+								<li title="splashy-folder_classic_up"><i class="splashy-folder_classic_up"></i></li>
+								<li title="splashy-folder_locked"><i class="splashy-folder_locked"></i></li>
+								<li title="splashy-folder_modernist"><i class="splashy-folder_modernist"></i></li>
+								<li title="splashy-folder_modernist_add"><i class="splashy-folder_modernist_add"></i></li>
+								<li title="splashy-folder_modernist_add_simple"><i class="splashy-folder_modernist_add_simple"></i></li>
+								<li title="splashy-folder_modernist_down"><i class="splashy-folder_modernist_down"></i></li>
+								<li title="splashy-folder_modernist_edit"><i class="splashy-folder_modernist_edit"></i></li>
+								<li title="splashy-folder_modernist_locked"><i class="splashy-folder_modernist_locked"></i></li>
+								<li title="splashy-folder_modernist_opened"><i class="splashy-folder_modernist_opened"></i></li>
+								<li title="splashy-folder_modernist_opened_stuffed"><i class="splashy-folder_modernist_opened_stuffed"></i></li>
+								<li title="splashy-folder_modernist_remove"><i class="splashy-folder_modernist_remove"></i></li>
+								<li title="splashy-folder_modernist_remove_simple"><i class="splashy-folder_modernist_remove_simple"></i></li>
+								<li title="splashy-folder_modernist_stuffed"><i class="splashy-folder_modernist_stuffed"></i></li>
+								<li title="splashy-folder_modernist_stuffed_add"><i class="splashy-folder_modernist_stuffed_add"></i></li>
+								<li title="splashy-folder_modernist_stuffed_add_simple"><i class="splashy-folder_modernist_stuffed_add_simple"></i></li>
+								<li title="splashy-folder_modernist_stuffed_edit"><i class="splashy-folder_modernist_stuffed_edit"></i></li>
+								<li title="splashy-folder_modernist_stuffed_locked"><i class="splashy-folder_modernist_stuffed_locked"></i></li>
+								<li title="splashy-folder_modernist_stuffed_remove"><i class="splashy-folder_modernist_stuffed_remove"></i></li>
+								<li title="splashy-folder_modernist_stuffed_remove_simple"><i class="splashy-folder_modernist_stuffed_remove_simple"></i></li>
+								<li title="splashy-folder_modernist_type_document"><i class="splashy-folder_modernist_type_document"></i></li>
+								<li title="splashy-folder_modernist_type_image"><i class="splashy-folder_modernist_type_image"></i></li>
+								<li title="splashy-folder_modernist_type_movie"><i class="splashy-folder_modernist_type_movie"></i></li>
+								<li title="splashy-folder_modernist_type_music"><i class="splashy-folder_modernist_type_music"></i></li>
+								<li title="splashy-folder_modernist_up"><i class="splashy-folder_modernist_up"></i></li>
+								<li title="splashy-folder_remove"><i class="splashy-folder_remove"></i></li>
+								<li title="splashy-folder_stuffed"><i class="splashy-folder_stuffed"></i></li>
+								<li title="splashy-folder_stuffed_add"><i class="splashy-folder_stuffed_add"></i></li>
+								<li title="splashy-folder_stuffed_locked"><i class="splashy-folder_stuffed_locked"></i></li>
+								<li title="splashy-folder_stuffed_remove"><i class="splashy-folder_stuffed_remove"></i></li>
+								<li title="splashy-gem_cancel_1"><i class="splashy-gem_cancel_1"></i></li>
+								<li title="splashy-gem_cancel_2"><i class="splashy-gem_cancel_2"></i></li>
+								<li title="splashy-gem_okay"><i class="splashy-gem_okay"></i></li>
+								<li title="splashy-gem_options"><i class="splashy-gem_options"></i></li>
+								<li title="splashy-gem_remove"><i class="splashy-gem_remove"></i></li>
+								<li title="splashy-group_blue"><i class="splashy-group_blue"></i></li>
+								<li title="splashy-group_blue_add"><i class="splashy-group_blue_add"></i></li>
+								<li title="splashy-group_blue_edit"><i class="splashy-group_blue_edit"></i></li>
+								<li title="splashy-group_blue_new"><i class="splashy-group_blue_new"></i></li>
+								<li title="splashy-group_blue_remove"><i class="splashy-group_blue_remove"></i></li>
+								<li title="splashy-group_green"><i class="splashy-group_green"></i></li>
+								<li title="splashy-group_green_add"><i class="splashy-group_green_add"></i></li>
+								<li title="splashy-group_green_edit"><i class="splashy-group_green_edit"></i></li>
+								<li title="splashy-group_green_new"><i class="splashy-group_green_new"></i></li>
+								<li title="splashy-group_green_remove"><i class="splashy-group_green_remove"></i></li>
+								<li title="splashy-group_grey"><i class="splashy-group_grey"></i></li>
+								<li title="splashy-group_grey_add"><i class="splashy-group_grey_add"></i></li>
+								<li title="splashy-group_grey_edit"><i class="splashy-group_grey_edit"></i></li>
+								<li title="splashy-group_grey_new"><i class="splashy-group_grey_new"></i></li>
+								<li title="splashy-group_grey_remove"><i class="splashy-group_grey_remove"></i></li>
+								<li title="splashy-hcard"><i class="splashy-hcard"></i></li>
+								<li title="splashy-hcards"><i class="splashy-hcards"></i></li>
+								<li title="splashy-hcards_add"><i class="splashy-hcards_add"></i></li>
+								<li title="splashy-hcards_down"><i class="splashy-hcards_down"></i></li>
+								<li title="splashy-hcards_edit"><i class="splashy-hcards_edit"></i></li>
+								<li title="splashy-hcards_remove"><i class="splashy-hcards_remove"></i></li>
+								<li title="splashy-hcards_up"><i class="splashy-hcards_up"></i></li>
+								<li title="splashy-hcard_add"><i class="splashy-hcard_add"></i></li>
+								<li title="splashy-hcard_download"><i class="splashy-hcard_download"></i></li>
+								<li title="splashy-hcard_edit"><i class="splashy-hcard_edit"></i></li>
+								<li title="splashy-hcard_new"><i class="splashy-hcard_new"></i></li>
+								<li title="splashy-hcard_remove"><i class="splashy-hcard_remove"></i></li>
+								<li title="splashy-hcard_up"><i class="splashy-hcard_up"></i></li>
+								<li title="splashy-heart"><i class="splashy-heart"></i></li>
+								<li title="splashy-heart_add"><i class="splashy-heart_add"></i></li>
+								<li title="splashy-heart_edit"><i class="splashy-heart_edit"></i></li>
+								<li title="splashy-heart_outline"><i class="splashy-heart_outline"></i></li>
+								<li title="splashy-heart_remove"><i class="splashy-heart_remove"></i></li>
+								<li title="splashy-heart_up"><i class="splashy-heart_up"></i></li>
+								<li title="splashy-help"><i class="splashy-help"></i></li>
+								<li title="splashy-home_green"><i class="splashy-home_green"></i></li>
+								<li title="splashy-home_grey"><i class="splashy-home_grey"></i></li>
+								<li title="splashy-image_cultured"><i class="splashy-image_cultured"></i></li>
+								<li title="splashy-image_modernist"><i class="splashy-image_modernist"></i></li>
+								<li title="splashy-information"><i class="splashy-information"></i></li>
+								<li title="splashy-lock_large_locked"><i class="splashy-lock_large_locked"></i></li>
+								<li title="splashy-lock_large_unlocked"><i class="splashy-lock_large_unlocked"></i></li>
+								<li title="splashy-lock_small_locked"><i class="splashy-lock_small_locked"></i></li>
+								<li title="splashy-lock_small_unlocked"><i class="splashy-lock_small_unlocked"></i></li>
+								<li title="splashy-mail_light"><i class="splashy-mail_light"></i></li>
+								<li title="splashy-mail_light_down"><i class="splashy-mail_light_down"></i></li>
+								<li title="splashy-mail_light_left"><i class="splashy-mail_light_left"></i></li>
+								<li title="splashy-mail_light_new_1"><i class="splashy-mail_light_new_1"></i></li>
+								<li title="splashy-mail_light_new_2"><i class="splashy-mail_light_new_2"></i></li>
+								<li title="splashy-mail_light_right"><i class="splashy-mail_light_right"></i></li>
+								<li title="splashy-mail_light_stuffed"><i class="splashy-mail_light_stuffed"></i></li>
+								<li title="splashy-mail_light_up"><i class="splashy-mail_light_up"></i></li>
+								<li title="splashy-map"><i class="splashy-map"></i></li>
+								<li title="splashy-marker_rounded_add"><i class="splashy-marker_rounded_add"></i></li>
+								<li title="splashy-marker_rounded_blue"><i class="splashy-marker_rounded_blue"></i></li>
+								<li title="splashy-marker_rounded_edit"><i class="splashy-marker_rounded_edit"></i></li>
+								<li title="splashy-marker_rounded_green"><i class="splashy-marker_rounded_green"></i></li>
+								<li title="splashy-marker_rounded_grey_1"><i class="splashy-marker_rounded_grey_1"></i></li>
+								<li title="splashy-marker_rounded_grey_2"><i class="splashy-marker_rounded_grey_2"></i></li>
+								<li title="splashy-marker_rounded_grey_3"><i class="splashy-marker_rounded_grey_3"></i></li>
+								<li title="splashy-marker_rounded_grey_4"><i class="splashy-marker_rounded_grey_4"></i></li>
+								<li title="splashy-marker_rounded_grey_5"><i class="splashy-marker_rounded_grey_5"></i></li>
+								<li title="splashy-marker_rounded_light_blue"><i class="splashy-marker_rounded_light_blue"></i></li>
+								<li title="splashy-marker_rounded_new"><i class="splashy-marker_rounded_new"></i></li>
+								<li title="splashy-marker_rounded_red"><i class="splashy-marker_rounded_red"></i></li>
+								<li title="splashy-marker_rounded_remove"><i class="splashy-marker_rounded_remove"></i></li>
+								<li title="splashy-marker_rounded_violet"><i class="splashy-marker_rounded_violet"></i></li>
+								<li title="splashy-marker_rounded_yellow"><i class="splashy-marker_rounded_yellow"></i></li>
+								<li title="splashy-marker_rounded_yellow_green"><i class="splashy-marker_rounded_yellow_green"></i></li>
+								<li title="splashy-marker_rounded_yellow_orange"><i class="splashy-marker_rounded_yellow_orange"></i></li>
+								<li title="splashy-media_controls_dark_first"><i class="splashy-media_controls_dark_first"></i></li>
+								<li title="splashy-media_controls_dark_forward"><i class="splashy-media_controls_dark_forward"></i></li>
+								<li title="splashy-media_controls_dark_last"><i class="splashy-media_controls_dark_last"></i></li>
+								<li title="splashy-media_controls_dark_pause"><i class="splashy-media_controls_dark_pause"></i></li>
+								<li title="splashy-media_controls_dark_play"><i class="splashy-media_controls_dark_play"></i></li>
+								<li title="splashy-media_controls_dark_rewind"><i class="splashy-media_controls_dark_rewind"></i></li>
+								<li title="splashy-media_controls_dark_stop"><i class="splashy-media_controls_dark_stop"></i></li>
+								<li title="splashy-media_controls_first_small"><i class="splashy-media_controls_first_small"></i></li>
+								<li title="splashy-media_controls_forward_small"><i class="splashy-media_controls_forward_small"></i></li>
+								<li title="splashy-media_controls_last_small"><i class="splashy-media_controls_last_small"></i></li>
+								<li title="splashy-media_controls_pause_small"><i class="splashy-media_controls_pause_small"></i></li>
+								<li title="splashy-media_controls_play_small"><i class="splashy-media_controls_play_small"></i></li>
+								<li title="splashy-media_controls_rewind_small"><i class="splashy-media_controls_rewind_small"></i></li>
+								<li title="splashy-media_controls_stop_small"><i class="splashy-media_controls_stop_small"></i></li>
+								<li title="splashy-menu"><i class="splashy-menu"></i></li>
+								<li title="splashy-menu_dropdown"><i class="splashy-menu_dropdown"></i></li>
+								<li title="splashy-movie_play"><i class="splashy-movie_play"></i></li>
+								<li title="splashy-music_cd_blue_note"><i class="splashy-music_cd_blue_note"></i></li>
+								<li title="splashy-music_green"><i class="splashy-music_green"></i></li>
+								<li title="splashy-music_grey"><i class="splashy-music_grey"></i></li>
+								<li title="splashy-new_small"><i class="splashy-new_small"></i></li>
+								<li title="splashy-okay"><i class="splashy-okay"></i></li>
+								<li title="splashy-okay_small"><i class="splashy-okay_small"></i></li>
+								<li title="splashy-pagination_1_first"><i class="splashy-pagination_1_first"></i></li>
+								<li title="splashy-pagination_1_last"><i class="splashy-pagination_1_last"></i></li>
+								<li title="splashy-pagination_1_next"><i class="splashy-pagination_1_next"></i></li>
+								<li title="splashy-pagination_1_previous"><i class="splashy-pagination_1_previous"></i></li>
+								<li title="splashy-pencil"><i class="splashy-pencil"></i></li>
+								<li title="splashy-pencil_small"><i class="splashy-pencil_small"></i></li>
+								<li title="splashy-printer"><i class="splashy-printer"></i></li>
+								<li title="splashy-quanitity_capsule_1"><i class="splashy-quanitity_capsule_1"></i></li>
+								<li title="splashy-quantity_capsule_2"><i class="splashy-quantity_capsule_2"></i></li>
+								<li title="splashy-quantity_capsule_3"><i class="splashy-quantity_capsule_3"></i></li>
+								<li title="splashy-quantity_capsule_4"><i class="splashy-quantity_capsule_4"></i></li>
+								<li title="splashy-quantity_capsule_5"><i class="splashy-quantity_capsule_5"></i></li>
+								<li title="splashy-refresh"><i class="splashy-refresh"></i></li>
+								<li title="splashy-refresh_backwards"><i class="splashy-refresh_backwards"></i></li>
+								<li title="splashy-refresh_forward"><i class="splashy-refresh_forward"></i></li>
+								<li title="splashy-remove"><i class="splashy-remove"></i></li>
+								<li title="splashy-remove_minus_sign"><i class="splashy-remove_minus_sign"></i></li>
+								<li title="splashy-remove_minus_sign_outline"><i class="splashy-remove_minus_sign_outline"></i></li>
+								<li title="splashy-remove_minus_sign_small"><i class="splashy-remove_minus_sign_small"></i></li>
+								<li title="splashy-remove_outline"><i class="splashy-remove_outline"></i></li>
+								<li title="splashy-shield"><i class="splashy-shield"></i></li>
+								<li title="splashy-shield_chevrons"><i class="splashy-shield_chevrons"></i></li>
+								<li title="splashy-shield_star"><i class="splashy-shield_star"></i></li>
+								<li title="splashy-slider_no_pointy_thing"><i class="splashy-slider_no_pointy_thing"></i></li>
+								<li title="splashy-smiley_amused"><i class="splashy-smiley_amused"></i></li>
+								<li title="splashy-smiley_happy"><i class="splashy-smiley_happy"></i></li>
+								<li title="splashy-smiley_surprised"><i class="splashy-smiley_surprised"></i></li>
+								<li title="splashy-sprocket_dark"><i class="splashy-sprocket_dark"></i></li>
+								<li title="splashy-sprocket_light"><i class="splashy-sprocket_light"></i></li>
+								<li title="splashy-star_boxed_empty"><i class="splashy-star_boxed_empty"></i></li>
+								<li title="splashy-star_boxed_full"><i class="splashy-star_boxed_full"></i></li>
+								<li title="splashy-star_boxed_half"><i class="splashy-star_boxed_half"></i></li>
+								<li title="splashy-star_empty"><i class="splashy-star_empty"></i></li>
+								<li title="splashy-star_full"><i class="splashy-star_full"></i></li>
+								<li title="splashy-star_half"><i class="splashy-star_half"></i></li>
+								<li title="splashy-tag"><i class="splashy-tag"></i></li>
+								<li title="splashy-tag_add"><i class="splashy-tag_add"></i></li>
+								<li title="splashy-tag_edit"><i class="splashy-tag_edit"></i></li>
+								<li title="splashy-tag_remove"><i class="splashy-tag_remove"></i></li>
+								<li title="splashy-thumb_down"><i class="splashy-thumb_down"></i></li>
+								<li title="splashy-thumb_up"><i class="splashy-thumb_up"></i></li>
+								<li title="splashy-ticket"><i class="splashy-ticket"></i></li>
+								<li title="splashy-ticket_add"><i class="splashy-ticket_add"></i></li>
+								<li title="splashy-ticket_remove"><i class="splashy-ticket_remove"></i></li>
+								<li title="splashy-upload"><i class="splashy-upload"></i></li>
+								<li title="splashy-view_list"><i class="splashy-view_list"></i></li>
+								<li title="splashy-view_list_with_thumbnail"><i class="splashy-view_list_with_thumbnail"></i></li>
+								<li title="splashy-view_outline"><i class="splashy-view_outline"></i></li>
+								<li title="splashy-view_outline_detail"><i class="splashy-view_outline_detail"></i></li>
+								<li title="splashy-view_table"><i class="splashy-view_table"></i></li>
+								<li title="splashy-view_thumbnail"><i class="splashy-view_thumbnail"></i></li>
+								<li title="splashy-volume"><i class="splashy-volume"></i></li>
+								<li title="splashy-volume_loud"><i class="splashy-volume_loud"></i></li>
+								<li title="splashy-volume_off"><i class="splashy-volume_off"></i></li>
+								<li title="splashy-volume_quiet"><i class="splashy-volume_quiet"></i></li>
+								<li title="splashy-warning"><i class="splashy-warning"></i></li>
+								<li title="splashy-warning_triangle"><i class="splashy-warning_triangle"></i></li>
+								<li title="splashy-warning_triangle_small"><i class="splashy-warning_triangle_small"></i></li>
+								<li title="splashy-zoom"><i class="splashy-zoom"></i></li>
+								<li title="splashy-zoom_in"><i class="splashy-zoom_in"></i></li>
+								<li title="splashy-zoom_out"><i class="splashy-zoom_out"></i></li>
+							</ul>
+							<h3 class="heading"><a href="http://www.famfamfam.com/lab/icons/flags/">Flag icons</a> <small>(247 icons)</small></h3>
+							<div class="icon_copy_b sepH_c" data-iconset="splashy">Click on icon to generate code <span></span></div>
+							<ul class="icon_list_b clearfix">
+								<li title="Andorra"><i class="flag-ad"></i></li>
+								<li title="United Arab Emirates"><i class="flag-ae"></i></li>
+								<li title="Afghanistan"><i class="flag-af"></i></li>
+								<li title="Antigua and Barbuda"><i class="flag-ag"></i></li>
+								<li title="Anguilla"><i class="flag-ai"></i></li>
+								<li title="Albania"><i class="flag-al"></i></li>
+								<li title="Armenia"><i class="flag-am"></i></li>
+								<li title="Netherlands Antilles"><i class="flag-an"></i></li>
+								<li title="Angola"><i class="flag-ao"></i></li>
+								<li title="Argentina"><i class="flag-ar"></i></li>
+								<li title="American Samoa"><i class="flag-as"></i></li>
+								<li title="Austria"><i class="flag-at"></i></li>
+								<li title="Australia"><i class="flag-au"></i></li>
+								<li title="Aruba"><i class="flag-aw"></i></li>
+								<li title="Åland Islands"><i class="flag-ax"></i></li>
+								<li title="Azerbaijan"><i class="flag-az"></i></li>
+								<li title="Bosnia and Herzegovina"><i class="flag-ba"></i></li>
+								<li title="Barbados"><i class="flag-bb"></i></li>
+								<li title="Bangladesh"><i class="flag-bd"></i></li>
+								<li title="Belgium"><i class="flag-be"></i></li>
+								<li title="Burkina Faso"><i class="flag-bf"></i></li>
+								<li title="Bulgaria"><i class="flag-bg"></i></li>
+								<li title="Bahrain"><i class="flag-bh"></i></li>
+								<li title="Burundi"><i class="flag-bi"></i></li>
+								<li title="Benin"><i class="flag-bj"></i></li>
+								<li title="Bermuda"><i class="flag-bm"></i></li>
+								<li title="Brunei Darussalam"><i class="flag-bn"></i></li>
+								<li title="Bolivia, Plurinational State of"><i class="flag-bo"></i></li>
+								<li title="Brazil"><i class="flag-br"></i></li>
+								<li title="Bahamas"><i class="flag-bs"></i></li>
+								<li title="Bhutan"><i class="flag-bt"></i></li>
+								<li title="Bouvet Island"><i class="flag-bv"></i></li>
+								<li title="Botswana"><i class="flag-bw"></i></li>
+								<li title="Belarus"><i class="flag-by"></i></li>
+								<li title="Belize"><i class="flag-bz"></i></li>
+								<li title="Canada"><i class="flag-ca"></i></li>
+								<li title="Catalonia"><i class="flag-catalonia"></i></li>
+								<li title="Cocos (Keeling) Islands"><i class="flag-cc"></i></li>
+								<li title="Congo, the Democratic Republic of the"><i class="flag-cd"></i></li>
+								<li title="Central African Republic"><i class="flag-cf"></i></li>
+								<li title="Congo"><i class="flag-cg"></i></li>
+								<li title="Switzerland"><i class="flag-ch"></i></li>
+								<li title="Côte d'Ivoire"><i class="flag-ci"></i></li>
+								<li title="Cook Islands"><i class="flag-ck"></i></li>
+								<li title="Chile"><i class="flag-cl"></i></li>
+								<li title="Cameroon"><i class="flag-cm"></i></li>
+								<li title="China"><i class="flag-cn"></i></li>
+								<li title="Colombia"><i class="flag-co"></i></li>
+								<li title="Costa Rica"><i class="flag-cr"></i></li>
+								<li title="Serbia and Montenegro"><i class="flag-cs"></i></li>
+								<li title="Cuba"><i class="flag-cu"></i></li>
+								<li title="Cape Verde"><i class="flag-cv"></i></li>
+								<li title="Christmas Island"><i class="flag-cx"></i></li>
+								<li title="Cyprus"><i class="flag-cy"></i></li>
+								<li title="Czech Republic"><i class="flag-cz"></i></li>
+								<li title="Germany"><i class="flag-de"></i></li>
+								<li title="Djibouti"><i class="flag-dj"></i></li>
+								<li title="Denmark"><i class="flag-dk"></i></li>
+								<li title="Dominica"><i class="flag-dm"></i></li>
+								<li title="Dominican Republic"><i class="flag-do"></i></li>
+								<li title="Algeria"><i class="flag-dz"></i></li>
+								<li title="Ecuador"><i class="flag-ec"></i></li>
+								<li title="Estonia"><i class="flag-ee"></i></li>
+								<li title="Egypt"><i class="flag-eg"></i></li>
+								<li title="Western Sahara"><i class="flag-eh"></i></li>
+								<li title="England"><i class="flag-england"></i></li>
+								<li title="Eritrea"><i class="flag-er"></i></li>
+								<li title="Spain"><i class="flag-es"></i></li>
+								<li title="Ethiopia"><i class="flag-et"></i></li>
+								<li title="European Union"><i class="flag-europeanunion"></i></li>
+								<li title="famfamfam ;)"><i class="flag-fam"></i></li>
+								<li title="Finland"><i class="flag-fi"></i></li>
+								<li title="Fiji"><i class="flag-fj"></i></li>
+								<li title="Falkland Islands (Malvinas)"><i class="flag-fk"></i></li>
+								<li title="Micronesia, Federated States of"><i class="flag-fm"></i></li>
+								<li title="Faroe Islands"><i class="flag-fo"></i></li>
+								<li title="France"><i class="flag-fr"></i></li>
+								<li title="Gabon"><i class="flag-ga"></i></li>
+								<li title="United Kingdom"><i class="flag-gb"></i></li>
+								<li title="Grenada"><i class="flag-gd"></i></li>
+								<li title="Georgia"><i class="flag-ge"></i></li>
+								<li title="French Guiana"><i class="flag-gf"></i></li>
+								<li title="Ghana"><i class="flag-gh"></i></li>
+								<li title="Gibraltar"><i class="flag-gi"></i></li>
+								<li title="Greenland"><i class="flag-gl"></i></li>
+								<li title="Gambia"><i class="flag-gm"></i></li>
+								<li title="Guinea"><i class="flag-gn"></i></li>
+								<li title="Guadeloupe"><i class="flag-gp"></i></li>
+								<li title="Equatorial Guinea"><i class="flag-gq"></i></li>
+								<li title="Greece"><i class="flag-gr"></i></li>
+								<li title="South Georgia and the South Sandwich Islands"><i class="flag-gs"></i></li>
+								<li title="Guatemala"><i class="flag-gt"></i></li>
+								<li title="Guam"><i class="flag-gu"></i></li>
+								<li title="Guinea-Bissau"><i class="flag-gw"></i></li>
+								<li title="Guyana"><i class="flag-gy"></i></li>
+								<li title="Hong Kong"><i class="flag-hk"></i></li>
+								<li title="Heard Island and McDonald Islands"><i class="flag-hm"></i></li>
+								<li title="Honduras"><i class="flag-hn"></i></li>
+								<li title="Croatia"><i class="flag-hr"></i></li>
+								<li title="Haiti"><i class="flag-ht"></i></li>
+								<li title="Hungary"><i class="flag-hu"></i></li>
+								<li title="Indonesia"><i class="flag-id"></i></li>
+								<li title="Ireland"><i class="flag-ie"></i></li>
+								<li title="Israel"><i class="flag-il"></i></li>
+								<li title="India"><i class="flag-in"></i></li>
+								<li title="British Indian Ocean Territory"><i class="flag-io"></i></li>
+								<li title="Iraq"><i class="flag-iq"></i></li>
+								<li title="Iran, Islamic Republic of"><i class="flag-ir"></i></li>
+								<li title="Iceland"><i class="flag-is"></i></li>
+								<li title="Italy"><i class="flag-it"></i></li>
+								<li title="Jamaica"><i class="flag-jm"></i></li>
+								<li title="Jordan"><i class="flag-jo"></i></li>
+								<li title="Japan"><i class="flag-jp"></i></li>
+								<li title="Kenya"><i class="flag-ke"></i></li>
+								<li title="Kyrgyzstan"><i class="flag-kg"></i></li>
+								<li title="Cambodia"><i class="flag-kh"></i></li>
+								<li title="Kiribati"><i class="flag-ki"></i></li>
+								<li title="Comoros"><i class="flag-km"></i></li>
+								<li title="Saint Kitts and Nevis"><i class="flag-kn"></i></li>
+								<li title="Korea, Democratic People's Republic of"><i class="flag-kp"></i></li>
+								<li title="Korea, Republic of"><i class="flag-kr"></i></li>
+								<li title="Kuwait"><i class="flag-kw"></i></li>
+								<li title="Cayman Islands"><i class="flag-ky"></i></li>
+								<li title="Kazakhstan"><i class="flag-kz"></i></li>
+								<li title="Lao People's Democratic Republic"><i class="flag-la"></i></li>
+								<li title="Lebanon"><i class="flag-lb"></i></li>
+								<li title="Saint Lucia"><i class="flag-lc"></i></li>
+								<li title="Liechtenstein"><i class="flag-li"></i></li>
+								<li title="Sri Lanka"><i class="flag-lk"></i></li>
+								<li title="Liberia"><i class="flag-lr"></i></li>
+								<li title="Lesotho"><i class="flag-ls"></i></li>
+								<li title="Lithuania"><i class="flag-lt"></i></li>
+								<li title="Luxembourg"><i class="flag-lu"></i></li>
+								<li title="Latvia"><i class="flag-lv"></i></li>
+								<li title="Libya"><i class="flag-ly"></i></li>
+								<li title="Morocco"><i class="flag-ma"></i></li>
+								<li title="Monaco"><i class="flag-mc"></i></li>
+								<li title="Moldova, Republic of"><i class="flag-md"></i></li>
+								<li title="Montenegro"><i class="flag-me"></i></li>
+								<li title="Madagascar"><i class="flag-mg"></i></li>
+								<li title="Marshall Islands"><i class="flag-mh"></i></li>
+								<li title="Macedonia, the former Yugoslav Republic of"><i class="flag-mk"></i></li>
+								<li title="Mali"><i class="flag-ml"></i></li>
+								<li title="Myanmar"><i class="flag-mm"></i></li>
+								<li title="Mongolia"><i class="flag-mn"></i></li>
+								<li title="Macao"><i class="flag-mo"></i></li>
+								<li title="Northern Mariana Islands"><i class="flag-mp"></i></li>
+								<li title="Martinique"><i class="flag-mq"></i></li>
+								<li title="Mauritania"><i class="flag-mr"></i></li>
+								<li title="Montserrat"><i class="flag-ms"></i></li>
+								<li title="Malta"><i class="flag-mt"></i></li>
+								<li title="Mauritius"><i class="flag-mu"></i></li>
+								<li title="Maldives"><i class="flag-mv"></i></li>
+								<li title="Malawi"><i class="flag-mw"></i></li>
+								<li title="Mexico"><i class="flag-mx"></i></li>
+								<li title="Malaysia"><i class="flag-my"></i></li>
+								<li title="Mozambique"><i class="flag-mz"></i></li>
+								<li title="Namibia"><i class="flag-na"></i></li>
+								<li title="New Caledonia"><i class="flag-nc"></i></li>
+								<li title="Niger"><i class="flag-ne"></i></li>
+								<li title="Norfolk Island"><i class="flag-nf"></i></li>
+								<li title="Nigeria"><i class="flag-ng"></i></li>
+								<li title="Nicaragua"><i class="flag-ni"></i></li>
+								<li title="Netherlands"><i class="flag-nl"></i></li>
+								<li title="Norway"><i class="flag-no"></i></li>
+								<li title="Nepal"><i class="flag-np"></i></li>
+								<li title="Nauru"><i class="flag-nr"></i></li>
+								<li title="Niue"><i class="flag-nu"></i></li>
+								<li title="New Zealand"><i class="flag-nz"></i></li>
+								<li title="Oman"><i class="flag-om"></i></li>
+								<li title="Panama"><i class="flag-pa"></i></li>
+								<li title="Peru"><i class="flag-pe"></i></li>
+								<li title="French Polynesia"><i class="flag-pf"></i></li>
+								<li title="Papua New Guinea"><i class="flag-pg"></i></li>
+								<li title="Philippines"><i class="flag-ph"></i></li>
+								<li title="Pakistan"><i class="flag-pk"></i></li>
+								<li title="Poland"><i class="flag-pl"></i></li>
+								<li title="Saint Pierre and Miquelon"><i class="flag-pm"></i></li>
+								<li title="Pitcairn"><i class="flag-pn"></i></li>
+								<li title="Puerto Rico"><i class="flag-pr"></i></li>
+								<li title="Palestinian Territory, Occupied"><i class="flag-ps"></i></li>
+								<li title="Portugal"><i class="flag-pt"></i></li>
+								<li title="Palau"><i class="flag-pw"></i></li>
+								<li title="Paraguay"><i class="flag-py"></i></li>
+								<li title="Qatar"><i class="flag-qa"></i></li>
+								<li title="Réunion"><i class="flag-re"></i></li>
+								<li title="Romania"><i class="flag-ro"></i></li>
+								<li title="Serbia"><i class="flag-rs"></i></li>
+								<li title="Russian Federation"><i class="flag-ru"></i></li>
+								<li title="Rwanda"><i class="flag-rw"></i></li>
+								<li title="Saudi Arabia"><i class="flag-sa"></i></li>
+								<li title="Solomon Islands"><i class="flag-sb"></i></li>
+								<li title="Seychelles"><i class="flag-sc"></i></li>
+								<li title="Scotland"><i class="flag-scotland"></i></li>
+								<li title="Sudan"><i class="flag-sd"></i></li>
+								<li title="Sweden"><i class="flag-se"></i></li>
+								<li title="Singapore"><i class="flag-sg"></i></li>
+								<li title="Saint Helena, Ascension and Tristan da Cunha"><i class="flag-sh"></i></li>
+								<li title="Slovenia"><i class="flag-si"></i></li>
+								<li title="Svalbard and Jan Mayen"><i class="flag-sj"></i></li>
+								<li title="Slovakia"><i class="flag-sk"></i></li>
+								<li title="Sierra Leone"><i class="flag-sl"></i></li>
+								<li title="San Marino"><i class="flag-sm"></i></li>
+								<li title="Senegal"><i class="flag-sn"></i></li>
+								<li title="Somalia"><i class="flag-so"></i></li>
+								<li title="Suriname"><i class="flag-sr"></i></li>
+								<li title="Sao Tome and Principe"><i class="flag-st"></i></li>
+								<li title="El Salvador"><i class="flag-sv"></i></li>
+								<li title="Syrian Arab Republic"><i class="flag-sy"></i></li>
+								<li title="Swaziland"><i class="flag-sz"></i></li>
+								<li title="Turks and Caicos Islands"><i class="flag-tc"></i></li>
+								<li title="Chad"><i class="flag-td"></i></li>
+								<li title="French Southern Territories"><i class="flag-tf"></i></li>
+								<li title="Togo"><i class="flag-tg"></i></li>
+								<li title="Thailand"><i class="flag-th"></i></li>
+								<li title="Tajikistan"><i class="flag-tj"></i></li>
+								<li title="Tokelau"><i class="flag-tk"></i></li>
+								<li title="Timor-Leste"><i class="flag-tl"></i></li>
+								<li title="Turkmenistan"><i class="flag-tm"></i></li>
+								<li title="Tunisia"><i class="flag-tn"></i></li>
+								<li title="Tonga"><i class="flag-to"></i></li>
+								<li title="Turkey"><i class="flag-tr"></i></li>
+								<li title="Trinidad and Tobago"><i class="flag-tt"></i></li>
+								<li title="Tuvalu"><i class="flag-tv"></i></li>
+								<li title="Taiwan, Province of China"><i class="flag-tw"></i></li>
+								<li title="Tanzania, United Republic of"><i class="flag-tz"></i></li>
+								<li title="Ukraine"><i class="flag-ua"></i></li>
+								<li title="Uganda"><i class="flag-ug"></i></li>
+								<li title="United States Minor Outlying Islands"><i class="flag-um"></i></li>
+								<li title="United States"><i class="flag-us"></i></li>
+								<li title="Uruguay"><i class="flag-uy"></i></li>
+								<li title="Uzbekistan"><i class="flag-uz"></i></li>
+								<li title="Holy See (Vatican City State)"><i class="flag-va"></i></li>
+								<li title="Saint Vincent and the Grenadines"><i class="flag-vc"></i></li>
+								<li title="Venezuela, Bolivarian Republic of"><i class="flag-ve"></i></li>
+								<li title="Virgin Islands, British"><i class="flag-vg"></i></li>
+								<li title="Virgin Islands, U.S."><i class="flag-vi"></i></li>
+								<li title="Viet Nam"><i class="flag-vn"></i></li>
+								<li title="Vanuatu"><i class="flag-vu"></i></li>
+								<li title="Wales"><i class="flag-wales"></i></li>
+								<li title="Wallis and Futuna"><i class="flag-wf"></i></li>
+								<li title="Samoa"><i class="flag-ws"></i></li>
+								<li title="Yemen"><i class="flag-ye"></i></li>
+								<li title="Mayotte"><i class="flag-yt"></i></li>
+								<li title="South Africa"><i class="flag-za"></i></li>
+								<li title="Zambia"><i class="flag-zm"></i></li>
+								<li title="Zimbabwe"><i class="flag-zw"></i></li>
+							</ul>
+							<h3 class="heading"><a href="http://www.greepit.com/open-source-icons-gcons/">gcons icons</a> <small>(100 icons)</small></h3>
+							<div class="icon_copy_c sepH_c" data-iconset="splashy">Click on icon to generate code <span></span></div>
+							<ul class="icon_list_c clearfix">
+								<li><img src="img/gCons/add-item.png" alt="" /></li>
+								<li><img src="img/gCons/addressbook.png" alt="" /></li>
+								<li><img src="img/gCons/agent.png" alt="" /></li>
+								<li><img src="img/gCons/apple.png" alt="" /></li>
+								<li><img src="img/gCons/arrow-round.png" alt="" /></li>
+								<li><img src="img/gCons/badge.png" alt="" /></li>
+								<li><img src="img/gCons/bar-chart-02.png" alt="" /></li>
+								<li><img src="img/gCons/bar-chart.png" alt="" /></li>
+								<li><img src="img/gCons/battery-full.png" alt="" /></li>
+								<li><img src="img/gCons/bird.png" alt="" /></li>
+								<li><img src="img/gCons/boat.png" alt="" /></li>
+								<li><img src="img/gCons/bookmark.png" alt="" /></li>
+								<li><img src="img/gCons/briefcase.png" alt="" /></li>
+								<li><img src="img/gCons/calculator.png" alt="" /></li>
+								<li><img src="img/gCons/calendar.png" alt="" /></li>
+								<li><img src="img/gCons/cassette.png" alt="" /></li>
+								<li><img src="img/gCons/chain.png" alt="" /></li>
+								<li><img src="img/gCons/chat-.png" alt="" /></li>
+								<li><img src="img/gCons/chat-02.png" alt="" /></li>
+								<li><img src="img/gCons/cloud-filled.png" alt="" /></li>
+								<li><img src="img/gCons/cloud-outline.png" alt="" /></li>
+								<li><img src="img/gCons/computer.png" alt="" /></li>
+								<li><img src="img/gCons/configuration.png" alt="" /></li>
+								<li><img src="img/gCons/configuration02.png" alt="" /></li>
+								<li><img src="img/gCons/connected.png" alt="" /></li>
+								<li><img src="img/gCons/connections.png" alt="" /></li>
+								<li><img src="img/gCons/container.png" alt="" /></li>
+								<li><img src="img/gCons/copy-item.png" alt="" /></li>
+								<li><img src="img/gCons/database.png" alt="" /></li>
+								<li><img src="img/gCons/delete-item.png" alt="" /></li>
+								<li><img src="img/gCons/disc.png" alt="" /></li>
+								<li><img src="img/gCons/dollar.png" alt="" /></li>
+								<li><img src="img/gCons/download.png" alt="" /></li>
+								<li><img src="img/gCons/edit.png" alt="" /></li>
+								<li><img src="img/gCons/email.png" alt="" /></li>
+								<li><img src="img/gCons/fan.png" alt="" /></li>
+								<li><img src="img/gCons/fancy-globe.png" alt="" /></li>
+								<li><img src="img/gCons/female-user.png" alt="" /></li>
+								<li><img src="img/gCons/fire.png" alt="" /></li>
+								<li><img src="img/gCons/first-aid.png" alt="" /></li>
+								<li><img src="img/gCons/flag.png" alt="" /></li>
+								<li><img src="img/gCons/flower.png" alt="" /></li>
+								<li><img src="img/gCons/full-screen.png" alt="" /></li>
+								<li><img src="img/gCons/glasses.png" alt="" /></li>
+								<li><img src="img/gCons/globe.png" alt="" /></li>
+								<li><img src="img/gCons/happy-face.png" alt="" /></li>
+								<li><img src="img/gCons/headphone.png" alt="" /></li>
+								<li><img src="img/gCons/heart.png" alt="" /></li>
+								<li><img src="img/gCons/home.png" alt="" /></li>
+								<li><img src="img/gCons/ID.png" alt="" /></li>
+								<li><img src="img/gCons/ipod.png" alt="" /></li>
+								<li><img src="img/gCons/lab.png" alt="" /></li>
+								<li><img src="img/gCons/lady.png" alt="" /></li>
+								<li><img src="img/gCons/lamp.png" alt="" /></li>
+								<li><img src="img/gCons/leaves.png" alt="" /></li>
+								<li><img src="img/gCons/light.png" alt="" /></li>
+								<li><img src="img/gCons/line-globe.png" alt="" /></li>
+								<li><img src="img/gCons/lock.png" alt="" /></li>
+								<li><img src="img/gCons/lookup.png" alt="" /></li>
+								<li><img src="img/gCons/male-user.png" alt="" /></li>
+								<li><img src="img/gCons/microphone.png" alt="" /></li>
+								<li><img src="img/gCons/mobile.png" alt="" /></li>
+								<li><img src="img/gCons/mobile2.png" alt="" /></li>
+								<li><img src="img/gCons/mouse.png" alt="" /></li>
+								<li><img src="img/gCons/multi-agents.png" alt="" /></li>
+								<li><img src="img/gCons/music-node.png" alt="" /></li>
+								<li><img src="img/gCons/network-pc.png" alt="" /></li>
+								<li><img src="img/gCons/network.png" alt="" /></li>
+								<li><img src="img/gCons/next-item.png" alt="" /></li>
+								<li><img src="img/gCons/phone.png" alt="" /></li>
+								<li><img src="img/gCons/pie-chart.png" alt="" /></li>
+								<li><img src="img/gCons/pin.png" alt="" /></li>
+								<li><img src="img/gCons/plane.png" alt="" /></li>
+								<li><img src="img/gCons/print.png" alt="" /></li>
+								<li><img src="img/gCons/processing-02.png" alt="" /></li>
+								<li><img src="img/gCons/processing.png" alt="" /></li>
+								<li><img src="img/gCons/push-pin.png" alt="" /></li>
+								<li><img src="img/gCons/recycle-empty.png" alt="" /></li>
+								<li><img src="img/gCons/recycle-full.png" alt="" /></li>
+								<li><img src="img/gCons/reload.png" alt="" /></li>
+								<li><img src="img/gCons/rss.png" alt="" /></li>
+								<li><img src="img/gCons/satellite.png" alt="" /></li>
+								<li><img src="img/gCons/save.png" alt="" /></li>
+								<li><img src="img/gCons/scale.png" alt="" /></li>
+								<li><img src="img/gCons/Scissors.png" alt="" /></li>
+								<li><img src="img/gCons/screen.png" alt="" /></li>
+								<li><img src="img/gCons/search.png" alt="" /></li>
+								<li><img src="img/gCons/server.png" alt="" /></li>
+								<li><img src="img/gCons/shield.png" alt="" /></li>
+								<li><img src="img/gCons/shut-down.png" alt="" /></li>
+								<li><img src="img/gCons/star.png" alt="" /></li>
+								<li><img src="img/gCons/tag.png" alt="" /></li>
+								<li><img src="img/gCons/tap.png" alt="" /></li>
+								<li><img src="img/gCons/tree.png" alt="" /></li>
+								<li><img src="img/gCons/umbrella.png" alt="" /></li>
+								<li><img src="img/gCons/unlock.png" alt="" /></li>
+								<li><img src="img/gCons/usb.png" alt="" /></li>
+								<li><img src="img/gCons/van.png" alt="" /></li>
+								<li><img src="img/gCons/wifi.png" alt="" /></li>
+								<li><img src="img/gCons/world.png" alt="" /></li>
+							</ul>
+							<h3 class="heading">Other icons <small><a href="http://burlesck.livejournal.com/">UIDesign Icons</a>, <a href="http://www.everaldo.com/crystal/?action=preview">Crystal Project</a></small></h3>
+							<div class="icon_copy_d sepH_d" data-iconset="splashy">Click on icon to generate code <span></span></div>
+							<ul class="icon_list_d clearfix">
+								<li title="icon-adt_trash"><i class="icon-adt_trash"></i></li>
+								<li title="icon-adt_atach"><i class="icon-adt_atach"></i></li>
+							</ul>
+							<h3 class="heading"><a href="http://glyphicons.com/">Glyphicons</a> <small>(120 icons)</small></h3>
+							<a href="http://twitter.github.com/bootstrap/base-css.html#icons">Here</a> you can find Glyphicons preview and instruction how to use them.
+                        </div>
+                    </div>
+                    <footer>
+                        <hr>
+                    	 <p class="pull-right">By Humain2 from <a target="_blank" href="http://www.pwaq.com">Pwaq.com</a></p>
+                      	 <p>&copy; 2013 <a target="_blank" href="http://www.pwaq.com">Pwaq Inc.</a></p>
+                    </footer>     
+                </div>
+            </div>
+            
+			<!-- sidebar -->
+            <a href="javascript:void(0)" class="sidebar_switch on_switch ttip_r" title="Hide Sidebar">Sidebar switch</a>
+            <div class="sidebar">
+				<div class="antiScroll">
+					<div class="antiscroll-inner">
+						<div class="antiscroll-content">
+					
+							<div class="sidebar_inner">
+								<div id="side_accordion" class="accordion">
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="dashboard.html" class="accordion-toggle">
+												<i class="fontello-icon-net"></i> Dashboard
+											</a>
+										</div>
+									</div>
+									
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-list-alt"></i> Forms
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseOne">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="form_elements.html">Form elements</a></li>
+													<li><a href="form_extended.html">Extended form elements</a></li>
+													<li><a href="form_validation.html">Form Validation</a></li>
+													<li><a href="wizard.html">Wizard</a></li>
+													
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-th"></i> Components 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseTwo">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="alerts_btns.html">Alerts & Buttons</a></li>
+													<li><a href="icons.html">Icons</a></li>
+													<li><a href="notifications.html">Notifications</a></li>
+													<li><a href="tables.html">Tables</a></li>
+													<li><a href="tabs_accordion.html">Tabs & Accordion</a></li>
+													<li><a href="typography.html">Typography</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-wrench"></i> Plugins 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseThree">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="charts.html">Charts</a></li>
+													<li><a href="calendar.html">Calendar</a></li>
+													<li><a href="file_manager.html">File Manager</a></li>
+													<li><a href="contacts_list.html">Contacts list</a></li>
+												</ul>
+												
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseFour" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-file"></i> Pages
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseFour">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="login.html">Login</a></li>
+													<li><a href="user.html">User profile</a></li>
+													<li><a href="chat.html">Chat</a></li>
+													<li><a href="mailbox.html">Mailbox</a></li>
+													<li><a href="search.html">Search page</a></li>
+													<li><a href="invoice.html">Invoice</a></li>
+													<li><a href="error_404.html">Error 404</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+								
+								<div class="push"></div>
+							</div>
+							   
+							<div class="sidebar_info">
+								<div class="box">
+									        	<small>Using 16.8 GB of your 51.7 GB </small>
+									        	<div class="progress progress-success progress-striped active">
+									                <div style="width: 20%" class="bar"></div>
+									            </div>
+									            <small><strong>38% full</strong></small>
+								</div>
+							</div> 
+						
+						</div>
+					</div>
+				</div>
+			</div>
+            
+            <script src="js/jquery.min.js"></script>
+			<!-- smart resize event -->
+			<script src="js/jquery.debouncedresize.min.js"></script>
+			<!-- hidden elements width/height -->
+			<script src="js/jquery.actual.min.js"></script>
+			<!-- js cookie plugin -->
+			<script src="js/jquery.cookie.min.js"></script>
+			<!-- main bootstrap js -->
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<!-- tooltips -->
+			<script src="lib/qtip2/jquery.qtip.min.js"></script>
+			<!-- sticky messages -->
+            <script src="lib/sticky/sticky.min.js"></script>
+			<!-- fix for ios orientation change -->
+			<script src="js/ios-orientationchange-fix.js"></script>
+			<!-- scrollbar -->
+			<script src="lib/antiscroll/antiscroll.js"></script>
+			<script src="lib/antiscroll/jquery-mousewheel.js"></script>
+			<!-- lightbox -->
+            <script src="lib/colorbox/jquery.colorbox.min.js"></script>
+            <!-- common functions -->
+			<script src="js/frimouss_common.js"></script>
+            
+            <!-- icons functions -->
+            <script src="js/frimouss_icons.js"></script>
+    
+			<script>
+				$(document).ready(function() {
+					//* show all elements & remove preloader
+					setTimeout('$("html").removeClass("js")',1000);
+				});
+			</script>
+		
+		</div>
+		<div id="loading_layer" style="display:none"><img src="img/ajax_loader.gif" alt="" /></div>
+	</body>
+</html>

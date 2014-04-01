@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Frimouss Admin Panel</title>
+    
+        <!-- Bootstrap framework -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+        <!-- jQuery UI theme-->
+            <link rel="stylesheet" href="lib/jquery-ui/css/Aristo/Aristo.css" />
+        <!-- tooltips-->
+            <link rel="stylesheet" href="lib/qtip2/jquery.qtip.min.css" />
+        <!-- notifications -->
+            <link rel="stylesheet" href="lib/sticky/sticky.css" />    
+        <!-- splashy icons -->
+            <link rel="stylesheet" href="img/splashy/splashy.css" />
+		<!-- flags -->
+            <link rel="stylesheet" href="img/flags/flags.css" />
+        <!-- upload -->
+            <link rel="stylesheet" href="lib/plupload/js/jquery.plupload.queue/css/plupload-frimouss.css" />
+		<!-- tag handler -->
+            <link rel="stylesheet" href="lib/tag_handler/css/jquery.taghandler.css" />
+		<!-- colorbox -->
+            <link rel="stylesheet" href="lib/colorbox/colorbox.css" />
+        <!-- main styles -->
+            <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+        <!-- Favicon -->
+            <link rel="shortcut icon" href="favicon.ico" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/ie.css" />
+            <script src="js/ie/html5.js"></script>
+			<script src="js/ie/respond.min.js"></script>
+        <![endif]-->
+		
+		<script>
+			//* hide all elements & show preloader
+			document.documentElement.className += 'js';
+		</script>
+    </head>
+    <body>
+	<div id="maincontainer" class="clearfix">
+		<!-- header -->
+	    <header>
+	        <div class="navbar navbar-fixed-top">
+	            <div class="navbar-inner">
+	                <div class="container-fluid">
+	                	<div class="logo"><a href="dashboard.html" title="Homepage"><img width="101" height="25" alt="Logo" src="img/logo.png"></a></div>
+	                    <form class="visible-desktop" id="search-theme-form" method="post" accept-charset="UTF-8" action="/">
+	                                    <input type="text" size="15" maxlength="128" name="search_theme_form" id="search-q" class="typeahead" />
+	                                      <input type="submit" value="Search" name="op" id="search-submit" />                
+	                                    </form>
+	                                                      	
+	                    <ul class="nav user_menu pull-right">
+	                       
+							<li class="divider-vertical hidden-phone hidden-tablet"></li>
+							
+	                        <li class="dropdown">
+	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-users"></span> Karim Benzama <b class="caret"></b></a>
+	                            <ul class="dropdown-menu">
+									<li><a href="user_profile.html">My Profile</a></li>
+									<li><a href="javascrip:void(0)">Settings</a></li>
+									<li><a href="javascrip:void(0)">Social</a></li>
+									<li><a href="javascrip:void(0)">Friends</a></li>
+									<li class="divider"></li>
+									<li><a href="login.html">Log Out</a></li>
+	                            </ul>
+	                        </li>
+	                        <li class="divider-vertical hidden-phone hidden-tablet"></li>
+	                        
+	                        <li class="dropdown">
+	                            <a href="#" class="dropdown-toggle nav_condensed" data-toggle="dropdown"><i class="flag-gb"></i> <b class="caret"></b></a>
+	                            <ul class="dropdown-menu">
+	                        		<li><a href="javascript:void(0)"><i class="flag-de"></i> Deutsch</a></li>
+	                        		<li><a href="javascript:void(0)"><i class="flag-fr"></i> Français</a></li>
+	                        		<li><a href="javascript:void(0)"><i class="flag-es"></i> Español</a></li>
+	                        		<li><a href="javascript:void(0)"><i class="flag-ma"></i> Arabic</a></li>
+	                            </ul>
+	                        </li>
+	                    </ul>
+	                    <ul class="nav user-menu visible-desktop pull-right">
+	                       <li><a data-toggle="modal" data-backdrop="static" href="#myTasks" title="New Task" class="btn-glyph ttip_b fontello-icon-edit"><span class="badge badge-important">9</span></a></li>
+	                       <li><a data-toggle="modal" data-backdrop="static" href="#myMail" title="Message" class="btn-glyph ttip_b fontello-icon-mail-1"><span class="badge badge-important">2</span></a></li>
+	                       <li><a href="chat.html" title="Support" class="btn-glyph ttip_b fontello-icon-lifebuoy"><span class="badge badge-important">1</span></a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="modal hide fade" id="myMail">
+	            <div class="modal-header">
+	                <button class="close" data-dismiss="modal">×</button>
+	                <h3>New messages</h3>
+	            </div>
+	            <div class="modal-body">
+	                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+	                <table class="table table-condensed table-striped" data-provides="rowlink">
+	                    <thead>
+	                        <tr>
+	                            <th>Sender</th>
+	                            <th>Subject</th>
+	                            <th>Date</th>
+	                            <th>Size</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+	                        <tr>
+	                            <td>Anji Mariotta</td>
+	                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+	                            <td>23/05/2013</td>
+	                            <td>45KB</td>
+	                        </tr>
+	                        <tr>
+	                            <td>Driss Willis</td>
+	                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+	                            <td>24/05/2013</td>
+	                            <td>15KB</td>
+	                        </tr>
+	                        <tr>
+	                            <td>Marlene Bui</td>
+	                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+	                            <td>25/05/2013</td>
+	                            <td>128KB</td>
+	                        </tr>
+	                        <tr>
+	                            <td>Dhung Found</td>
+	                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+	                            <td>25/05/2013</td>
+	                            <td>31KB</td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+	            </div>
+	            <div class="modal-footer">
+	                <a href="mailbox.html" class="btn">Go to mailbox</a>
+	            </div>
+	        </div>
+	        <div class="modal fade" id="myTasks">
+	            <div class="modal-header">
+	                <button class="close" data-dismiss="modal">×</button>
+	                <h3>New Tasks</h3>
+	            </div>
+	            <div class="modal-body">
+	                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+	                <table class="table table-condensed table-striped" data-provides="rowlink">
+	                    <thead>
+	                        <tr>
+	                            <th>id</th>
+	                            <th>Summary</th>
+	                            <th>Updated</th>
+	                            <th>Priority</th>
+	                            <th>Status</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+	                        <tr>
+	                            <td>#123</td>
+	                            <td><a href="javascript:void(0)">Fix navigation menu&hellip;</a></td>
+	                            <td>23/05/2012</td>
+	                            <td class="tac"><span class="label label-important">High</span></td>
+	                            <td>Open</td>
+	                        </tr>
+	                        <tr>
+	                            <td>#218</td>
+	                            <td><a href="javascript:void(0)">Upgrade Apache and Mysql &hellip;</a></td>
+	                            <td>22/05/2012</td>
+	                            <td class="tac"><span class="label label-warning">Medium</span></td>
+	                            <td>Reopen</td>
+	                        </tr>
+	                        <tr>
+	                            <td>#425</td>
+	                            <td><a href="javascript:void(0)">Make performance test on server&hellip;</a></td>
+	                            <td>22/05/2012</td>
+	                            <td class="tac"><span class="label label-success">Low</span></td>
+	                            <td>Updated</td>
+	                        </tr>
+	                        <tr>
+	                            <td>#510</td>
+	                            <td><a href="javascript:void(0)">Fix design border&hellip;</a></td>
+	                            <td>17/05/2012</td>
+	                            <td class="tac"><span class="label label-warning">Low</span></td>
+	                            <td>Open</td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+	            </div>
+	            <div class="modal-footer">
+	                <a href="taskmanager.html" class="btn">Go to task manager</a>
+	            </div>
+	        </div>
+	    </header>	    
+	    <!-- main content -->
+	    <div id="contentwrapper">
+	        <div class="main_content">
+				
+				<div class="header">
+				 	<h1 class="page-title"><i class="fontello-icon-mail"></i>Webmail</h1>
+				</div>
+				<ul class="breadcrumb">
+				    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+			        <li class="active">Webmail</li>
+		        </ul>
+				
+				<div class="container-fluid"> 
+			
+                    
+                    <div class="row-fluid">
+						<div class="span12">
+							<div class="mbox">
+								<div class="tabbable">
+									<div class="heading">
+										<ul class="nav nav-tabs">
+											<li><a href="#mbox_new" data-toggle="tab"><i class="fontello-icon-edit"></i> New message</a></li>
+											<li class="active"><a href="#mbox_inbox" data-toggle="tab"><i class="fontello-icon-inbox"></i>  Inbox</a></li>
+											<li><a href="#mbox_outbox" data-toggle="tab"><i class="fontello-icon-upload"></i> Outbox</a></li>
+											<li><a href="#mbox_trash" data-toggle="tab"><i class="fontello-icon-trash"></i> Trash</a></li>
+										</ul>
+									</div>
+									<div class="tab-content">
+										<div class="tab-pane" id="mbox_new">
+											<form id="new_message_form">
+												<div class="sepH_b">
+													<label for="mail_sender">Sender</label>
+													<select name="mail_sender" id="mail_sender">
+														<option>no-replay@example.com</option>
+														<option>hakim@example.com</option>
+													</select>
+												</div>
+												<div class="sepH_b">
+													<label>Recipient</label>
+													<ul id="mail_recipients"></ul>
+												</div>
+												<div class="sepH_b">
+													<label for="mail_subject">Subject</label>
+													<input type="text" class="span12" id="mail_subject" name="mail_subject">
+												</div>
+												<div class="sepH_c">
+													<label>Attachments</label>
+													<a class="add_files" href="#">Add files</a>
+													<div class="mail_uploader">
+														<div class="frimouss-upload" id="mail_attachments">
+															<p>You browser doesn't have Flash, Silverlight or HTML5 support.</p>
+														</div>
+														<span class="help-block">This files will be uploaded on form submit.</span>
+													</div>
+												</div>
+												<div class="formSep">
+													<label for="mail_message">Subject</label>
+													<textarea class="span12 auto_expand" rows="12" cols="10" id="mail_message" name="mail_message"></textarea>
+												</div>
+												
+												<div>
+													<button class="btn exemple_" type="submit">Send message</button>
+												</div>
+											</form>
+										</div>
+										<div class="tab-pane active" id="mbox_inbox">
+											<table data-msg_rowlink="a" class="table table_vam mbox_table dTableR" id="dt_inbox">
+												<thead>
+													<tr>
+														<th class="table_checkbox"><input type="checkbox" data-tableid="dt_inbox" class="select_msgs" name="select_msgs"></th>
+														<th><i class="splashy-star_empty"></i></th>
+														<th><i class="splashy-mail_light"></i></th>
+														<th>Subject</th>
+														<th>Sender</th>
+														<th>Date</th>
+														<th>Size</th>
+														<th><i class=" fontello-icon-attach"></i></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="unread">
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet c…</a></td>
+														<td><span>alae@example.com</span></td>
+														<td>28/06/2012</td>
+														<td>14 KB</td>
+														<td></td>
+													</tr>
+													<tr class="unread">
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet con…</a></td>
+														<td><span>exemple_27@example.com</span></td>
+														<td>28/06/2012</td>
+														<td>24 KB</td>
+														<td></td>
+													</tr>
+													<tr class="unread">
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit ame…</a></td>
+														<td><span>exemple_11@example.com</span></td>
+														<td>29/06/2012</td>
+														<td>47 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet cons…</a></td>
+														<td><span>exemple_17@example.com</span></td>
+														<td>21/03/2012</td>
+														<td>501 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet …</a></td>
+														<td><span>exemple_23@example.com</span></td>
+														<td>24/06/2012</td>
+														<td>213 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_full mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet cons…</a></td>
+														<td><span>exemple_30@example.com</span></td>
+														<td>26/03/2012</td>
+														<td>500 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet consect…</a></td>
+														<td><span>exemple_9@example.com</span></td>
+														<td>18/05/2012</td>
+														<td>995 KB</td>
+														<td><i class=" fontello-icon-attach"></i></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet consect…</a></td>
+														<td><span>exemple_10@example.com</span></td>
+														<td>22/04/2012</td>
+														<td>411 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_full mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet con…</a></td>
+														<td><span>exemple_24@example.com</span></td>
+														<td>8/06/2012</td>
+														<td>1152 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet …</a></td>
+														<td><span>exemple_14@example.com</span></td>
+														<td>8/03/2012</td>
+														<td>1024 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet cons…</a></td>
+														<td><span>exemple_7@example.com</span></td>
+														<td>11/04/2012</td>
+														<td>184 KB</td>
+														<td><i class=" fontello-icon-attach"></i></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet con…</a></td>
+														<td><span>exemple_2@example.com</span></td>
+														<td>1/04/2012</td>
+														<td>273 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet c…</a></td>
+														<td><span>exemple_11@example.com</span></td>
+														<td>11/06/2012</td>
+														<td>130 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit ame…</a></td>
+														<td><span>exemple_26@example.com</span></td>
+														<td>9/06/2012</td>
+														<td>398 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet cons…</a></td>
+														<td><span>exemple_12@example.com</span></td>
+														<td>26/06/2012</td>
+														<td>428 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet conse…</a></td>
+														<td><span>exemple_2@example.com</span></td>
+														<td>18/03/2012</td>
+														<td>184 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet c…</a></td>
+														<td><span>exemple_17@example.com</span></td>
+														<td>8/06/2012</td>
+														<td>159 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet c…</a></td>
+														<td><span>exemple_8@example.com</span></td>
+														<td>3/04/2012</td>
+														<td>1114 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet …</a></td>
+														<td><span>exemple_20@example.com</span></td>
+														<td>2/05/2012</td>
+														<td>1001 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit ame…</a></td>
+														<td><span>exemple_18@example.com</span></td>
+														<td>13/04/2012</td>
+														<td>752 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet conse…</a></td>
+														<td><span>exemple_29@example.com</span></td>
+														<td>22/05/2012</td>
+														<td>1190 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit ame…</a></td>
+														<td><span>exemple_12@example.com</span></td>
+														<td>22/05/2012</td>
+														<td>648 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet consect…</a></td>
+														<td><span>exemple_3@example.com</span></td>
+														<td>25/03/2012</td>
+														<td>1281 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet consecte…</a></td>
+														<td><span>exemple_14@example.com</span></td>
+														<td>3/03/2012</td>
+														<td>1247 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet consec…</a></td>
+														<td><span>exemple_8@example.com</span></td>
+														<td>13/06/2012</td>
+														<td>1239 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet…</a></td>
+														<td><span>exemple_29@example.com</span></td>
+														<td>11/05/2012</td>
+														<td>589 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet consect…</a></td>
+														<td><span>exemple_9@example.com</span></td>
+														<td>8/05/2012</td>
+														<td>1441 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit ame…</a></td>
+														<td><span>exemple_23@example.com</span></td>
+														<td>9/06/2012</td>
+														<td>796 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet conse…</a></td>
+														<td><span>exemple_23@example.com</span></td>
+														<td>15/05/2012</td>
+														<td>1329 KB</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>	
+										</div>
+								
+										<div class="tab-pane" id="mbox_outbox">
+											<table data-msg_rowlink="a" class="table table_vam mbox_table dTableR" id="dt_outbox">
+												<thead>
+													<tr>
+														<th class="table_checkbox"><input type="checkbox" data-tableid="dt_outbox" class="select_msgs" name="select_msgs"></th>
+														<th><i class="splashy-star_empty"></i></th>
+														<th><i class="splashy-mail_light"></i></th>
+														<th>Subject</th>
+														<th>Sender</th>
+														<th>Date</th>
+														<th>Size</th>
+														<th><i class=" fontello-icon-attach"></i></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet co…</a></td>
+														<td><span>exemple_19@example.com</span></td>
+														<td>9/04/2012</td>
+														<td>1058 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_full mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet…</a></td>
+														<td><span>exemple_10@example.com</span></td>
+														<td>24/05/2012</td>
+														<td>349 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet conse…</a></td>
+														<td><span>exemple_23@example.com</span></td>
+														<td>3/03/2012</td>
+														<td>606 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet co…</a></td>
+														<td><span>exemple_30@example.com</span></td>
+														<td>17/05/2012</td>
+														<td>1071 KB</td>
+														<td><i class=" fontello-icon-attach"></i></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_full mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet cons…</a></td>
+														<td><span>exemple_24@example.com</span></td>
+														<td>12/06/2012</td>
+														<td>1055 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet consecte…</a></td>
+														<td><span>exemple_20@example.com</span></td>
+														<td>11/05/2012</td>
+														<td>567 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet c…</a></td>
+														<td><span>exemple_28@example.com</span></td>
+														<td>25/05/2012</td>
+														<td>688 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet cons…</a></td>
+														<td><span>exemple_24@example.com</span></td>
+														<td>19/05/2012</td>
+														<td>689 KB</td>
+														<td><i class=" fontello-icon-attach"></i></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet consect…</a></td>
+														<td><span>exemple_9@example.com</span></td>
+														<td>5/06/2012</td>
+														<td>685 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet con…</a></td>
+														<td><span>exemple_13@example.com</span></td>
+														<td>11/03/2012</td>
+														<td>334 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet…</a></td>
+														<td><span>exemple_23@example.com</span></td>
+														<td>25/05/2012</td>
+														<td>1094 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet cons…</a></td>
+														<td><span>exemple_14@example.com</span></td>
+														<td>10/03/2012</td>
+														<td>1442 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_right"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet conse…</a></td>
+														<td><span>exemple_11@example.com</span></td>
+														<td>23/05/2012</td>
+														<td>1457 KB</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="msg_view" class="tab-pane">
+											<div class="doc_view">
+												<div class="doc_view_header">
+													<dl class="dl-horizontal">
+														<dt>Subject</dt>
+															<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+														<dt>Sender</dt>
+															<dd><span>email1@example.com</span></dd>
+														<dt>Recipient</dt>
+															<dd><span>johnsmith@example.com</span></dd>
+														<dt>Date</dt>
+															<dd>20 June 2012 12:32:25</dd>
+														<dt><i class=" fontello-icon-attach"></i></dt>
+															<dd><a href="javascript:void(0)">image01.jpg</a>, <a href="javascript:void(0)">image02.jpg</a>, <a href="javascript:void(0)">document.pdf</a></dd>
+													</dl>
+												</div>
+												<div class="doc_view_content">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis consectetur feugiat. Cras lacinia ullamcorper mauris, a tincidunt lacus malesuada non. Mauris ut mi ut augue vehicula suscipit. Suspendisse lobortis tempor urna, ut feugiat mauris pretium sed. Aliquam eget dolor eget dolor euismod feugiat eu et augue. Sed metus metus, condimentum quis vulputate et, pretium eu tortor. Maecenas felis felis, dignissim at pretium sit amet, condimentum a libero. Nam laoreet semper tortor sed fermentum. Duis eleifend tortor sed justo venenatis aliquam.
+													Curabitur augue elit, mattis eu ornare eget, varius sed metus. Cras fringilla fermentum malesuada. Nulla consectetur sollicitudin nibh, iaculis sagittis diam placerat ac. Aenean molestie vestibulum mattis. Suspendisse elementum, tellus quis mattis adipiscing, dui mauris pulvinar mauris, et rhoncus nisi turpis sit amet turpis. Duis nunc nisl, ullamcorper quis ultricies quis, suscipit non dui. Etiam id urna massa, at pharetra velit. Ut tortor mi, vestibulum id imperdiet a, consectetur vel lorem.
+													Maecenas eget velit pharetra tellus placerat condimentum at vel sapien. Suspendisse ac urna turpis, eget lobortis purus. Ut id arcu et nulla accumsan semper. In lacinia vestibulum nulla ac pellentesque. Nullam mattis ante ornare est tincidunt placerat. Donec non feugiat felis. Sed felis lacus, molestie in luctus vel, tempor a dui. Aliquam erat volutpat. Morbi laoreet gravida sagittis. Nulla tempor ipsum vitae tortor suscipit facilisis et at ligula. Ut lobortis, mauris vel faucibus condimentum, metus nulla varius odio, sed accumsan lorem elit sed mi. Nunc venenatis orci vel erat tincidunt quis tincidunt erat tempus. Cras vel sapien sed enim viverra egestas nec id orci. Nulla nec ornare ante. Donec tristique iaculis nunc in fringilla.
+												</div>
+												<div class="doc_view_footer clearfix">
+													<div class="btn-group pull-left">
+														<a class="btn" href="javascript:void(0)"><i class="fontello-icon-edit"></i> Answer</a>
+														<a class="btn" href="javascript:void(0)"><i class="fontello-icon-forward"></i> Forward</a>
+														<a class="btn" href="#"><i class="fontello-icon-trash"></i> Delete</a>
+													</div>
+													<div class="pull-right">
+														Size: 240 KB
+													</div>
+												</div>
+											</div>
+											<ul class="pager">
+												<li class="previous">
+													<a href="#"><i class="icon-chevron-left"></i> Previous</a>
+												</li>
+												<li class="next">
+													<a href="#">Next <i class="icon-chevron-right"></i></a>
+												</li>
+											</ul>
+										</div>
+										<div class="tab-pane" id="mbox_trash">
+											<table data-msg_rowlink="a" class="table table_vam mbox_table dTableR" id="dt_trash">
+												<thead>
+													<tr>
+														<th class="table_checkbox"><input type="checkbox" data-tableid="dt_trash" class="select_msgs" name="select_msgs"></th>
+														<th><i class="splashy-star_empty"></i></th>
+														<th><i class="splashy-mail_light"></i></th>
+														<th>Subject</th>
+														<th>Sender</th>
+														<th>Date</th>
+														<th>Size</th>
+														<th><i class=" fontello-icon-attach"></i></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet c…</a></td>
+														<td><span>exemple_9@example.com</span></td>
+														<td>20/06/2012</td>
+														<td>1274 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_full mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet…</a></td>
+														<td><span>exemple_27@example.com</span></td>
+														<td>3/04/2012</td>
+														<td>1300 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet con…</a></td>
+														<td><span>exemple_26@example.com</span></td>
+														<td>8/06/2012</td>
+														<td>1495 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet co…</a></td>
+														<td><span>exemple_1@example.com</span></td>
+														<td>20/04/2012</td>
+														<td>879 KB</td>
+														<td><i class=" fontello-icon-attach"></i></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_full mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet con…</a></td>
+														<td><span>exemple_1@example.com</span></td>
+														<td>1/06/2012</td>
+														<td>210 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet consecte…</a></td>
+														<td><span>exemple_16@example.com</span></td>
+														<td>11/06/2012</td>
+														<td>362 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet co…</a></td>
+														<td><span>exemple_4@example.com</span></td>
+														<td>12/03/2012</td>
+														<td>281 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet c…</a></td>
+														<td><span>exemple_9@example.com</span></td>
+														<td>26/04/2012</td>
+														<td>962 KB</td>
+														<td><i class=" fontello-icon-attach"></i></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet consect…</a></td>
+														<td><span>exemple_28@example.com</span></td>
+														<td>12/03/2012</td>
+														<td>1305 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet co…</a></td>
+														<td><span>exemple_17@example.com</span></td>
+														<td>23/03/2012</td>
+														<td>1419 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet co…</a></td>
+														<td><span>exemple_21@example.com</span></td>
+														<td>25/04/2012</td>
+														<td>814 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit ame…</a></td>
+														<td><span>exemple_13@example.com</span></td>
+														<td>1/04/2012</td>
+														<td>451 KB</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="nohref"><input type="checkbox" class="select_msg" name="msg_sel"></td>
+														<td class="nohref starSelect"><i class="splashy-star_empty mbox_star"></i></td>
+														<td><i class="splashy-mail_light_stuffed"></i></td>
+														<td><a href="#msg_view">Lorem ipsum dolor sit amet …</a></td>
+														<td><span>exemple_25@example.com</span></td>
+														<td>10/05/2012</td>
+														<td>1401 KB</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<!-- hide elements -->
+					<div class="hide">
+						<!-- actions for inbox -->
+						<div class="dt_inbox_actions">
+							<div class="btn-group pull-left">
+								<a class="btn" href="javascript:void(0)"><i class="fontello-icon-edit"></i> Answer</a>
+								<a class="btn" href="javascript:void(0)"><i class="fontello-icon-forward"></i> Forward</a>
+								<a class="btn" href="#"><i class="fontello-icon-trash"></i> Delete</a>
+							</div>
+						</div>
+						<!-- actions for outbox -->
+						<div class="dt_outbox_actions">
+							<div class="btn-group">
+								<a href="javascript:void(0)" class="btn" title="Resend"><i class="fontello-icon-forward"></i></a>
+								<a href="#" class="delete_msg btn" title="Delete" data-tableid="dt_outbox"><i class="fontello-icon-trash"></i></a>
+							</div>
+						</div>
+						<!-- actions for trash -->
+						<div class="dt_trash_actions">
+							<div class="btn-group">
+								<a href="#" class="delete_msg btn" title="Delete permamently" data-tableid="dt_trash"><i class="fontello-icon-trash"></i></a>
+							</div>
+						</div>
+						<!-- confirmation box -->
+						<div id="confirm_dialog" class="cbox_content">
+							<div class="sepH_c tac"><strong>Are you sure you want to delete this message(s)?</strong></div>
+							<div class="tac">
+								<a href="#" class="btn exemple_ confirm_yes">Yes</a>
+								<a href="#" class="btn confirm_no">No</a>
+							</div>
+						</div>
+					</div>
+                    <footer>
+                        <hr>
+                    	 <p class="pull-right">By Humain2 from <a target="_blank" href="http://www.pwaq.com">Pwaq.com</a></p>
+                      	 <p>&copy; 2013 <a target="_blank" href="http://www.pwaq.com">Pwaq Inc.</a></p>
+                    </footer>    
+                </div>
+            </div>
+            
+			<!-- sidebar -->
+			<a href="javascript:void(0)" class="sidebar_switch on_switch ttip_r" title="Hide Sidebar">Sidebar switch</a>
+            <div class="sidebar">
+				
+				<div class="antiScroll">
+					<div class="antiscroll-inner">
+						<div class="antiscroll-content">
+					
+							<div class="sidebar_inner">
+								<div id="side_accordion" class="accordion">
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="dashboard.html" class="accordion-toggle">
+												<i class="fontello-icon-net"></i> Dashboard
+											</a>
+										</div>
+									</div>
+									
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-list-alt"></i> Forms
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseOne">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="form_elements.html">Form elements</a></li>
+													<li><a href="form_extended.html">Extended form elements</a></li>
+													<li><a href="form_validation.html">Form Validation</a></li>
+													<li><a href="wizard.html">Wizard</a></li>
+													
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-th"></i> Components 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseTwo">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="alerts_btns.html">Alerts & Buttons</a></li>
+													<li><a href="icons.html">Icons</a></li>
+													<li><a href="notifications.html">Notifications</a></li>
+													<li><a href="tables.html">Tables</a></li>
+													<li><a href="tabs_accordion.html">Tabs & Accordion</a></li>
+													<li><a href="typography.html">Typography</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-wrench"></i> Plugins 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseThree">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="charts.html">Charts</a></li>
+													<li><a href="calendar.html">Calendar</a></li>
+													<li><a href="file_manager.html">File Manager</a></li>
+													<li><a href="contacts_list.html">Contacts list</a></li>
+												</ul>
+												
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseFour" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-file"></i> Pages
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseFour">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="login.html">Login</a></li>
+													<li><a href="user.html">User profile</a></li>
+													<li><a href="chat.html">Chat</a></li>
+													<li><a href="mailbox.html">Mailbox</a></li>
+													<li><a href="search.html">Search page</a></li>
+													<li><a href="invoice.html">Invoice</a></li>
+													<li><a href="error_404.html">Error 404</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+								
+								<div class="push"></div>
+							</div>
+							   
+							<div class="sidebar_info">
+								<div class="box">
+									        	<small>Using 16.8 GB of your 51.7 GB </small>
+									        	<div class="progress progress-success progress-striped active">
+									                <div style="width: 20%" class="bar"></div>
+									            </div>
+									            <small><strong>38% full</strong></small>
+								</div>
+							</div> 
+						
+						</div>
+					</div>
+				</div>
+			
+			</div>
+            
+            <script src="js/jquery.min.js"></script>
+			<!-- smart resize event -->
+			<script src="js/jquery.debouncedresize.min.js"></script>
+			<!-- hidden elements width/height -->
+			<script src="js/jquery.actual.min.js"></script>
+			<!-- js cookie plugin -->
+			<script src="js/jquery.cookie.min.js"></script>
+			<!-- main bootstrap js -->
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<!-- tooltips -->
+			<script src="lib/qtip2/jquery.qtip.min.js"></script>
+			<!-- fix for ios orientation change -->
+			<script src="js/ios-orientationchange-fix.js"></script>
+            <!-- scroll -->
+			<script src="lib/antiscroll/antiscroll.js"></script>
+			<script src="lib/antiscroll/jquery-mousewheel.js"></script>
+			<!-- common functions -->
+			<script src="js/frimouss_common.js"></script>
+			
+			<script src="lib/jquery-ui/jquery-ui-1.8.23.custom.min.js"></script>
+            <!-- touch events for jquery ui-->
+            <script src="js/forms/jquery.ui.touch-punch.min.js"></script>
+			<!-- colorbox -->
+			<script src="lib/colorbox/jquery.colorbox.min.js"></script>
+			<!-- datatable (inbox,outbox) -->
+			<script src="lib/datatables/jquery.dataTables.min.js"></script>
+			<!-- additional sorting for datatables -->
+			<script src="lib/datatables/jquery.dataTables.sorting.js"></script>
+			<!-- plupload and all it's runtimes and the jQuery queue widget (attachments) -->
+			<script type="text/javascript" src="lib/plupload/js/plupload.full.js"></script>
+			<script type="text/javascript" src="lib/plupload/js/jquery.plupload.queue/jquery.plupload.queue.full.js"></script>
+			<!-- autosize textareas (new message) -->
+			<script src="js/forms/jquery.autosize.min.js"></script>
+			<!-- tag handler (recipients) -->
+			<script src="lib/tag_handler/jquery.taghandler.min.js"></script>
+			<!-- mailbox functions -->
+			<script src="js/frimouss_mailbox.js"></script>
+			
+			<script>
+				$(document).ready(function() {
+					//* show all elements & remove preloader
+					setTimeout('$("html").removeClass("js")',1000);
+				});
+			</script>
+		
+		</div>
+	</body>
+</html>

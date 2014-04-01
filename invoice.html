@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Frimouss Admin Panel</title>
+    
+        <!-- Bootstrap framework -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+        <!-- jQuery UI theme-->
+            <link rel="stylesheet" href="lib/jquery-ui/css/Aristo/Aristo.css" />
+        <!-- tooltips-->
+            <link rel="stylesheet" href="lib/qtip2/jquery.qtip.min.css" />
+        <!-- notifications -->
+            <link rel="stylesheet" href="lib/sticky/sticky.css" />    
+        <!-- splashy icons -->
+            <link rel="stylesheet" href="img/splashy/splashy.css" />
+		<!-- flags -->
+            <link rel="stylesheet" href="img/flags/flags.css" />
+		<!-- colorbox -->
+            <link rel="stylesheet" href="lib/colorbox/colorbox.css" />
+		<!-- CLEditor -->
+            <link rel="stylesheet" href="lib/CLEditor/jquery.cleditor.css" />
+        <!-- main styles -->
+            <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+        <!-- Favicon -->
+            <link rel="shortcut icon" href="favicon.ico" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/ie.css" />
+            <script src="js/ie/html5.js"></script>
+			<script src="js/ie/respond.min.js"></script>
+        <![endif]-->
+		
+		<script>
+			//* hide all elements & show preloader
+			document.documentElement.className += 'js';
+		</script>
+    </head>
+    <body>
+		<div id="maincontainer" class="clearfix">
+			<!-- header -->
+		    <header>
+		        <div class="navbar navbar-fixed-top">
+		            <div class="navbar-inner">
+		                <div class="container-fluid">
+		                	<div class="logo"><a href="dashboard.html" title="Homepage"><img width="101" height="25" alt="Logo" src="img/logo.png"></a></div>
+		                    <form class="visible-desktop" id="search-theme-form" method="post" accept-charset="UTF-8" action="/">
+		                                    <input type="text" size="15" maxlength="128" name="search_theme_form" id="search-q" class="typeahead" />
+		                                      <input type="submit" value="Search" name="op" id="search-submit" />                
+		                                    </form>
+		                                                      	
+		                    <ul class="nav user_menu pull-right">
+		                       
+								<li class="divider-vertical hidden-phone hidden-tablet"></li>
+								
+		                        <li class="dropdown">
+		                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-users"></span> Karim Benzama <b class="caret"></b></a>
+		                            <ul class="dropdown-menu">
+										<li><a href="user_profile.html">My Profile</a></li>
+										<li><a href="javascrip:void(0)">Settings</a></li>
+										<li><a href="javascrip:void(0)">Social</a></li>
+										<li><a href="javascrip:void(0)">Friends</a></li>
+										<li class="divider"></li>
+										<li><a href="login.html">Log Out</a></li>
+		                            </ul>
+		                        </li>
+		                        <li class="divider-vertical hidden-phone hidden-tablet"></li>
+		                        
+		                        <li class="dropdown">
+		                            <a href="#" class="dropdown-toggle nav_condensed" data-toggle="dropdown"><i class="flag-gb"></i> <b class="caret"></b></a>
+		                            <ul class="dropdown-menu">
+		                        		<li><a href="javascript:void(0)"><i class="flag-de"></i> Deutsch</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-fr"></i> Français</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-es"></i> Español</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-ma"></i> Arabic</a></li>
+		                            </ul>
+		                        </li>
+		                    </ul>
+		                    <ul class="nav user-menu visible-desktop pull-right">
+		                       <li><a data-toggle="modal" data-backdrop="static" href="#myTasks" title="New Task" class="btn-glyph ttip_b fontello-icon-edit"><span class="badge badge-important">9</span></a></li>
+		                       <li><a data-toggle="modal" data-backdrop="static" href="#myMail" title="Message" class="btn-glyph ttip_b fontello-icon-mail-1"><span class="badge badge-important">2</span></a></li>
+		                       <li><a href="chat.html" title="Support" class="btn-glyph ttip_b fontello-icon-lifebuoy"><span class="badge badge-important">1</span></a></li>
+		                    </ul>
+					  </div>
+		            </div>
+		        </div>
+		        <div class="modal hide fade" id="myMail">
+		            <div class="modal-header">
+		                <button class="close" data-dismiss="modal">×</button>
+		                <h3>New messages</h3>
+		            </div>
+		            <div class="modal-body">
+		                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		                <table class="table table-condensed table-striped" data-provides="rowlink">
+		                    <thead>
+		                        <tr>
+		                            <th>Sender</th>
+		                            <th>Subject</th>
+		                            <th>Date</th>
+		                            <th>Size</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>Anji Mariotta</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>23/05/2013</td>
+		                            <td>45KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Driss Willis</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>24/05/2013</td>
+		                            <td>15KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Marlene Bui</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>25/05/2013</td>
+		                            <td>128KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Dhung Found</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>25/05/2013</td>
+		                            <td>31KB</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            <div class="modal-footer">
+		                <a href="mailbox.html" class="btn">Go to mailbox</a>
+		            </div>
+		        </div>
+		        <div class="modal fade" id="myTasks">
+		            <div class="modal-header">
+		                <button class="close" data-dismiss="modal">×</button>
+		                <h3>New Tasks</h3>
+		            </div>
+		            <div class="modal-body">
+		                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		                <table class="table table-condensed table-striped" data-provides="rowlink">
+		                    <thead>
+		                        <tr>
+		                            <th>id</th>
+		                            <th>Summary</th>
+		                            <th>Updated</th>
+		                            <th>Priority</th>
+		                            <th>Status</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>#123</td>
+		                            <td><a href="javascript:void(0)">Fix navigation menu&hellip;</a></td>
+		                            <td>23/05/2012</td>
+		                            <td class="tac"><span class="label label-important">High</span></td>
+		                            <td>Open</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#218</td>
+		                            <td><a href="javascript:void(0)">Upgrade Apache and Mysql &hellip;</a></td>
+		                            <td>22/05/2012</td>
+		                            <td class="tac"><span class="label label-warning">Medium</span></td>
+		                            <td>Reopen</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#425</td>
+		                            <td><a href="javascript:void(0)">Make performance test on server&hellip;</a></td>
+		                            <td>22/05/2012</td>
+		                            <td class="tac"><span class="label label-success">Low</span></td>
+		                            <td>Updated</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#510</td>
+		                            <td><a href="javascript:void(0)">Fix design border&hellip;</a></td>
+		                            <td>17/05/2012</td>
+		                            <td class="tac"><span class="label label-warning">Low</span></td>
+		                            <td>Open</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            <div class="modal-footer">
+		                <a href="taskmanager.html" class="btn">Go to task manager</a>
+		            </div>
+		        </div>
+		    </header>    
+		    <!-- main content -->
+		    <div id="contentwrapper">
+		        <div class="main_content">
+					
+					<div class="header">
+					 	<h1 class="page-title"><i class="fontello-icon-doc-2"></i> Invoice</h1>
+					</div>
+					<ul class="breadcrumb">
+					    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+				        <li class="active">Invoice</li>
+			        </ul>
+			        
+			        <div class="container-fluid">
+					<div class="row-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div id="invoice-toolbar" class="btn-toolbar">
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn"><i class="fontello-icon-cancel-circle"></i>Delete</button>
+                                        <button type="button" class="btn"><i class="fontello-icon-edit"></i>Edit</button>
+                                        <button type="button" id="invoice-print" class="btn">
+                                          <i class="fontello-icon-print"></i>Print
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="invoice paper-stack">
+                                    <div class="invoice-header clearfix">
+                                        <div class="invoice-logo">
+                                            <img src="img/invoice/logo_invoice.png" alt="">
+                                        </div>
+                                        <div class="invoice-company">
+                                            Frimouss INC.<br>
+                                            34, rue de la perche,<br>
+                                            Taza<br>
+                                            Morocco<br>
+                                        </div>
+                                    </div>
+                                    <div class="invoice-sub clearfix">
+                                        <div class="invoice-to">
+                                            <span class="invoice-caption">Invoiced to:</span>
+                                            DOZI, Ltd.<br>
+                                            84, Girardot<br>
+                                            South Pole, 5433<br>
+                                            +212 5781 5354
+                                        </div>
+                                        <div class="invoice-info">
+                                            <span class="invoice-caption">INVOICE</span>
+                                            <ul>
+                                                <li>Invoice ID: <span>#4342434</span></li>
+                                                <li>Invoice Date: <span>January 01, 2013</span></li>
+                                                <li>Due Date: <span> Febrary 01, 2013</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="invoice-content clearfix">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Item</th>
+                                                    <th>Description</th>
+                                                    <th>Price</th>
+                                                    <th>Quantity</th>
+                                                    <th>Subtotal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Graphic Design</td>
+                                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis ipsum enim, sed viverra felis. Morbi tempus libero ut eros dignissim ut tempor arcu ultrices. Etiam laoreet dictum sem, ac commodo lacus viverra sed. Cras eu eros metus. Pellentesque suscipit viverra blandit.</td>
+                                                    <td>$2,500.00</td>
+                                                    <td>1</td>
+                                                    <td>$2,500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Developpement</td>
+                                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis ipsum enim, sed viverra felis. Morbi tempus libero ut eros dignissim ut tempor arcu ultrices. Etiam laoreet dictum sem, ac commodo lacus viverra sed. Cras eu eros metus. Pellentesque suscipit viverra blandit.</td>
+                                                    <td>$4,500.00</td>
+                                                    <td>1</td>
+                                                    <td>$4,500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Logo Design</td>
+                                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis ipsum enim, sed viverra felis. Morbi tempus libero ut eros dignissim ut tempor arcu ultrices. Etiam laoreet dictum sem, ac commodo lacus viverra sed. Cras eu eros metus. Pellentesque suscipit viverra blandit.</td>
+                                                    <td>$9,500.00</td>
+                                                    <td>1</td>
+                                                    <td>$9,500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SEO</td>
+                                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis ipsum enim, sed viverra felis. Morbi tempus libero ut eros dignissim ut tempor arcu ultrices. Etiam laoreet dictum sem, ac commodo lacus viverra sed. Cras eu eros metus. Pellentesque suscipit viverra blandit.</td>
+                                                    <td>$5,500.00</td>
+                                                    <td>1</td>
+                                                    <td>$5,500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="invoice-table-total" colspan="4">Total</td>
+                                                    <td>$36,000.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="invoice-table-total" colspan="4">Tax</td>
+                                                    <td>10%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="invoice-payments">
+                                            <span class="invoice-caption">Payment Methods</span>
+                                            <img src="img/invoice/amex.png" alt="American Express">
+                                            <img src="img/invoice/discover.png" alt="Discover">
+                                            <img src="img/invoice/maestro.png" alt="Maestro">
+                                            <img src="img/invoice/mastercard.png" alt="MasterCard">
+                                            <img src="img/invoice/visa.png" alt="Visa">
+                                        </div>
+                                        <div class="invoice-total">
+                                            <span>Total:</span> $36,600.00
+                                        </div>
+                                    </div>
+                                </div>
+							                            
+													</div>
+							                    </div>
+					       <footer>
+					           <hr>
+					       	 <p class="pull-right">By Humain2 from <a target="_blank" href="http://www.pwaq.com">Pwaq.com</a></p>
+					         	 <p>&copy; 2013 <a target="_blank" href="http://www.pwaq.com">Pwaq Inc.</a></p>
+					       </footer>        
+                     </div>   
+                </div>
+            </div>
+            
+			<!-- sidebar -->
+			<a href="javascript:void(0)" class="sidebar_switch on_switch ttip_r" title="Hide Sidebar">Sidebar switch</a>
+            <div class="sidebar">
+				
+				<div class="antiScroll">
+					<div class="antiscroll-inner">
+						<div class="antiscroll-content">
+					
+							<div class="sidebar_inner">
+								<div id="side_accordion" class="accordion">
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="dashboard.html" class="accordion-toggle">
+												<i class="fontello-icon-net"></i> Dashboard
+											</a>
+										</div>
+									</div>
+									
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-list-alt"></i> Forms
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseOne">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="form_elements.html">Form elements</a></li>
+													<li><a href="form_extended.html">Extended form elements</a></li>
+													<li><a href="form_validation.html">Form Validation</a></li>
+													<li><a href="wizard.html">Wizard</a></li>
+													
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-th"></i> Components 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseTwo">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="alerts_btns.html">Alerts & Buttons</a></li>
+													<li><a href="icons.html">Icons</a></li>
+													<li><a href="notifications.html">Notifications</a></li>
+													<li><a href="tables.html">Tables</a></li>
+													<li><a href="tabs_accordion.html">Tabs & Accordion</a></li>
+													<li><a href="typography.html">Typography</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-wrench"></i> Plugins 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseThree">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="charts.html">Charts</a></li>
+													<li><a href="calendar.html">Calendar</a></li>
+													<li><a href="file_manager.html">File Manager</a></li>
+													<li><a href="contacts_list.html">Contacts list</a></li>
+												</ul>
+												
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseFour" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-file"></i> Pages
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseFour">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="login.html">Login</a></li>
+													<li><a href="user.html">User profile</a></li>
+													<li><a href="chat.html">Chat</a></li>
+													<li><a href="mailbox.html">Mailbox</a></li>
+													<li><a href="search.html">Search page</a></li>
+													<li><a href="invoice.html">Invoice</a></li>
+													<li><a href="error_404.html">Error 404</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+								
+								<div class="push"></div>
+							</div>
+							   
+							<div class="sidebar_info">
+								<div class="box">
+									        	<small>Using 16.8 GB of your 51.7 GB </small>
+									        	<div class="progress progress-success progress-striped active">
+									                <div style="width: 20%" class="bar"></div>
+									            </div>
+									            <small><strong>38% full</strong></small>
+								</div>
+							</div> 
+						
+						</div>
+					</div>
+				</div>
+			
+			</div>
+            
+            <script src="js/jquery.min.js"></script>
+			<!-- smart resize event -->
+			<script src="js/jquery.debouncedresize.min.js"></script>
+			<!-- hidden elements width/height -->
+			<script src="js/jquery.actual.min.js"></script>
+			<!-- js cookie plugin -->
+			<script src="js/jquery.cookie.min.js"></script>
+			<!-- main bootstrap js -->
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<!-- tooltips -->
+			<script src="lib/qtip2/jquery.qtip.min.js"></script>
+			<!-- fix for ios orientation change -->
+			<script src="js/ios-orientationchange-fix.js"></script>
+            <!-- scroll -->
+			<script src="lib/antiscroll/antiscroll.js"></script>
+			<script src="lib/antiscroll/jquery-mousewheel.js"></script>
+			<!-- common functions -->
+			<script src="js/frimouss_common.js"></script>
+			<!-- ELASTIC -->
+			<script type="text/javascript" src="lib/elastic/jquery.elastic.js"></script>
+			<!-- jquery nicescroll -->
+			<script src="lib/nicescroll/jquery.nicescroll.js"></script>
+			<!-- CLEditor -->
+			<script src="lib/CLEditor/jquery.cleditor.js"></script>
+			<script src="lib/CLEditor/jquery.cleditor.icon.min.js"></script>
+			<!-- date library -->
+			<script src="lib/moment_js/moment.min.js"></script>
+			<script>
+				$(document).ready(function() {
+					//* show all elements & remove preloader
+					setTimeout('$("html").removeClass("js")',1000);
+					
+				});
+				$(function() {
+				            $('#invoice-print').on('click', function() { window.print(); });
+				});
+			</script>
+		</div>
+		<div id="loading_layer" style="display:none"><img src="img/ajax_loader.gif" alt="" /></div>
+	</body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Frimouss Admin Panel</title>
+    
+        <!-- Bootstrap framework -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+        <!-- tooltips-->
+            <link rel="stylesheet" href="lib/qtip2/jquery.qtip.min.css" />
+        <!-- notifications -->
+            <link rel="stylesheet" href="lib/sticky/sticky.css" />    
+        <!-- splashy icons -->
+            <link rel="stylesheet" href="img/splashy/splashy.css" />
+		<!-- flags -->
+            <link rel="stylesheet" href="img/flags/flags.css" />
+		<!-- colorbox -->
+            <link rel="stylesheet" href="lib/colorbox/colorbox.css" />
+			
+        <!-- main styles -->
+            <link rel="stylesheet" href="css/style.css" />
+			
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+	
+        <!-- Favicon -->
+            <link rel="shortcut icon" href="favicon.ico" />
+		
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/ie.css" />
+            <script src="js/ie/html5.js"></script>
+			<script src="js/ie/respond.min.js"></script>
+        <![endif]-->
+		
+		<script>
+			//* hide all elements & show preloader
+			document.documentElement.className += 'js';
+		</script>
+    </head>
+    <body>
+		<div id="maincontainer" class="clearfix">
+			<!-- header -->
+		    <header>
+		        <div class="navbar navbar-fixed-top">
+		            <div class="navbar-inner">
+		                <div class="container-fluid">
+		                	<div class="logo"><a href="dashboard.html" title="Homepage"><img width="101" height="25" alt="Logo" src="img/logo.png"></a></div>
+		                    <form class="visible-desktop" id="search-theme-form" method="post" accept-charset="UTF-8" action="/">
+		                                    <input type="text" size="15" maxlength="128" name="search_theme_form" id="search-q" class="typeahead" />
+		                                      <input type="submit" value="Search" name="op" id="search-submit" />                
+		                                    </form>
+		                                                      	
+		                    <ul class="nav user_menu pull-right">
+		                       
+								<li class="divider-vertical hidden-phone hidden-tablet"></li>
+								
+		                        <li class="dropdown">
+		                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-users"></span> Karim Benzama <b class="caret"></b></a>
+		                            <ul class="dropdown-menu">
+										<li><a href="user_profile.html">My Profile</a></li>
+										<li><a href="javascrip:void(0)">Settings</a></li>
+										<li><a href="javascrip:void(0)">Social</a></li>
+										<li><a href="javascrip:void(0)">Friends</a></li>
+										<li class="divider"></li>
+										<li><a href="login.html">Log Out</a></li>
+		                            </ul>
+		                        </li>
+		                        <li class="divider-vertical hidden-phone hidden-tablet"></li>
+		                        
+		                        <li class="dropdown">
+		                            <a href="#" class="dropdown-toggle nav_condensed" data-toggle="dropdown"><i class="flag-gb"></i> <b class="caret"></b></a>
+		                            <ul class="dropdown-menu">
+		                        		<li><a href="javascript:void(0)"><i class="flag-de"></i> Deutsch</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-fr"></i> Français</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-es"></i> Español</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-ma"></i> Arabic</a></li>
+		                            </ul>
+		                        </li>
+		                    </ul>
+		                    <ul class="nav user-menu visible-desktop pull-right">
+		                       <li><a data-toggle="modal" data-backdrop="static" href="#myTasks" title="New Task" class="btn-glyph ttip_b fontello-icon-edit"><span class="badge badge-important">9</span></a></li>
+		                       <li><a data-toggle="modal" data-backdrop="static" href="#myMail" title="Message" class="btn-glyph ttip_b fontello-icon-mail-1"><span class="badge badge-important">2</span></a></li>
+		                       <li><a href="chat.html" title="Support" class="btn-glyph ttip_b fontello-icon-lifebuoy"><span class="badge badge-important">1</span></a></li>
+		                    </ul>
+		                          
+		                </div>
+		            </div>
+		        </div>
+		        <div class="modal hide fade" id="myMail">
+		            <div class="modal-header">
+		                <button class="close" data-dismiss="modal">×</button>
+		                <h3>New messages</h3>
+		            </div>
+		            <div class="modal-body">
+		                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		                <table class="table table-condensed table-striped" data-provides="rowlink">
+		                    <thead>
+		                        <tr>
+		                            <th>Sender</th>
+		                            <th>Subject</th>
+		                            <th>Date</th>
+		                            <th>Size</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>Anji Mariotta</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>23/05/2013</td>
+		                            <td>45KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Driss Willis</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>24/05/2013</td>
+		                            <td>15KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Marlene Bui</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>25/05/2013</td>
+		                            <td>128KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Dhung Found</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>25/05/2013</td>
+		                            <td>31KB</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            <div class="modal-footer">
+		                <a href="mailbox.html" class="btn">Go to mailbox</a>
+		            </div>
+		        </div>
+		        <div class="modal fade" id="myTasks">
+		            <div class="modal-header">
+		                <button class="close" data-dismiss="modal">×</button>
+		                <h3>New Tasks</h3>
+		            </div>
+		            <div class="modal-body">
+		                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		                <table class="table table-condensed table-striped" data-provides="rowlink">
+		                    <thead>
+		                        <tr>
+		                            <th>id</th>
+		                            <th>Summary</th>
+		                            <th>Updated</th>
+		                            <th>Priority</th>
+		                            <th>Status</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>#123</td>
+		                            <td><a href="javascript:void(0)">Fix navigation menu&hellip;</a></td>
+		                            <td>23/05/2012</td>
+		                            <td class="tac"><span class="label label-important">High</span></td>
+		                            <td>Open</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#218</td>
+		                            <td><a href="javascript:void(0)">Upgrade Apache and Mysql &hellip;</a></td>
+		                            <td>22/05/2012</td>
+		                            <td class="tac"><span class="label label-warning">Medium</span></td>
+		                            <td>Reopen</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#425</td>
+		                            <td><a href="javascript:void(0)">Make performance test on server&hellip;</a></td>
+		                            <td>22/05/2012</td>
+		                            <td class="tac"><span class="label label-success">Low</span></td>
+		                            <td>Updated</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#510</td>
+		                            <td><a href="javascript:void(0)">Fix design border&hellip;</a></td>
+		                            <td>17/05/2012</td>
+		                            <td class="tac"><span class="label label-warning">Low</span></td>
+		                            <td>Open</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            <div class="modal-footer">
+		                <a href="taskmanager.html" class="btn">Go to task manager</a>
+		            </div>
+		        </div>
+		    </header>		    
+		    <!-- main content -->
+		    <div id="contentwrapper">
+		        <div class="main_content">
+					
+					<div class="header">
+					 	<h1 class="page-title"><i class="fontello-icon-user"></i>Profile</h1>
+					</div>
+					<ul class="breadcrumb">
+					    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+				        <li class="active">Profile</li>
+			        </ul>
+					
+					<div class="container-fluid"> 
+				
+                    
+                    <div class="row-fluid">
+						<div class="span12">
+						
+	<div class="profile">
+	                                    <div class="clearfix">
+	                                        <div class="profile-head clearfix">
+	                                            <div class="profile-info pull-left">
+	                                                <h1 class="profile-username">Karim Gennouni</h1>
+	                                                <ul class="profile-attributes">
+	                                                    <li><i class="fontello-icon-location"></i> Taza, Morocco</li>
+	                                                    <li><i class="fontello-icon-globe"></i> Scrum Master, Project Manager</li>
+	                                                </ul>
+	                                            </div>
+	                                            <div class="btn-toolbar pull-right">
+	                                                <a href="#" class="btn"><i class="fontello-icon-mail-1"></i> Send Message</a>
+	                                                <a href="#" class="btn btn-success"><i class="fontello-icon-twitter-bird-1"></i> Follow</a>
+	                                            </div>
+	                                        </div>
+	                                        <div class="profile-sidebar">
+	                                            <div class="thumbnail">
+	                                                <img src="img/avatarr.png" alt="">
+	                                            </div>
+	                                            <ul class="nav nav-tabs nav-stacked">
+	                                                <li class="active"><a href="#"><i class="fontello-icon-user"></i> Profile</a></li>
+	                                                <li><a href="#"><i class="fontello-icon-users-1"></i> Friends</a></li>
+	                                                <li><a href="#"><i class="fontello-icon-chat"></i> Discussions</a></li>
+	                                                <li><a href="#"><i class="fontello-icon-phone"></i> Contacts</a></li>
+	                                            </ul>
+	                                        </div>
+	                                        <div class="profile-content">
+	                                            <div class="tab-content">
+	                                                <div class="tab-pane active" id="profile">
+	                                                 <div class="span12">
+	                                                 	<div class="vcard">
+	                                                 		<ul>
+	                                                 			<li class="v-heading">
+	                                                 				Information
+	                                                 			</li>
+	                                                 			<li>
+	                                                 				<span class="item-key">Full name</span>
+	                                                 				<div class="vcard-item">Karim Gennouni</div>
+	                                                 			</li>
+	                                                 			<li>
+	                                                 				<span class="item-key">Username</span>
+	                                                 				<div class="vcard-item">karim</div>
+	                                                 			</li>
+	                                                 			<li>
+	                                                 				<span class="item-key">Email</span>
+	                                                 				<div class="vcard-item">karim@frimouss.com</div>
+	                                                 			</li>
+	                                                 			<li>
+	                                                 				<span class="item-key">Gender</span>
+	                                                 				<div class="vcard-item">Male</div>
+	                                                 			</li>
+	                                                 			<li>
+	                                                 				<span class="item-key">Job experience:</span>
+	                                                 				<div class="vcard-item">
+	                                                 					<ul class="list_a">
+	                                                 						<li>Duis semper orci ac nulla pretium a tincidunt nibh interdum.</li>
+	                                                 						<li>Morbi euismod arcu nec felis commodo vel semper ante accumsan.</li>
+	                                                 						<li>Nulla ullamcorper egestas sem, eu mattis sem mattis vitae.</li>
+	                                                 						<li>Sed porttitor diam vitae justo egestas aliquam.</li>
+	                                                 						<li>Phasellus suscipit ante ac mi sodales tempus.</li>
+	                                                 					</ul>
+	                                                 				</div>
+	                                                 			</li>
+	                                                 			<li>
+	                                                 				<span class="item-key">About</span>
+	                                                 				<div class="vcard-item">
+	                                                 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus faucibus tortor, eu imperdiet libero feugiat ut. Proin imperdiet, lectus ut rutrum adipiscing, velit nisl pharetra justo, at egestas quam ante sed ligula. Morbi ac cursus ligula. Curabitur dolor felis, dignissim a consequat lobortis, semper laoreet ante. Aliquam erat volutpat.</p>
+	                                                 					<p>Cras ligula leo, consectetur a facilisis sed, volutpat ac urna. Duis porta tincidunt tempor. Quisque mi justo, porta vel eleifend quis, pharetra eget lectus. Ut gravida dui eu nibh faucibus ultrices. Nam ipsum nulla, eleifend eu ultrices nec, egestas in magna. Nulla tristique tempor odio a venenatis. Nulla lacinia, erat quis consectetur lobortis, libero magna iaculis turpis, eget sodales libero ante vitae neque. Nunc dolor tortor, viverra eget fringilla nec, varius venenatis massa. Fusce mi mi, molestie ut semper sed, tincidunt id urna. Morbi quis quam suscipit dolor rhoncus cursus non vitae enim. Suspendisse ullamcorper dui urna, id rutrum enim.</p>
+	                                                 				</div>
+	                                                 			</li>
+	                                                 			<li class="v-heading">
+	                                                 				Activity <span>(latest 24 hours)</span>
+	                                                 			</li>
+	                                                 			<li>
+	                                                 				<ul class="unstyled sepH_b item-list">
+	                                                 					<li><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum dolor sit amet...</a></li>
+	                                                 					<li><i class="splashy-document_letter_edit sepV_b"></i>Karim <a href="#">posted</a> new article <a href="#">Lorem ipsum dolor sit amet, consectetur...</a></li>
+	                                                 					<li><i class="splashy-image_cultured  sepV_b"></i>Karim added <a href="#">new_image,jpg</a></li>
+	                                                 					<li><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></li>
+	                                                 					<li class="item-list-more"><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum dolor sit </a></li>
+	                                                 					<li class="item-list-more"><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></li>
+	                                                 					<li class="item-list-more"><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum dolor sit amet, consectetur </a></li>
+	                                                 					<li class="item-list-more"><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+	                                                 					<li class="item-list-more"><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum, consectetur adipiscing elit</a></li>
+	                                                 					<li class="item-list-more"><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum dolor sit </a></li>
+	                                                 					<li class="item-list-more"><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></li>
+	                                                 					<li class="item-list-more"><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum dolor sit amet, consectetur </a></li>
+	                                                 					<li class="item-list-more"><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing</a></li>
+	                                                 					<li class="item-list-more"><i class="splashy-comment sepV_b"></i>Karim <a href="#">commented</a> on <a href="#">Lorem ipsum, consectetur adipiscing elit</a></li>
+	                                                 				</ul>
+	                                                 				<a href="#" data-items="5" class="item-list-show btn btn-mini">Show more...</a>
+	                                                 			</li>
+	                                                 			<li class="v-heading">
+	                                                 				Photos
+	                                                 			</li>
+	                                                 			<li>
+	                                                 				<div class="sepH_a item-list clearfix">
+	                                                 					<img class="thumbnail sepV_a sepH_a" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a item-list-more" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a item-list-more" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a item-list-more" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a item-list-more" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a item-list-more" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a item-list-more" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a item-list-more" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 					<img class="thumbnail sepV_a sepH_a item-list-more" src="http://www.placehold.it/100x100/EFEFEF/AAAAAA" alt="" />
+	                                                 				</div>
+	                                                 				<a href="#" data-items="5" class="item-list-show btn btn-mini">Show more...</a>
+	                                                 			</li>
+	                                                 		</ul>
+	                                                 	</div>
+	                                                 </div>
+	                                                 
+	                                                 </div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>					
+						
+						                                
+						                                
+						                                
+						                                
+						
+						</div>
+					</div>
+                    <footer>
+                        <hr>
+                    	 <p class="pull-right">By Humain2 from <a target="_blank" href="http://www.pwaq.com">Pwaq.com</a></p>
+                      	 <p>&copy; 2013 <a target="_blank" href="http://www.pwaq.com">Pwaq Inc.</a></p>
+                    </footer>    
+                </div>
+            </div>
+            
+			<!-- sidebar -->
+            <a href="javascript:void(0)" class="sidebar_switch on_switch ttip_r" title="Hide Sidebar">Sidebar switch</a>
+            <div class="sidebar">
+				
+				<div class="antiScroll">
+					<div class="antiscroll-inner">
+						<div class="antiscroll-content">
+					
+							<div class="sidebar_inner">
+								<div id="side_accordion" class="accordion">
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="dashboard.html" class="accordion-toggle">
+												<i class="fontello-icon-net"></i> Dashboard
+											</a>
+										</div>
+									</div>
+									
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-list-alt"></i> Forms
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseOne">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="form_elements.html">Form elements</a></li>
+													<li><a href="form_extended.html">Extended form elements</a></li>
+													<li><a href="form_validation.html">Form Validation</a></li>
+													<li><a href="wizard.html">Wizard</a></li>
+													
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-th"></i> Components 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseTwo">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="alerts_btns.html">Alerts & Buttons</a></li>
+													<li><a href="icons.html">Icons</a></li>
+													<li><a href="notifications.html">Notifications</a></li>
+													<li><a href="tables.html">Tables</a></li>
+													<li><a href="tabs_accordion.html">Tabs & Accordion</a></li>
+													<li><a href="typography.html">Typography</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-wrench"></i> Plugins 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseThree">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="charts.html">Charts</a></li>
+													<li><a href="calendar.html">Calendar</a></li>
+													<li><a href="file_manager.html">File Manager</a></li>
+													<li><a href="contacts_list.html">Contacts list</a></li>
+												</ul>
+												
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseFour" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-file"></i> Pages
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseFour">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="login.html">Login</a></li>
+													<li><a href="user.html">User profile</a></li>
+													<li><a href="chat.html">Chat</a></li>
+													<li><a href="mailbox.html">Mailbox</a></li>
+													<li><a href="search.html">Search page</a></li>
+													<li><a href="invoice.html">Invoice</a></li>
+													<li><a href="error_404.html">Error 404</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+								
+								<div class="push"></div>
+							</div>
+							   
+							<div class="sidebar_info">
+								<div class="box">
+									        	<small>Using 16.8 GB of your 51.7 GB </small>
+									        	<div class="progress progress-success progress-striped active">
+									                <div style="width: 20%" class="bar"></div>
+									            </div>
+									            <small><strong>38% full</strong></small>
+								</div>
+							</div> 
+						
+						</div>
+					</div>
+				</div>
+			
+			</div>
+			
+            <script src="js/jquery.min.js"></script>
+			<!-- smart resize event -->
+			<script src="js/jquery.debouncedresize.min.js"></script>
+			<!-- hidden elements width/height -->
+			<script src="js/jquery.actual.min.js"></script>
+			<!-- js cookie plugin -->
+			<script src="js/jquery.cookie.min.js"></script>
+			<!-- main bootstrap js -->
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<!-- tooltips -->
+			<script src="lib/qtip2/jquery.qtip.min.js"></script>
+			
+			<!-- fix for ios orientation change -->
+			<script src="js/ios-orientationchange-fix.js"></script>
+			<!-- scrollbar -->
+			<script src="lib/antiscroll/antiscroll.js"></script>
+			<script src="lib/antiscroll/jquery-mousewheel.js"></script>
+			<!-- lightbox -->
+            <script src="lib/colorbox/jquery.colorbox.min.js"></script>
+            <!-- common functions -->
+			<script src="js/frimouss_common.js"></script>
+			
+			<!-- user profile (static) functions -->
+			<script src="js/frimouss_user_static.js"></script>
+			
+			<script>
+				$(document).ready(function() {
+					//* show all elements & remove preloader
+					setTimeout('$("html").removeClass("js")',1000);
+				});
+			</script>
+		
+		</div>
+		<div id="loading_layer" style="display:none"><img src="img/ajax_loader.gif" alt="" /></div>
+	</body>
+</html>
+
+

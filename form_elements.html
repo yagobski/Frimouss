@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Frimouss Admin Panel</title>
+    
+        <!-- Bootstrap framework -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+        <!-- Bootstrap toggle-->
+            <link rel="stylesheet" href="lib/bootstrap-toggle-buttons/css/bootstrap-toggle-buttons-theme.css" />
+        <!-- tooltips-->
+            <link rel="stylesheet" href="lib/qtip2/jquery.qtip.min.css" />
+        <!-- code prettify -->
+            <link rel="stylesheet" href="lib/google-code-prettify/prettify.css" />    
+        <!-- notifications -->
+            <link rel="stylesheet" href="lib/sticky/sticky.css" />    
+        <!-- splashy icons -->
+            <link rel="stylesheet" href="img/splashy/splashy.css" />
+		<!-- flags -->
+            <link rel="stylesheet" href="img/flags/flags.css" />
+		<!-- colorbox -->
+            <link rel="stylesheet" href="lib/colorbox/colorbox.css" />	
+        <!-- main styles -->
+            <link rel="stylesheet" href="css/style.css" />			
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+        <!-- Favicon -->
+            <link rel="shortcut icon" href="favicon.ico" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/ie.css" />
+            <script src="js/ie/html5.js"></script>
+			<script src="js/ie/respond.min.js"></script>
+        <![endif]-->
+		
+		<script>
+			//* hide all elements & show preloader
+			document.documentElement.className += 'js';
+		</script>
+    </head>
+    <body>
+		<div id="maincontainer" class="clearfix">
+			<!-- header -->
+		    <header>
+		        <div class="navbar navbar-fixed-top">
+		            <div class="navbar-inner">
+		                <div class="container-fluid">
+		                	<div class="logo"><a href="dashboard.html" title="Homepage"><img width="101" height="25" alt="Logo" src="img/logo.png"></a></div>
+		                    <form class="visible-desktop" id="search-theme-form" method="post" accept-charset="UTF-8" action="/">
+		                                    <input type="text" size="15" maxlength="128" name="search_theme_form" id="search-q" class="typeahead" />
+		                                      <input type="submit" value="Search" name="op" id="search-submit" />                
+		                                    </form>
+		                                                      	
+		                    <ul class="nav user_menu pull-right">
+		                       
+								<li class="divider-vertical hidden-phone hidden-tablet"></li>
+								
+		                        <li class="dropdown">
+		                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-users"></span> Karim Benzama <b class="caret"></b></a>
+		                            <ul class="dropdown-menu">
+										<li><a href="user_profile.html">My Profile</a></li>
+										<li><a href="javascrip:void(0)">Settings</a></li>
+										<li><a href="javascrip:void(0)">Social</a></li>
+										<li><a href="javascrip:void(0)">Friends</a></li>
+										<li class="divider"></li>
+										<li><a href="login.html">Log Out</a></li>
+		                            </ul>
+		                        </li>
+		                        <li class="divider-vertical hidden-phone hidden-tablet"></li>
+		                        
+		                        <li class="dropdown">
+		                            <a href="#" class="dropdown-toggle nav_condensed" data-toggle="dropdown"><i class="flag-gb"></i> <b class="caret"></b></a>
+		                            <ul class="dropdown-menu">
+		                        		<li><a href="javascript:void(0)"><i class="flag-de"></i> Deutsch</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-fr"></i> Français</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-es"></i> Español</a></li>
+		                        		<li><a href="javascript:void(0)"><i class="flag-ma"></i> Arabic</a></li>
+		                            </ul>
+		                        </li>
+		                    </ul>
+		                    <ul class="nav user-menu visible-desktop pull-right">
+		                       <li><a data-toggle="modal" data-backdrop="static" href="#myTasks" title="New Task" class="btn-glyph ttip_b fontello-icon-edit"><span class="badge badge-important">9</span></a></li>
+		                       <li><a data-toggle="modal" data-backdrop="static" href="#myMail" title="Message" class="btn-glyph ttip_b fontello-icon-mail-1"><span class="badge badge-important">2</span></a></li>
+		                       <li><a href="chat.html" title="Support" class="btn-glyph ttip_b fontello-icon-lifebuoy"><span class="badge badge-important">1</span></a></li>
+		                    </ul>
+		               </div>
+		            </div>
+		        </div>
+		        <div class="modal hide fade" id="myMail">
+		            <div class="modal-header">
+		                <button class="close" data-dismiss="modal">×</button>
+		                <h3>New messages</h3>
+		            </div>
+		            <div class="modal-body">
+		                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		                <table class="table table-condensed table-striped" data-provides="rowlink">
+		                    <thead>
+		                        <tr>
+		                            <th>Sender</th>
+		                            <th>Subject</th>
+		                            <th>Date</th>
+		                            <th>Size</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>Anji Mariotta</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>23/05/2013</td>
+		                            <td>45KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Driss Willis</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>24/05/2013</td>
+		                            <td>15KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Marlene Bui</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>25/05/2013</td>
+		                            <td>128KB</td>
+		                        </tr>
+		                        <tr>
+		                            <td>Dhung Found</td>
+		                            <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+		                            <td>25/05/2013</td>
+		                            <td>31KB</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            <div class="modal-footer">
+		                <a href="mailbox.html" class="btn">Go to mailbox</a>
+		            </div>
+		        </div>
+		        <div class="modal fade" id="myTasks">
+		            <div class="modal-header">
+		                <button class="close" data-dismiss="modal">×</button>
+		                <h3>New Tasks</h3>
+		            </div>
+		            <div class="modal-body">
+		                <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+		                <table class="table table-condensed table-striped" data-provides="rowlink">
+		                    <thead>
+		                        <tr>
+		                            <th>id</th>
+		                            <th>Summary</th>
+		                            <th>Updated</th>
+		                            <th>Priority</th>
+		                            <th>Status</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                            <td>#123</td>
+		                            <td><a href="javascript:void(0)">Fix navigation menu&hellip;</a></td>
+		                            <td>23/05/2012</td>
+		                            <td class="tac"><span class="label label-important">High</span></td>
+		                            <td>Open</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#218</td>
+		                            <td><a href="javascript:void(0)">Upgrade Apache and Mysql &hellip;</a></td>
+		                            <td>22/05/2012</td>
+		                            <td class="tac"><span class="label label-warning">Medium</span></td>
+		                            <td>Reopen</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#425</td>
+		                            <td><a href="javascript:void(0)">Make performance test on server&hellip;</a></td>
+		                            <td>22/05/2012</td>
+		                            <td class="tac"><span class="label label-success">Low</span></td>
+		                            <td>Updated</td>
+		                        </tr>
+		                        <tr>
+		                            <td>#510</td>
+		                            <td><a href="javascript:void(0)">Fix design border&hellip;</a></td>
+		                            <td>17/05/2012</td>
+		                            <td class="tac"><span class="label label-warning">Low</span></td>
+		                            <td>Open</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            <div class="modal-footer">
+		                <a href="taskmanager.html" class="btn">Go to task manager</a>
+		            </div>
+		        </div>
+		    </header>
+		    <!-- main content -->
+		    <div id="contentwrapper">
+		        <div class="main_content">
+					
+					<div class="header">
+					 	<h1 class="page-title"><i class="fontello-icon-list-alt"></i>Form elements</h1>
+					</div>
+					<ul class="breadcrumb">
+					    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+				        <li class="active">Form elements</li>
+			        </ul>
+					
+					<div class="container-fluid"> 
+                    
+                    <div class="row-fluid">
+                        <div class="span12">
+							<form>
+								<div class="formSep">
+									<div class="row-fluid">
+										<div class="span6">
+											<label>Input field</label>
+											<input type="text" />
+											<span class="help-inline">help inline</span>
+											<span class="help-block">help block</span>
+										</div>
+										<div class="span6">
+											<label>Input field with <code>.span8</code> class</label>
+											<input class="span8" type="text" />
+											<span class="help-inline">help inline</span>
+											<span class="help-block">help block</span>
+										</div>
+									</div>
+									
+								</div>
+								<div class="formSep">
+									<div class="row-fluid">
+										<div class="span6">
+											<label>Textarea</label>
+											<textarea name="txtarea_reg" id="txtarea_reg" cols="10" rows="3"></textarea>
+										</div>
+										<div class="span6">
+											<label>Textarea with <code>.span8</code> class</label>
+											<textarea name="txtarea_sp" id="txtarea_sp" cols="10" rows="3" class="span8"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="formSep">
+									<div class="row-fluid">
+										<div class="span6">
+											<label>Regular select</label>
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
+										<div class="span6">
+											<label>Select with <code>.span8</code> class</label>
+											<select class="span8">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option selected="selected">5</option>
+											</select>
+										</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span6">
+											<label>Multiselect</label>
+											<select multiple="multiple">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select> 
+										</div>
+										<div class="span6">
+											<label>Multiselect with <code>.span8</code> class</label>
+											<select multiple="multiple" class="span8">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select> 
+										</div>
+									</div>
+								</div>
+								<div class="formSep">
+									<div class="row-fluid">
+										<div class="span6">
+											<label>TOGGLE Button</label>
+											
+											<label>Checkbox as Toogle Button</label>
+											   <div id="default-tgbtn">
+											    <input type="checkbox" checked="checked">
+											    </div>
+											    <label>Toogle Button - styling</label>
+											     <div id="text-tgbtn">
+											       <input type="checkbox" checked="checked">
+											    </div>
+										<p id="tgbtn-text" class="help-block">Status is: <strong>true</strong></p>
+											
+											
+										</div>
+										<div class="span6">
+											<label>Colored </label>
+										   	<div class="row-fluid">
+		                                      	<div class="span6">
+		                                              <div id="warning-tgbtn">
+		                                                  <input type="checkbox" checked="checked">
+		                                              </div>
+		                                              <br>
+		                                      
+		                                              <div id="danger-tgbtn">
+		                                                  <input type="checkbox" checked="checked">
+		                                              </div>
+		                                              <br>
+		                                      
+		                                              <div id="info-tgbtn">
+		                                                  <input type="checkbox" checked="checked">
+		                                              </div>
+		                                              <br>
+		                                      
+		                                              <div id="success-tgbtn">
+		                                                  <input type="checkbox" checked="checked">
+		                                              </div>
+		                                          </div>
+		                                          
+		                                          <div class="span6">
+		                                              <div id="blue-tgbtn">
+		                                                  <input type="checkbox" checked="checked">
+		                                              </div>
+		                                              <br>
+		                                      
+		                                              <div id="red-tgbtn">
+		                                                  <input type="checkbox" checked="checked">
+		                                              </div>
+		                                              <br>
+		                                      
+		                                              <div id="orange-tgbtn">
+		                                                  <input type="checkbox" checked="checked">
+		                                              </div>
+		                                              <br>
+		                                      
+		                                              <div id="yellow-tgbtn">
+		                                                  <input type="checkbox" checked="checked">
+		                                              </div>
+		                                          </div>
+		                                      </div>								
+										</div>
+									</div>
+								</div>
+								<div class="formSep">
+									<div class="row-fluid">
+										<div class="span6">
+											<label>Checkboxes</label>
+											<label class="checkbox">
+												<input type="checkbox" value="option1" name="optionsCheckboxList1">
+												Lorem ipsum dolor sit amet, consectetur
+											</label>
+											<label class="checkbox">
+												<input type="checkbox" value="option2" name="optionsCheckboxList2">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit
+											</label>
+											<label class="checkbox">
+												<input type="checkbox" value="option3" name="optionsCheckboxList3">
+												Lorem ipsum dolor sit amet
+											</label>
+										</div>
+										<div class="span6">
+											<label>Radio buttons</label>
+											<label class="radio">
+												<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+												Lorem ipsum dolor sit amet, consectetur
+											</label>
+											<label class="radio">
+												<input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="formSep">
+									<div class="row-fluid">
+										<div class="span6">
+											<label for="formA26">Appended button</label>
+											<div class="input-append">
+											    <input id="formA26" class="span4" size="16" type="text">
+											    <button class="btn" type="button">Go!</button>
+											</div>
+											<!-- // form item -->
+											
+											<label for="formA27">Appended two button</label>
+											<div class="input-append">
+											    <input id="formA27" class="span4" size="16" type="text">
+											    <button class="btn" type="button">Search</button>
+											    <button class="btn" type="button">Options</button>
+											</div>
+											<!-- // form item -->
+											
+											<label for="formA28">Appended as bar</label>
+											<div class="input-append btn-bar">
+											    <input id="formA28" class="span4" size="16" type="text">
+											    <button class="btn btn-glyph" type="button"><i class="fontello-icon-pencil-4"></i></button>
+											    <button class="btn btn-glyph" type="button"><i class="fontello-icon-arrows-cw"></i></button>
+											    <button class="btn btn-glyph" type="button"><i class="fontello-icon-check"></i></button>
+											    <button class="btn btn-glyph" type="button"><i class="fontello-icon-plus-1"></i></button>
+											    <button class="btn btn-glyph" type="button"><i class="fontello-icon-cancel-1"></i></button>
+											</div>										</div>
+										<div class="span6">
+											<label>Field with tooltip</label>
+												<input id="fieldBTooltip" class="span6 ttip_b" type="text" placeholder="hover show tooltip" title="Tooltip for field - Top | Right | Bottom | Left">
+											<label>Field with tooltip</label>
+												<input id="fieldBTooltip" class="span6 ttip_r" type="text" placeholder="hover show tooltip" title="Tooltip for field - Top | Right | Bottom | Left">
+											<label>With help popover</label>
+												<input type="text" placeholder="hover to icon for help" name="fieldPopoverHover" class="span6" id="fieldPopoverHover"><span data-original-title="Here title for popover" data-content="Bootstrap popover tips&lt;br&gt; Top | Right | Bottom | Left - default right" rel="popover-hover" class="pop_over help-inline help-icon"><i class="fontello-icon-help-circle"></i></span>
+										</div>
+									</div>
+								</div>
+								
+								
+								
+							
+								<div class="formSep">
+									<p class="sepH_c">Prepended an appended inputs</p>
+									<div class="row-fluid">
+										<div class="span4">
+											<div class="input-prepend">
+												<span class="add-on"><i class="icon-envelope"></i></span><input type="text" size="16" class="span5">
+											</div>  
+										</div>
+										<div class="span4">
+											<div class="input-prepend">
+												<span class="add-on">(+256)</span><input type="text" size="16" class="span5">
+											</div>  
+										</div>
+										<div class="span4">
+											<div class="input-append">
+												<input type="text" size="16" class="span5"><button type="button" class="btn">Change</button><button type="button" class="btn">Ok</button>
+											</div> 
+										</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span4">
+											<div class="input-append">
+												<input type="text" size="16" class="span5"><span class="add-on">.00</span>
+											</div>
+										</div>
+										<div class="span4">
+											<div class="input-prepend input-append">
+												<span class="add-on">$</span><input type="text" size="16" class="span5"><span class="add-on">.00</span>
+											</div>
+										</div>
+										<div class="span4">
+											<div class="input-append">
+												<input type="text" size="16" class="span5"><button type="button" class="btn">OK</button>
+											</div> 
+										</div>
+									</div>
+								</div>
+								<div class="formSep">
+									<p class="sepH_c">Form control states</p>
+									<div class="row-fluid">
+										<div class="span3">
+											<label>Focus state</label>
+											<input type="text" class="focused span10" />
+										</div>
+										<div class="span3 f_error">
+											<label>Error state</label>
+											<input type="text" class="span10" />
+											<span class="help-block">help block</span>
+										</div>
+										<div class="span3 f_warning">
+											<label>Warning state</label>
+											<input type="text" class="span10" />
+											<span class="help-block">help block</span>
+										</div>
+										<div class="span3 f_success">
+											<label>Success state</label>
+											<input type="text" class="span10" />
+											<span class="help-block">help block</span>
+										</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span3">
+											<div class="input-prepend input-append">
+												<span class="add-on">$</span><input type="text" size="16" class="span5 focused"><span class="add-on">.00</span>
+											</div>
+										</div>
+										<div class="span3 f_error">
+											<div class="input-prepend input-append">
+												<span class="add-on">$</span><input type="text" size="16" class="span5"><span class="add-on">.00</span>
+											</div>
+										</div>
+										<div class="span3 f_warning">
+											<div class="input-prepend input-append">
+												<span class="add-on">$</span><input type="text" size="16" class="span5"><span class="add-on">.00</span>
+											</div>
+										</div>
+										<div class="span3 f_success">
+											<div class="input-prepend input-append">
+												<span class="add-on">$</span><input type="text" size="16" class="span5"><span class="add-on">.00</span>
+											</div>
+										</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span3">
+										   <label>Disabled</label>
+										   <input type="text" disabled="disabled" class="span10" />
+										</div>
+									</div>
+								</div>
+								<div class="formSep">
+									<label>Form elements with <code>.span*</code> classes</label>
+									<div class="row-fluid sepH_b stacked">
+										<div class="span6">
+											<input type="text" class="span3" placeholder=".span3" />
+											<input type="text" class="span5" placeholder=".span5" />
+											<input type="text" class="span7" placeholder=".span7" />
+										</div>
+										<div class="span6">
+											<select class="span3">
+												<option>1</option>
+												<option>2</option>
+												<option selected="selected">3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+											<select class="span5">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option selected="selected">5</option>
+											</select>
+											<select class="span7">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option selected="selected">7</option>
+											</select>
+										</div>
+									</div>
+									<label>Alternate static sizes</label>
+									<div class="row-fluid">
+										<div class="span3">
+											<input type="text" class="input-mini" placeholder=".input-mini" />
+										</div>
+										<div class="span3">
+											<input type="text" class="input-small" placeholder=".input-small" />
+										</div>
+										<div class="span3">
+											<input type="text" class="input-medium" placeholder=".input-medium" />
+										</div>
+									</div>
+								</div>
+							</form>
+                            
+							<div class="row-fluid">
+								<div class="span12">
+									<div class="formSep">
+										<label class="sepH_b">Progress bars</label>
+										<div class="row-fluid">
+											<div class="span3">
+												<div class="sepH_b progress progress-info">
+													<div style="width: 20%" class="bar"></div>
+												</div>
+											</div>
+											<div class="span3">
+												<div class="sepH_b progress progress-success">
+													<div style="width: 40%" class="bar"></div>
+												</div>
+											</div>
+											<div class="span3">
+												<div class="sepH_b progress progress-warning">
+													<div style="width: 60%" class="bar"></div>
+												</div>
+											</div>
+											<div class="span3">
+												<div class="sepH_b progress progress-danger">
+													<div style="width: 80%" class="bar"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="formSep">
+										<label class="sepH_b">Stripped progress bars</label>
+										<div class="row-fluid">
+											<div class="span3">
+												<div class="sepH_b progress progress-info progress-striped">
+													<div style="width: 14%" class="bar"></div>
+												</div>
+											</div>
+											<div class="span3">
+												<div class="sepH_b progress progress-success progress-striped active">
+													<div style="width: 66%" class="bar"></div>
+												</div>
+											</div>
+											<div class="span3">
+												<div class="sepH_b progress progress-warning progress-striped">
+													<div style="width: 42%" class="bar"></div>
+												</div>
+											</div>
+											<div class="span3">
+												<div class="sepH_b progress progress-danger progress-striped active">
+													<div style="width: 88%" class="bar"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                            <div class="row-fluid">
+                                <div class="span6">
+									<form class="form-horizontal well">
+										<fieldset>
+											<p class="f_legend">Horizontal form</p>
+											<div class="control-group">
+												<label class="control-label">Limited characters</label>
+												<div class="controls">
+													<input type="text" class="span10" />
+													<span class="help-block">block help text</span>
+												</div>
+											</div>
+											<div class="control-group">
+												<label class="control-label">Field clear text
+												</label>
+												<div class="controls">
+													<input type="text" class="span10" />
+												</div>
+											</div>
+											<div class="control-group">
+												<label class="control-label">Limited characters</label>
+												<div class="controls">
+													<input type="text" class="span10" />
+												</div>
+											</div>
+											<div class="control-group">
+												<label class="control-label">Limited words
+												</label>
+												<div class="controls">
+													<textarea cols="30" rows="5" class="span10"></textarea>
+													<span class="help-block">block help text</span>
+												</div>
+											</div>
+											<div class="control-group">
+												<div class="controls">
+													<button class="btn" type="submit">Form button</button>
+												</div>
+											</div>
+										</fieldset>
+									</form>
+                                </div>
+                                <div class="span6">
+									<form class="well form-inline">
+										<p class="f_legend">Inline form</p>
+										<input type="text" placeholder="Email" class="input-small" />
+										<input type="password" placeholder="Password" class="input-small" />
+										<button class="btn" type="submit">Sign in</button>
+									</form>
+                                </div>
+                            </div>
+                            
+                            <footer>
+                                <hr>
+                            	 <p class="pull-right">By Humain2 from <a target="_blank" href="http://www.pwaq.com">Pwaq.com</a></p>
+                              	 <p>&copy; 2013 <a target="_blank" href="http://www.pwaq.com">Pwaq Inc.</a></p>
+                            </footer>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+            
+			<!-- sidebar -->
+            <a href="javascript:void(0)" class="sidebar_switch on_switch ttip_r" title="Hide Sidebar">Sidebar switch</a>
+            <div class="sidebar">
+				
+				<div class="antiScroll">
+					<div class="antiscroll-inner">
+						<div class="antiscroll-content">
+					
+							<div class="sidebar_inner">
+								<div id="side_accordion" class="accordion">
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="dashboard.html" class="accordion-toggle">
+												<i class="fontello-icon-net"></i> Dashboard
+											</a>
+										</div>
+									</div>
+									
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-list-alt"></i> Forms
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseOne">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="form_elements.html">Form elements</a></li>
+													<li><a href="form_extended.html">Extended form elements</a></li>
+													<li><a href="form_validation.html">Form Validation</a></li>
+													<li><a href="wizard.html">Wizard</a></li>
+													
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-th"></i> Components 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseTwo">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="alerts_btns.html">Alerts & Buttons</a></li>
+													<li><a href="icons.html">Icons</a></li>
+													<li><a href="notifications.html">Notifications</a></li>
+													<li><a href="tables.html">Tables</a></li>
+													<li><a href="tabs_accordion.html">Tabs & Accordion</a></li>
+													<li><a href="typography.html">Typography</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-wrench"></i> Plugins 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseThree">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="charts.html">Charts</a></li>
+													<li><a href="calendar.html">Calendar</a></li>
+													<li><a href="file_manager.html">File Manager</a></li>
+													<li><a href="contacts_list.html">Contacts list</a></li>
+												</ul>
+												
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseFour" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-file"></i> Pages
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseFour">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="login.html">Login</a></li>
+													<li><a href="user.html">User profile</a></li>
+													<li><a href="chat.html">Chat</a></li>
+													<li><a href="mailbox.html">Mailbox</a></li>
+													<li><a href="search.html">Search page</a></li>
+													<li><a href="invoice.html">Invoice</a></li>
+													<li><a href="error_404.html">Error 404</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+								
+								<div class="push"></div>
+							</div>
+							   
+							<div class="sidebar_info">
+								<div class="box">
+									        	<small>Using 16.8 GB of your 51.7 GB </small>
+									        	<div class="progress progress-success progress-striped active">
+									                <div style="width: 20%" class="bar"></div>
+									            </div>
+									            <small><strong>38% full</strong></small>
+								</div>
+							</div> 
+						
+						</div>
+					</div>
+				</div>
+			
+			</div>
+            
+            <script src="js/jquery.min.js"></script>
+			<!-- smart resize event -->
+			<script src="js/jquery.debouncedresize.min.js"></script>
+			<!-- hidden elements width/height -->
+			<script src="js/jquery.actual.min.js"></script>
+			<!-- js cookie plugin -->
+			<script src="js/jquery.cookie.min.js"></script>
+			<!-- main bootstrap js -->
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<!-- bootstrap toggle -->
+			<script type="text/javascript" src="lib/bootstrap-toggle-buttons/js/bootstrap-toggle-buttons.js"></script>
+			
+			<!-- tooltips -->
+			<script src="lib/qtip2/jquery.qtip.min.js"></script>
+			<!-- uniform -->
+			<script src="lib/uniform/jquery.uniform.min.js"></script>
+			
+			<!-- fix for ios orientation change -->
+			<script src="js/ios-orientationchange-fix.js"></script>
+			<!-- scrollbar -->
+			<script src="lib/antiscroll/antiscroll.js"></script>
+			<script src="lib/antiscroll/jquery-mousewheel.js"></script>
+			<!-- lightbox -->
+            <script src="lib/colorbox/jquery.colorbox.min.js"></script>
+            <!-- common functions -->
+			<script src="js/frimouss_common.js"></script>
+			<!-- form functions -->
+			<script src="js/frimouss_forms_standard.js"></script>
+			
+			
+		
+		</div>
+		<div id="loading_layer" style="display:none"><img src="img/ajax_loader.gif" alt="" /></div>
+	</body>
+</html>

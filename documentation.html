@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Documentation - Frimouss Admin Panel</title>
+    
+        <!-- Bootstrap framework -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+        <!-- tooltips-->
+            <link rel="stylesheet" href="lib/qtip2/jquery.qtip.min.css" />
+        <!-- colorbox -->
+            <link rel="stylesheet" href="lib/colorbox/colorbox.css" />    
+        <!-- code prettify -->
+            <link rel="stylesheet" href="lib/google-code-prettify/prettify.css" />    
+        <!-- notifications -->
+            <link rel="stylesheet" href="lib/sticky/sticky.css" />    
+        <!-- splashy icons -->
+            <link rel="stylesheet" href="img/splashy/splashy.css" />
+		<!-- flags -->
+            <link rel="stylesheet" href="img/flags/flags.css" />
+		<!-- calendar -->
+            <link rel="stylesheet" href="lib/fullcalendar/calendar.css" />
+        <!-- code prettify -->
+            <link rel="stylesheet" href="lib/google-code-prettify/prettify.css" />	
+        <!-- main styles -->
+            <link rel="stylesheet" href="css/style.css" />
+        <!-- Font demo -->			
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+            <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cuprum" />
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bree+Serif">
+        <!-- Favicon -->
+            <link rel="shortcut icon" href="favicon.ico" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/ie.css" />
+            <script src="js/ie/html5.js"></script>
+			<script src="js/ie/respond.min.js"></script>
+			<script src="lib/flot/excanvas.min.js"></script>
+        <![endif]-->
+		<script>
+			//* hide all elements & show preloader
+			document.documentElement.className += 'js';
+		</script>
+    </head>
+    <body>
+		<div id="maincontainer" class="clearfix">
+			<!-- header -->
+            <header>
+                <div class="navbar navbar-fixed-top">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+		                	<div class="logo"><a href="#" title="Homepage"><img width="101" height="25" alt="Logo" src="img/logo.png"></a></div>
+                            <form class="visible-desktop" id="search-theme-form" method="post" accept-charset="UTF-8" action="/">
+                                            <input type="text" size="15" maxlength="128" name="search_theme_form" id="search-q" class="typeahead" />
+                                              <input type="submit" value="Search" name="op" id="search-submit" />                
+                                            </form>
+                                                              	
+                            <ul class="nav user_menu pull-right">
+                               
+								<li class="divider-vertical hidden-phone hidden-tablet"></li>
+								
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-users"></span> Karim Benzama <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+										<li><a href="user_profile.html">My Profile</a></li>
+										<li><a href="javascrip:void(0)">Settings</a></li>
+										<li><a href="javascrip:void(0)">Social</a></li>
+										<li><a href="javascrip:void(0)">Friends</a></li>
+										<li class="divider"></li>
+										<li><a href="login.html">Log Out</a></li>
+                                    </ul>
+                                </li>
+                                <li class="divider-vertical hidden-phone hidden-tablet"></li>
+                                
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle nav_condensed" data-toggle="dropdown"><i class="flag-gb"></i> <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                		<li><a href="javascript:void(0)"><i class="flag-de"></i> Deutsch</a></li>
+                                		<li><a href="javascript:void(0)"><i class="flag-fr"></i> Français</a></li>
+                                		<li><a href="javascript:void(0)"><i class="flag-es"></i> Español</a></li>
+                                		<li><a href="javascript:void(0)"><i class="flag-ma"></i> Arabic</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav user-menu visible-desktop pull-right">
+                               <li><a data-toggle="modal" data-backdrop="static" href="#myTasks" title="New Task" class="btn-glyph ttip_b fontello-icon-edit"><span class="badge badge-important">9</span></a></li>
+                               <li><a data-toggle="modal" data-backdrop="static" href="#myMail" title="Message" class="btn-glyph ttip_b fontello-icon-mail-1"><span class="badge badge-important">2</span></a></li>
+                               <li><a href="chat.html" title="Support" class="btn-glyph ttip_b fontello-icon-lifebuoy"><span class="badge badge-important">1</span></a></li>
+                            </ul>
+                                                      
+                        </div>
+                    </div>
+                </div>
+                <div class="modal hide fade" id="myMail">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">×</button>
+                        <h3>New messages</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <table class="table table-condensed table-striped" data-provides="rowlink">
+                            <thead>
+                                <tr>
+                                    <th>Sender</th>
+                                    <th>Subject</th>
+                                    <th>Date</th>
+                                    <th>Size</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Anji Mariotta</td>
+                                    <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+                                    <td>23/05/2013</td>
+                                    <td>45KB</td>
+                                </tr>
+                                <tr>
+                                    <td>Driss Willis</td>
+                                    <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+                                    <td>24/05/2013</td>
+                                    <td>15KB</td>
+                                </tr>
+                                <tr>
+                                    <td>Marlene Bui</td>
+                                    <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+                                    <td>25/05/2013</td>
+                                    <td>128KB</td>
+                                </tr>
+                                <tr>
+                                    <td>Dhung Found</td>
+                                    <td><a href="javascript:void(0)">Lonsectetur adipiscing elit</a></td>
+                                    <td>25/05/2013</td>
+                                    <td>31KB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="mailbox.html" class="btn">Go to mailbox</a>
+                    </div>
+                </div>
+                <div class="modal fade" id="myTasks">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">×</button>
+                        <h3>New Tasks</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <table class="table table-condensed table-striped" data-provides="rowlink">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Summary</th>
+                                    <th>Updated</th>
+                                    <th>Priority</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#123</td>
+                                    <td><a href="javascript:void(0)">Fix navigation menu&hellip;</a></td>
+                                    <td>23/05/2012</td>
+                                    <td class="tac"><span class="label label-important">High</span></td>
+                                    <td>Open</td>
+                                </tr>
+                                <tr>
+                                    <td>#218</td>
+                                    <td><a href="javascript:void(0)">Upgrade Apache and Mysql &hellip;</a></td>
+                                    <td>22/05/2012</td>
+                                    <td class="tac"><span class="label label-warning">Medium</span></td>
+                                    <td>Reopen</td>
+                                </tr>
+                                <tr>
+                                    <td>#425</td>
+                                    <td><a href="javascript:void(0)">Make performance test on server&hellip;</a></td>
+                                    <td>22/05/2012</td>
+                                    <td class="tac"><span class="label label-success">Low</span></td>
+                                    <td>Updated</td>
+                                </tr>
+                                <tr>
+                                    <td>#510</td>
+                                    <td><a href="javascript:void(0)">Fix design border&hellip;</a></td>
+                                    <td>17/05/2012</td>
+                                    <td class="tac"><span class="label label-warning">Low</span></td>
+                                    <td>Open</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="taskmanager.html" class="btn">Go to task manager</a>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- main content -->
+            <div id="contentwrapper">
+                <div class="main_content">
+					
+					<div class="header">
+					 	<h1 class="page-title"><i class="fontello-icon-monitor"></i>Documentation</h1>
+					</div>
+					<ul class="breadcrumb">
+					    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+				        <li class="active">Documentation</li>
+			        </ul>
+					<div class="container-fluid"> 
+					
+					<div class="row-fluid">
+                        <div class="span12">
+                            <div class="sepH_c">
+                                <h3 class="heading">About Frimouss Admin template</h3>
+                                <div class="row-fluid">
+                                    <div class="span4">Frimouss is a fully responsive admin html template, perfect for anyone looking to start a backend system with a modern interface. No more separate websites for mobile, as this theme will adapt seamlessly to any device screen and on top of that...
+                                   	
+                                   	<br /><br />
+                                   	<p class="sepH_a"><strong>Pages:</strong></p>
+                                    
+                                    <ol>
+                                    <li>Main Dashboard</li>
+                                    <li>Search</li>
+                                    <li>Mailbox</li>
+                                    <li>Support</li>
+                                    <li>Invoice</li>
+                                    <li>Login Page</li>
+                                    <li>User Profile</li>
+                                    <li>Error 404</li>
+                                    </ol>
+                                    
+                                    
+                                    <br /><br />
+                                    <p class="sepH_a"><strong>Changelog:</strong></p>
+                                    
+                                    <ul class="unstyled">
+                                    <li>v1.0 (04.02.2013)</li>
+                                    <li>
+                                    	<ul>
+                                    		<li>Initial release</li>
+                                    	</ul>
+                                    </li>
+                                    
+                                    
+                                    </div>
+                                    <div class="span8">
+                                        <p class="sepH_a"><strong>Features:</strong></p>
+                                        <ol>
+                                            <li>Based on Twitter Bootstrap</li>
+                                            <li>Responsive Design, looks great on: Desktops, Tablet Devices, Mobile Devices</li>
+                                            <li>Responsive two column layout (hideable sidebar)</li>
+                                            <li>Fixed top bar</li>
+                                            <li>HTML5/CSS3</li>
+                                            <li>Custom search page</li>
+                                            <li>Custom mailbox</li>
+                                            <li>Charts (lines, bars, pies, Cercular, Sparklines)</li>
+                                            <li>Many Widgets, ex. Weekly Stats, Last Users, To-Do List, Support Tickets, Chats</li>
+											<li>Chat/Support page</li>
+											<li>User page (static)</li>
+                                            <li>Drag&amp;Drop Multiupload</li>
+											<li>Datepicker, Timepicker, Date rangePicker</li>
+                                            <li>Image grid</li>
+                                            <li>4 icon sets (Fontello, glyphicons &amp; splashy icons)</li>
+                                            <li>Custom 404 error page</li>
+                                            <li>Integrated calendar (jQuery FullCalendar)</li>
+                                            <li>Tables (static, dynamic)</li>
+                                            <li>Notifications (sticky, modal boxes)</li>
+                                            <li>Responsive file explorer</li>
+                                            <li>WYSIWYG editor with integrated file explorer</li>
+                                            <li>Regular and extended form elements (sliders, progresbars, enchanced select elements, 2 column multiselect, styled form elements, colorpicker, masked inputs, tags handler and many more)</li>
+                                            <li>Tooltips (always visible in the viewport), Popovers</li>
+                                            <li>Bootstrap Javascript Plugins (modal, dropdown, tab, popover, collapse, typeahead, rowlink, fileupload )</li>
+                                            <li>Form Validation</li>
+                                            <li>Step by Step Wizard</li>
+											<li>Drag&Drop Widget Boxes</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doc_sect">
+                                <div class="sepH_c">
+                                    <h3 class="heading">CSS Files</h3>
+                                    <div class="row-fluid">
+                                        <div class="span4">Frimouss Admin uses couple of styling sheets to control visual apperance. There are 2 CSS files from bootstrap framework, main stylesheet, stylesheet for IE&lt;9 and plugins stylesheets.</div>
+                                        <div class="span8">
+                                            <ul class="unstyled">
+                                                <li>
+                                                    <code>bootstrap/css/bootstrap.min.css</code>, <code>bootstrap/css/bootstrap-responsive.min.css</code>
+                                                    <p class="sml_t">Minified stylesheets from bootstrap framework</p>
+                                                </li>
+                                                <li>
+                                                    <code>css/style.css</code>
+                                                    <p class="sml_t">Main Frimouss Admin styleshet</p>
+                                                </li>
+												<li>
+                                                    <code>css/ie.css</code>
+                                                    <p class="sml_t">Styleshet for IE&lt;9 </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sepH_c">
+                                    <h3 class="heading">JS Files</h3>
+                                    <div class="row-fluid">
+                                        <div class="span4">
+											<p>Frimouss Admin uses js plugins. These plugins are located in <code>bootstrap/js/</code> (plugins from bootstrap framework), <code>js/</code> (small plugins) and <code>lib/</code> (more complex plugins).</p>
+											<p>Every plugin has own documentation, just click on plugin link.</p>
+										</div>
+                                        <div class="span8">
+                                            <ul class="unstyled">
+                                                <li>
+                                                    <code>bootstrap/js/bootstrap.min.js</code>
+                                                    <p class="sml_t">Plugins from bootstrap framework.</p>
+                                                    <ul class="list_a sepH_c">
+                                                        <li><a href="http://twitter.github.com/bootstrap/javascript.html#modals">Modals</a></li>
+                                                        
+                                                        <li><a href="http://twitter.github.com/bootstrap/javascript.html#dropdowns">Dropdowns</a></li>
+                                                        <li><a href="http://twitter.github.com/bootstrap/javascript.html#tabs">Tabs</a></li>
+                                                        <li><a href="http://twitter.github.com/bootstrap/javascript.html#tooltips">Tooltips</a></li>
+                                                        <li><a href="http://twitter.github.com/bootstrap/javascript.html#popovers">Popovers</a></li>
+                                                        <li><a href="http://twitter.github.com/bootstrap/javascript.html#collapse">Collapse</a></li>
+                                                        <li><a href="http://twitter.github.com/bootstrap/javascript.html#typeahead">Typeahead</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    Plugins located in <code>js/</code>
+                                                    <p class="sml_t">Configuration for plugins & small js plugins</p>
+                                                    <ul class="list_a sepH_c">
+                                                        <li><a href="http://dreamerslab.com/blog/en/get-hidden-elements-width-and-height-with-jquery/">Actual width/height of hidden DOM elements</a></li>
+                                                        <li><a href="http://omnipotent.net/jquery Sparkline/">jquery.sparkline</a></li>
+                                                        <li><a href="http://anthonyterrien.com/knob/">KNOB</a></li>
+                                                        <li><a href="https://github.com/jhollingworth/bootstrap-wysihtml5">bootstrap-wysihtml5</a></li>
+                                                         <li><a href="https://github.com/jhollingworth/bootstrap-wysihtml5">bootstrap-wysihtml5</a></li>                                                       
+                                                        <li><a href="http://www.script-tutorials.com/animated-jquery-progressbar/">Animated Progressbars</a></li>
+                                                        <li><a href="http://qwertypants.me/counter/">Character and Word Counter for textareas</a></li>
+                                                        <li><a href="https://github.com/carhartl/jquery-cookie">jQuery Cookie</a></li>                                                        <li><a href="http://www.wookmark.com/jquery-plugin">Grid layout</a></li>
+                                                        <li><a href="http://docs.jquery.com/Main_Page">jQuery Library</a></li>
+                                                        <li><a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing</a></li>
+                                                        <li><a href="http://jasny.github.com/bootstrap/javascript.html#fileupload">Fileupload (with thumbnails)</a></li>
+                                                        <li><a href="http://github.com/desandro/imagesloaded">ImagesLoaded</a></li>
+                                                        <li><a href="http://github.com/RobinHerbots/jquery.inputmask">Input Mask</a></li>
+                                                        <li><a href="https://github.com/thepeg/MediaTable">Responsive Table</a></li>
+                                                        <li><a href="http://jasny.github.com/bootstrap/javascript.html#rowlink">Rowlink</a></li>
+                                                        <li><a href="http://benpickles.github.com/peity/">Small charts</a></li>
+                                                        <li><a href="https://github.com/louisremi/jquery-smartresize">Special jQuery event that happens once after a window resize</a></li>
+                                                        <li><a href="http://www.jacklmoore.com/autosize" class="ext_disabled">Textarea autosize</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    Plugins located in <code>lib/</code>
+                                                    <p class="sml_t">More complex plugins</p>
+                                                    <ul class="list_a sepH_c">
+                                                        <li><a href="http://arshaw.com/fullcalendar/">Calendar</a></li>
+                                                        <li><a href="http://code.google.com/p/flot/">Charts</a></li>
+                                                        <li><a href="http://premiumsoftware.net/cleditor/">CLEditor</a></li>
+                                                        <li><a href="http://www.jacklmoore.com/colorbox">Colorbox</a></li>
+                                                        <li><a href="http://momentjs.com/">Date library</a></li>
+                                                        <li><a href="http://www.datatables.net/index">Datatables</a></li>
+                                                        <li><a href="https://github.com/eternicode/bootstrap-datepicker">Datepicker</a></li>
+                                                        <li><a href="http://harvesthq.github.com/chosen/">Enhanced select elements</a></li>
+                                                        <li><a href="http://opensource.teamdf.com/list/docs/">Floating header list</a></li>
+                                                        <li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">Form validation</a></li>
+                                                        <li><a href="http://jqueryui.com/demos/">jQuery UI</a></li>
+                                                        <li><a href="http://loudev.com/">2col Multiselect</a></li>
+                                                        <li><a href="http://uniformjs.com/">Nice form elements</a></li>
+                                                        <li><a href="http://danpalmer.me/jquery-complexify">Password strength checker</a></li>
+                                                        <li><a href="http://www.plupload.com/documentation.php">Plupload</a></li>
+                                                        <li><a href="https://github.com/javve/list">Searchable, sortable list</a></li>
+                                                        <li><a href="http://ssssnakes.com/smoke/">Smoke.js</a></li>
+                                                        <li><a href="http://thrivingkings.com/sticky/">Sticky notifications</a></li>
+                                                        <li><a href="http://code.google.com/p/google-code-prettify/">Syntax highlighting</a></li>
+                                                        <li><a href="http://ioncache.github.com/Tag-Handler/">Tag handler</a></li>
+                                                        <li><a href="http://craigsworks.com/projects/qtip2/docs">Tooltips</a></li>
+                                                        <li><a href="http://www.wbotelhos.com/stepy/">Wizard</a></li>
+                                                        <li><a href="http://www.tinymce.com/wiki.php">WYSIWG Editor</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    File manager <code>file-manager/</code>
+                                                    <ul class="list_a sepH_c">
+                                                        <li><a href="http://kcfinder.sunhater.com/">KC Finder</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								<div class="sepH_c">
+                                    <h3 class="heading">External links</h3>
+                                    <div class="row-fluid">
+                                        <div class="span12">
+											<p>There is a js function (<code>frimouss_external_links.init()</code> located in frimouss_common.js) that changes all external links (icon and attribute <code>target="_blank"</code> is added). To disable this function for single link add <code>ext_disabled</code> class to this link: <code>&lt;a href="http://url.com" class="ext_disabled"&gt;</code>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="sepH_c">
+                                    <h3 class="heading">Sidebar</h3>
+                                    <div class="row-fluid">
+                                        <div class="span12">
+                                            Frimouss Admin has two columns by default, main content and a hideable sidebar. This sidebar can be hidden on page load by adding <code>sidebar_hidden</code> class to body.<br/>
+											In this template sidebar state is saved to cookie. If you don't want this functionality just coment/remove some code in <code>js/frimouss_common.js</code>.<br/>
+											There is also implemented scrollbar in this sidebar, if your content in sidebar is longer than window height then this scrollbar will show up.<br/>
+											If you want to move sidebar to right add <code>sidebar_right</code> to body: <code>&lt;body class="sidebar_right"&gt;</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sepH_c">
+                                    <h3 class="heading">Layout, grid & elements</h3>
+                                    <div class="row-fluid">
+                                        <div class="span12">
+                                            This template has 25 HTML pages, lot of jQuery plugins and custom widgets, elements from <a href="http://twitter.github.com/bootstrap/index.html">twitter bootstrap</a>, form elements and much more…                                     
+                                            
+                                            This template is using jQuery cookie to remember when you switch sidebar position, change navigation, switch fluid/fixed layout. So when you restart browser or refresh/change page it will remember latest choice. It can also be done manually by adding single classes that is explained in documentation. Most of elements was designed directly in browser, while psd file contain only main elements. 
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sepH_c">
+                                    <h3 class="heading">Credits</h3>
+                                    <div class="row-fluid">
+                                        <div class="span12">
+                                            <ul class="list_a">
+                                                <li>Bootstrap Framework <a href="http://twitter.github.com/bootstrap/index.html">http://twitter.github.com/bootstrap/index.html</a></li>
+                                                <li>Fontello icons</li> <a href="http://fontello.com/">http://fontello.com/</a>
+                                                <li>Plugins mentioned in <strong>JS Files</strong> section</li>
+                                                <li>Glyphicons <a href="http://glyphicons.com/">http://glyphicons.com/</a></li>
+                                                <li>Splashy icons <a href="http://splashyfish.com/icons/">http://splashyfish.com/icons/</a></li>
+                                                <li>gcons icons <a href="http://www.greepit.com/open-source-icons-gcons/">http://www.greepit.com/open-source-icons-gcons/</a></li>
+                                                <li>Flag icons <a href="http://www.famfamfam.com/lab/icons/flags/">http://www.famfamfam.com/lab/icons/flags/</a></li>
+                                                <li>Google fonts <a href="http://www.google.com/webfonts">http://www.google.com/webfonts</a></li>
+                                                <li>Background patterns <a href="http://subtlepatterns.com/">http://subtlepatterns.com/</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+						
+				                   
+                   </div>    
+                </div>
+            </div>
+            
+			<!-- sidebar -->
+            <a href="javascript:void(0)" class="sidebar_switch on_switch ttip_r" title="Hide Sidebar">Sidebar switch</a>
+            <div class="sidebar">
+				
+				<div class="antiScroll">
+					<div class="antiscroll-inner">
+						<div class="antiscroll-content">
+					
+							<div class="sidebar_inner">
+								<div id="side_accordion" class="accordion">
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="dashboard.html" class="accordion-toggle">
+												<i class="fontello-icon-net"></i> Dashboard
+											</a>
+										</div>
+									</div>
+									
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-list-alt"></i> Forms
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseOne">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="form_elements.html">Form elements</a></li>
+													<li><a href="form_extended.html">Extended form elements</a></li>
+													<li><a href="form_validation.html">Form Validation</a></li>
+													<li><a href="wizard.html">Wizard</a></li>
+													
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-th"></i> Components 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseTwo">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="alerts_btns.html">Alerts & Buttons</a></li>
+													<li><a href="icons.html">Icons</a></li>
+													<li><a href="notifications.html">Notifications</a></li>
+													<li><a href="tables.html">Tables</a></li>
+													<li><a href="tabs_accordion.html">Tabs & Accordion</a></li>
+													<li><a href="typography.html">Typography</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-wrench"></i> Plugins 
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseThree">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="charts.html">Charts</a></li>
+													<li><a href="calendar.html">Calendar</a></li>
+													<li><a href="file_manager.html">File Manager</a></li>
+													<li><a href="contacts_list.html">Contacts list</a></li>
+												</ul>
+												
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a href="#collapseFour" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+												<i class="icon-file"></i> Pages
+											</a>
+										</div>
+										<div class="accordion-body collapse" id="collapseFour">
+											<div class="accordion-inner">
+												<ul class="nav nav-list">
+													<li><a href="login.html">Login</a></li>
+													<li><a href="user.html">User profile</a></li>
+													<li><a href="chat.html">Chat</a></li>
+													<li><a href="mailbox.html">Mailbox</a></li>
+													<li><a href="search.html">Search page</a></li>
+													<li><a href="invoice.html">Invoice</a></li>
+													<li><a href="error_404.html">Error 404</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+								
+								<div class="push"></div>
+							</div>
+							   
+							<div class="sidebar_info">
+								<div class="box">
+									        	<small>Using 16.8 GB of your 51.7 GB </small>
+									        	<div class="progress progress-success progress-striped active">
+									                <div style="width: 20%" class="bar"></div>
+									            </div>
+									            <small><strong>38% full</strong></small>
+								</div>
+							</div> 
+						
+						</div>
+					</div>
+				</div>
+			
+			</div>
+            
+            <script src="js/jquery.min.js"></script>
+			<!-- smart resize event -->
+			<script src="js/jquery.debouncedresize.min.js"></script>
+			<!-- hidden elements width/height -->
+			<script src="js/jquery.actual.min.js"></script>
+			<!-- js cookie plugin -->
+			<script src="js/jquery.cookie.min.js"></script>
+			<!-- main bootstrap js -->
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<!-- bootstrap plugins -->
+			<script src="js/bootstrap.plugins.min.js"></script>
+			<!-- tooltips -->
+			<script src="lib/qtip2/jquery.qtip.min.js"></script>
+			
+            <!-- fix for ios orientation change -->
+			<script src="js/ios-orientationchange-fix.js"></script>
+			<!-- scrollbar -->
+			<script src="lib/antiscroll/antiscroll.js"></script>
+			<script src="lib/antiscroll/jquery-mousewheel.js"></script>
+			<!-- to top -->
+			<script src="lib/UItoTop/jquery.ui.totop.min.js"></script>
+			<!-- common functions -->
+			<script src="js/frimouss_common.js"></script>
+			
+			<script src="lib/jquery-ui/jquery-ui-1.8.23.custom.min.js"></script>
+            <!-- touch events for jquery ui-->
+            <script src="js/forms/jquery.ui.touch-punch.min.js"></script>
+            <!-- multi-column layout -->
+            <script src="js/jquery.imagesloaded.min.js"></script>
+            <script src="js/jquery.wookmark.js"></script>
+            <!-- responsive table -->
+            <script src="js/jquery.mediaTable.min.js"></script>
+            <!-- small charts -->
+            <script src="js/jquery.peity.min.js"></script>
+           
+                     
+             <!-- daterange -->
+            <script type="text/javascript" src="lib/bootstrap-daterangepicker-master/date.js"></script>
+            <script type="text/javascript" src="lib/bootstrap-daterangepicker-master/daterangepicker.js"></script>
+    		
+    		<!-- code prettifier -->
+    		<script src="lib/google-code-prettify/prettify.min.js"></script>
+       		<!-- autosize textareas (new message) -->
+    		<script src="js/forms/jquery.autosize.min.js"></script>
+    		<script src="lib/jquery-ui/jquery-ui-1.8.23.custom.min.js"></script>
+    		<!-- touch events for jquery ui-->
+    		<script src="js/forms/jquery.ui.touch-punch.min.js"></script>
+    		
+			<script>
+				$(document).ready(function() {
+					//* show all elements & remove preloader
+					setTimeout('$("html").removeClass("js")',1000);
+					
+				});
+			</script>
+		
+		</div>
+		<div id="loading_layer" style="display:none"><img src="img/ajax_loader.gif" alt="" /></div>
+	</body>
+</html>
