@@ -3,8 +3,6 @@ Frimouss
 
   Frimouss - Frimouss is a fully responsive admin html template, perfect for anyone looking to start a backend system with a modern interface. No more separate websites for mobile, as this theme will adapt seamlessly to any device screen and on top of that...
 
-Live Preview: http://www.pwaq.com/cronner/Frimouss_v1.0/login.html
-
 Features:
 Based on Twitter Bootstrap
 Responsive Design, looks great on: Desktops, Tablet Devices, Mobile Devices
