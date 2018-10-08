@@ -1,7 +1,8 @@
+
 # Frimouss
+![Screenshoot](https://raw.githubusercontent.com/elybin/Frimouss/master/img/2018-10-09-045723_1366x768_scrot.png)
 
 Frimouss is a fully responsive admin html template, perfect for anyone looking to start a backend system with a modern interface. No more separate websites for mobile, as this theme will adapt seamlessly to any device screen and on top of that.
-
 
 ## Features
 - Based on Twitter Bootstrap
